@@ -4,7 +4,8 @@
 *.dll
 *.so
 *.dylib
-
+*~
+*pycache*
 # Test binary, built with `go test -c`
 *.test
 

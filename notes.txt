@@ -1,0 +1,20 @@
+git clone https://github.com/ethereum/go-ethereum.git
+git clone --recursive https://github.com/ethereum/solidity.git
+cd go-ethereum
+make geth
+cd ..
+cd solidity
+
+
+personal.unlockAccount('0x8dDf7BbC87c7Ef77dcAF8BC6980E79C14444146b', 'a')
+
+geth --datadir ~/scratch/ev21/data init genesis2.json
+./geth --datadir ~/scratch/ev21/data account new
+
+./geth --networkid 19794 --mine --datadir "~/scratch/ev21/data" --nodiscover --rpc --rpcport "8545" 
+--port "30303" --rpccorsdomain "*" --nat "any" --rpcapi eth,web3,personal,net 
+
+python3 -m pip install --user pipx
+npm install -g ganache-cli
+python3 -m pipx ensurepath
+pipx install eth-brownie

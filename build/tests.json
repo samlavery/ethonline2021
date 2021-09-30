@@ -1,0 +1,56 @@
+{
+  "contracts": {
+    "Auction": "0bdc7c4037e633309d618e2a7833484f5b7059ee",
+    "Token": "c7065ac0810b51d1a666ed8f4f5c2528008c7228"
+  },
+  "tests": {
+    "tests/test_approve.py": {
+      "coverage": false,
+      "isolated": [
+        "Token"
+      ],
+      "results": "FFFFF..",
+      "sha1": "f2e536498f44e86fa2853ec7bbe10710f9d97a53",
+      "txhash": [
+        "a887d2b17e046cc29f96ba9d82015bd7259981b1"
+      ]
+    },
+    "tests/test_approve_for_all.py": {
+      "coverage": false,
+      "isolated": [
+        "Token"
+      ],
+      "results": ".....F",
+      "sha1": "eebba98299a5ef82ee04978d95f815ff87dc1bd4",
+      "txhash": [
+        "1ee13cf07e68476b2ba49eeb44c0f669174a0ebf"
+      ]
+    }
+  },
+  "tx": {
+    "1ee13cf07e68476b2ba49eeb44c0f669174a0ebf": {
+      "Token": {
+        "0": [
+          [
+            17,
+            18
+          ],
+          [],
+          []
+        ]
+      }
+    },
+    "a887d2b17e046cc29f96ba9d82015bd7259981b1": {
+      "Token": {
+        "0": [
+          [
+            17,
+            18
+          ],
+          [],
+          []
+        ]
+      }
+    }
+  }
+}

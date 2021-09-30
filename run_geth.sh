@@ -1,0 +1,1 @@
+~/geth --mine --networkid 19794 --datadir "~/scratch/e/data3" --nodiscover --http.corsdomain "*" --nat "any" --http.api eth,web3,personal,net,debug --http  --miner.threads 1 --allow-insecure-unlock --unlock 0x6C1FD81014422602dD1f9eFaCFfe284E701A2deD --miner.gaslimit 100000000 -verbosity 5

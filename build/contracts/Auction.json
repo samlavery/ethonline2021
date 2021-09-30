@@ -1,0 +1,6057 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "Payment",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_auctionowner",
+          "type": "address"
+        },
+        {
+          "name": "_items",
+          "type": "uint256"
+        },
+        {
+          "name": "_auction_start",
+          "type": "uint256"
+        },
+        {
+          "name": "_bidding_time",
+          "type": "uint256"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "gas": 185013,
+      "inputs": [
+        {
+          "name": "_tokenID",
+          "type": "uint256"
+        }
+      ],
+      "name": "bid",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "gas": 2220,
+      "inputs": [
+        {
+          "name": "_tokenID",
+          "type": "uint256"
+        }
+      ],
+      "name": "currentBid",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "gas": 36109,
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "gas": 73626,
+      "inputs": [],
+      "name": "endAuction",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "gas": 1298,
+      "inputs": [],
+      "name": "auctionStart",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "gas": 1328,
+      "inputs": [],
+      "name": "auctionEnd",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "gas": 1358,
+      "inputs": [],
+      "name": "ended",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "gas": 1388,
+      "inputs": [],
+      "name": "items",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "gas": 1633,
+      "inputs": [
+        {
+          "name": "arg0",
+          "type": "address"
+        }
+      ],
+      "name": "pendingReturns",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/Auction.vy"
+  },
+  "ast": {
+    "ast_type": "Module",
+    "body": [
+      {
+        "annotation": {
+          "ast_type": "Subscript",
+          "col_offset": 12,
+          "end_col_offset": 37,
+          "end_lineno": 6,
+          "lineno": 6,
+          "node_id": 4,
+          "slice": {
+            "ast_type": "Index",
+            "col_offset": 12,
+            "end_col_offset": 37,
+            "end_lineno": 6,
+            "lineno": 6,
+            "node_id": 14,
+            "src": "116:25:0",
+            "value": {
+              "ast_type": "Tuple",
+              "col_offset": 20,
+              "elements": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 20,
+                  "end_col_offset": 27,
+                  "end_lineno": 6,
+                  "id": "uint256",
+                  "lineno": 6,
+                  "node_id": 8,
+                  "src": "124:7:0"
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 29,
+                  "end_col_offset": 36,
+                  "end_lineno": 6,
+                  "id": "address",
+                  "lineno": 6,
+                  "node_id": 10,
+                  "src": "133:7:0"
+                }
+              ],
+              "end_col_offset": 36,
+              "end_lineno": 6,
+              "lineno": 6,
+              "node_id": 7,
+              "src": "124:16:0"
+            }
+          },
+          "src": "116:25:0",
+          "value": {
+            "ast_type": "Name",
+            "col_offset": 12,
+            "end_col_offset": 19,
+            "end_lineno": 6,
+            "id": "HashMap",
+            "lineno": 6,
+            "node_id": 5,
+            "src": "116:7:0"
+          }
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 37,
+        "end_lineno": 6,
+        "lineno": 6,
+        "node_id": 1,
+        "simple": 1,
+        "src": "104:37:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 10,
+          "end_lineno": 6,
+          "id": "idToWinner",
+          "lineno": 6,
+          "node_id": 2,
+          "src": "104:10:0"
+        },
+        "value": null
+      },
+      {
+        "annotation": {
+          "ast_type": "Subscript",
+          "col_offset": 15,
+          "end_col_offset": 40,
+          "end_lineno": 7,
+          "lineno": 7,
+          "node_id": 18,
+          "slice": {
+            "ast_type": "Index",
+            "col_offset": 15,
+            "end_col_offset": 40,
+            "end_lineno": 7,
+            "lineno": 7,
+            "node_id": 28,
+            "src": "157:25:0",
+            "value": {
+              "ast_type": "Tuple",
+              "col_offset": 23,
+              "elements": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 23,
+                  "end_col_offset": 30,
+                  "end_lineno": 7,
+                  "id": "uint256",
+                  "lineno": 7,
+                  "node_id": 22,
+                  "src": "165:7:0"
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 32,
+                  "end_col_offset": 39,
+                  "end_lineno": 7,
+                  "id": "address",
+                  "lineno": 7,
+                  "node_id": 24,
+                  "src": "174:7:0"
+                }
+              ],
+              "end_col_offset": 39,
+              "end_lineno": 7,
+              "lineno": 7,
+              "node_id": 21,
+              "src": "165:16:0"
+            }
+          },
+          "src": "157:25:0",
+          "value": {
+            "ast_type": "Name",
+            "col_offset": 15,
+            "end_col_offset": 22,
+            "end_lineno": 7,
+            "id": "HashMap",
+            "lineno": 7,
+            "node_id": 19,
+            "src": "157:7:0"
+          }
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 40,
+        "end_lineno": 7,
+        "lineno": 7,
+        "node_id": 15,
+        "simple": 1,
+        "src": "142:40:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 13,
+          "end_lineno": 7,
+          "id": "highestBidder",
+          "lineno": 7,
+          "node_id": 16,
+          "src": "142:13:0"
+        },
+        "value": null
+      },
+      {
+        "annotation": {
+          "ast_type": "Subscript",
+          "col_offset": 12,
+          "end_col_offset": 37,
+          "end_lineno": 8,
+          "lineno": 8,
+          "node_id": 32,
+          "slice": {
+            "ast_type": "Index",
+            "col_offset": 12,
+            "end_col_offset": 37,
+            "end_lineno": 8,
+            "lineno": 8,
+            "node_id": 42,
+            "src": "195:25:0",
+            "value": {
+              "ast_type": "Tuple",
+              "col_offset": 20,
+              "elements": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 20,
+                  "end_col_offset": 27,
+                  "end_lineno": 8,
+                  "id": "uint256",
+                  "lineno": 8,
+                  "node_id": 36,
+                  "src": "203:7:0"
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 29,
+                  "end_col_offset": 36,
+                  "end_lineno": 8,
+                  "id": "uint256",
+                  "lineno": 8,
+                  "node_id": 38,
+                  "src": "212:7:0"
+                }
+              ],
+              "end_col_offset": 36,
+              "end_lineno": 8,
+              "lineno": 8,
+              "node_id": 35,
+              "src": "203:16:0"
+            }
+          },
+          "src": "195:25:0",
+          "value": {
+            "ast_type": "Name",
+            "col_offset": 12,
+            "end_col_offset": 19,
+            "end_lineno": 8,
+            "id": "HashMap",
+            "lineno": 8,
+            "node_id": 33,
+            "src": "195:7:0"
+          }
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 37,
+        "end_lineno": 8,
+        "lineno": 8,
+        "node_id": 29,
+        "simple": 1,
+        "src": "183:37:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 10,
+          "end_lineno": 8,
+          "id": "highestBid",
+          "lineno": 8,
+          "node_id": 30,
+          "src": "183:10:0"
+        },
+        "value": null
+      },
+      {
+        "annotation": {
+          "args": [
+            {
+              "ast_type": "Name",
+              "col_offset": 21,
+              "end_col_offset": 28,
+              "end_lineno": 11,
+              "id": "uint256",
+              "lineno": 11,
+              "node_id": 49,
+              "src": "305:7:0"
+            }
+          ],
+          "ast_type": "Call",
+          "col_offset": 14,
+          "end_col_offset": 29,
+          "end_lineno": 11,
+          "func": {
+            "ast_type": "Name",
+            "col_offset": 14,
+            "end_col_offset": 20,
+            "end_lineno": 11,
+            "id": "public",
+            "lineno": 11,
+            "node_id": 47,
+            "src": "298:6:0"
+          },
+          "keyword": null,
+          "keywords": [],
+          "lineno": 11,
+          "node_id": 46,
+          "src": "298:15:0"
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 29,
+        "end_lineno": 11,
+        "lineno": 11,
+        "node_id": 43,
+        "simple": 1,
+        "src": "284:29:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 12,
+          "end_lineno": 11,
+          "id": "auctionStart",
+          "lineno": 11,
+          "node_id": 44,
+          "src": "284:12:0"
+        },
+        "value": null
+      },
+      {
+        "annotation": {
+          "args": [
+            {
+              "ast_type": "Name",
+              "col_offset": 19,
+              "end_col_offset": 26,
+              "end_lineno": 12,
+              "id": "uint256",
+              "lineno": 12,
+              "node_id": 57,
+              "src": "333:7:0"
+            }
+          ],
+          "ast_type": "Call",
+          "col_offset": 12,
+          "end_col_offset": 27,
+          "end_lineno": 12,
+          "func": {
+            "ast_type": "Name",
+            "col_offset": 12,
+            "end_col_offset": 18,
+            "end_lineno": 12,
+            "id": "public",
+            "lineno": 12,
+            "node_id": 55,
+            "src": "326:6:0"
+          },
+          "keyword": null,
+          "keywords": [],
+          "lineno": 12,
+          "node_id": 54,
+          "src": "326:15:0"
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 27,
+        "end_lineno": 12,
+        "lineno": 12,
+        "node_id": 51,
+        "simple": 1,
+        "src": "314:27:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 10,
+          "end_lineno": 12,
+          "id": "auctionEnd",
+          "lineno": 12,
+          "node_id": 52,
+          "src": "314:10:0"
+        },
+        "value": null
+      },
+      {
+        "annotation": {
+          "ast_type": "Name",
+          "col_offset": 13,
+          "end_col_offset": 20,
+          "end_lineno": 17,
+          "id": "address",
+          "lineno": 17,
+          "node_id": 62,
+          "src": "462:7:0"
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 20,
+        "end_lineno": 17,
+        "lineno": 17,
+        "node_id": 59,
+        "simple": 1,
+        "src": "449:20:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 11,
+          "end_lineno": 17,
+          "id": "beneficiary",
+          "lineno": 17,
+          "node_id": 60,
+          "src": "449:11:0"
+        },
+        "value": null
+      },
+      {
+        "annotation": {
+          "ast_type": "Name",
+          "col_offset": 10,
+          "end_col_offset": 17,
+          "end_lineno": 18,
+          "id": "uint256",
+          "lineno": 18,
+          "node_id": 67,
+          "src": "480:7:0"
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 17,
+        "end_lineno": 18,
+        "lineno": 18,
+        "node_id": 64,
+        "simple": 1,
+        "src": "470:17:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 8,
+          "end_lineno": 18,
+          "id": "finalSum",
+          "lineno": 18,
+          "node_id": 65,
+          "src": "470:8:0"
+        },
+        "value": null
+      },
+      {
+        "annotation": {
+          "args": [
+            {
+              "ast_type": "Name",
+              "col_offset": 14,
+              "end_col_offset": 18,
+              "end_lineno": 20,
+              "id": "bool",
+              "lineno": 20,
+              "node_id": 75,
+              "src": "549:4:0"
+            }
+          ],
+          "ast_type": "Call",
+          "col_offset": 7,
+          "end_col_offset": 19,
+          "end_lineno": 20,
+          "func": {
+            "ast_type": "Name",
+            "col_offset": 7,
+            "end_col_offset": 13,
+            "end_lineno": 20,
+            "id": "public",
+            "lineno": 20,
+            "node_id": 73,
+            "src": "542:6:0"
+          },
+          "keyword": null,
+          "keywords": [],
+          "lineno": 20,
+          "node_id": 72,
+          "src": "542:12:0"
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 19,
+        "end_lineno": 20,
+        "lineno": 20,
+        "node_id": 69,
+        "simple": 1,
+        "src": "535:19:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 5,
+          "end_lineno": 20,
+          "id": "ended",
+          "lineno": 20,
+          "node_id": 70,
+          "src": "535:5:0"
+        },
+        "value": null
+      },
+      {
+        "annotation": {
+          "args": [
+            {
+              "ast_type": "Name",
+              "col_offset": 14,
+              "end_col_offset": 21,
+              "end_lineno": 21,
+              "id": "uint256",
+              "lineno": 21,
+              "node_id": 83,
+              "src": "569:7:0"
+            }
+          ],
+          "ast_type": "Call",
+          "col_offset": 7,
+          "end_col_offset": 22,
+          "end_lineno": 21,
+          "func": {
+            "ast_type": "Name",
+            "col_offset": 7,
+            "end_col_offset": 13,
+            "end_lineno": 21,
+            "id": "public",
+            "lineno": 21,
+            "node_id": 81,
+            "src": "562:6:0"
+          },
+          "keyword": null,
+          "keywords": [],
+          "lineno": 21,
+          "node_id": 80,
+          "src": "562:15:0"
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 22,
+        "end_lineno": 21,
+        "lineno": 21,
+        "node_id": 77,
+        "simple": 1,
+        "src": "555:22:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 5,
+          "end_lineno": 21,
+          "id": "items",
+          "lineno": 21,
+          "node_id": 78,
+          "src": "555:5:0"
+        },
+        "value": null
+      },
+      {
+        "annotation": {
+          "args": [
+            {
+              "ast_type": "Subscript",
+              "col_offset": 23,
+              "end_col_offset": 48,
+              "end_lineno": 23,
+              "lineno": 23,
+              "node_id": 91,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 23,
+                "end_col_offset": 48,
+                "end_lineno": 23,
+                "lineno": 23,
+                "node_id": 101,
+                "src": "669:25:0",
+                "value": {
+                  "ast_type": "Tuple",
+                  "col_offset": 31,
+                  "elements": [
+                    {
+                      "ast_type": "Name",
+                      "col_offset": 31,
+                      "end_col_offset": 38,
+                      "end_lineno": 23,
+                      "id": "address",
+                      "lineno": 23,
+                      "node_id": 95,
+                      "src": "677:7:0"
+                    },
+                    {
+                      "ast_type": "Name",
+                      "col_offset": 40,
+                      "end_col_offset": 47,
+                      "end_lineno": 23,
+                      "id": "uint256",
+                      "lineno": 23,
+                      "node_id": 97,
+                      "src": "686:7:0"
+                    }
+                  ],
+                  "end_col_offset": 47,
+                  "end_lineno": 23,
+                  "lineno": 23,
+                  "node_id": 94,
+                  "src": "677:16:0"
+                }
+              },
+              "src": "669:25:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 23,
+                "end_col_offset": 30,
+                "end_lineno": 23,
+                "id": "HashMap",
+                "lineno": 23,
+                "node_id": 92,
+                "src": "669:7:0"
+              }
+            }
+          ],
+          "ast_type": "Call",
+          "col_offset": 16,
+          "end_col_offset": 49,
+          "end_lineno": 23,
+          "func": {
+            "ast_type": "Name",
+            "col_offset": 16,
+            "end_col_offset": 22,
+            "end_lineno": 23,
+            "id": "public",
+            "lineno": 23,
+            "node_id": 89,
+            "src": "662:6:0"
+          },
+          "keyword": null,
+          "keywords": [],
+          "lineno": 23,
+          "node_id": 88,
+          "src": "662:33:0"
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 49,
+        "end_lineno": 23,
+        "lineno": 23,
+        "node_id": 85,
+        "simple": 1,
+        "src": "646:49:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 14,
+          "end_lineno": 23,
+          "id": "pendingReturns",
+          "lineno": 23,
+          "node_id": 86,
+          "src": "646:14:0"
+        },
+        "value": null
+      },
+      {
+        "args": {
+          "args": [
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 28,
+                "end_col_offset": 35,
+                "end_lineno": 30,
+                "id": "address",
+                "lineno": 30,
+                "node_id": 105,
+                "src": "882:7:0"
+              },
+              "arg": "_auctionowner",
+              "ast_type": "arg",
+              "col_offset": 13,
+              "end_col_offset": 35,
+              "end_lineno": 30,
+              "lineno": 30,
+              "node_id": 104,
+              "src": "867:22:0"
+            },
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 45,
+                "end_col_offset": 52,
+                "end_lineno": 30,
+                "id": "uint256",
+                "lineno": 30,
+                "node_id": 108,
+                "src": "899:7:0"
+              },
+              "arg": "_items",
+              "ast_type": "arg",
+              "col_offset": 37,
+              "end_col_offset": 52,
+              "end_lineno": 30,
+              "lineno": 30,
+              "node_id": 107,
+              "src": "891:15:0"
+            },
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 70,
+                "end_col_offset": 77,
+                "end_lineno": 30,
+                "id": "uint256",
+                "lineno": 30,
+                "node_id": 111,
+                "src": "924:7:0"
+              },
+              "arg": "_auction_start",
+              "ast_type": "arg",
+              "col_offset": 54,
+              "end_col_offset": 77,
+              "end_lineno": 30,
+              "lineno": 30,
+              "node_id": 110,
+              "src": "908:23:0"
+            },
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 94,
+                "end_col_offset": 101,
+                "end_lineno": 30,
+                "id": "uint256",
+                "lineno": 30,
+                "node_id": 114,
+                "src": "948:7:0"
+              },
+              "arg": "_bidding_time",
+              "ast_type": "arg",
+              "col_offset": 79,
+              "end_col_offset": 101,
+              "end_lineno": 30,
+              "lineno": 30,
+              "node_id": 113,
+              "src": "933:22:0"
+            }
+          ],
+          "ast_type": "arguments",
+          "col_offset": 13,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 101,
+          "end_lineno": 30,
+          "lineno": 30,
+          "node_id": 103,
+          "src": "867:88:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "Assign",
+            "col_offset": 4,
+            "end_col_offset": 36,
+            "end_lineno": 31,
+            "lineno": 31,
+            "node_id": 116,
+            "src": "962:32:0",
+            "target": {
+              "ast_type": "Attribute",
+              "attr": "beneficiary",
+              "col_offset": 4,
+              "end_col_offset": 20,
+              "end_lineno": 31,
+              "lineno": 31,
+              "node_id": 117,
+              "src": "962:16:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 4,
+                "end_col_offset": 8,
+                "end_lineno": 31,
+                "id": "self",
+                "lineno": 31,
+                "node_id": 118,
+                "src": "962:4:0"
+              }
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 23,
+              "end_col_offset": 36,
+              "end_lineno": 31,
+              "id": "_auctionowner",
+              "lineno": 31,
+              "node_id": 121,
+              "src": "981:13:0"
+            }
+          },
+          {
+            "ast_type": "Assign",
+            "col_offset": 4,
+            "end_col_offset": 23,
+            "end_lineno": 32,
+            "lineno": 32,
+            "node_id": 123,
+            "src": "999:19:0",
+            "target": {
+              "ast_type": "Attribute",
+              "attr": "items",
+              "col_offset": 4,
+              "end_col_offset": 14,
+              "end_lineno": 32,
+              "lineno": 32,
+              "node_id": 124,
+              "src": "999:10:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 4,
+                "end_col_offset": 8,
+                "end_lineno": 32,
+                "id": "self",
+                "lineno": 32,
+                "node_id": 125,
+                "src": "999:4:0"
+              }
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 17,
+              "end_col_offset": 23,
+              "end_lineno": 32,
+              "id": "_items",
+              "lineno": 32,
+              "node_id": 128,
+              "src": "1012:6:0"
+            }
+          },
+          {
+            "ast_type": "Assign",
+            "col_offset": 4,
+            "end_col_offset": 38,
+            "end_lineno": 33,
+            "lineno": 33,
+            "node_id": 130,
+            "src": "1023:34:0",
+            "target": {
+              "ast_type": "Attribute",
+              "attr": "auctionStart",
+              "col_offset": 4,
+              "end_col_offset": 21,
+              "end_lineno": 33,
+              "lineno": 33,
+              "node_id": 131,
+              "src": "1023:17:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 4,
+                "end_col_offset": 8,
+                "end_lineno": 33,
+                "id": "self",
+                "lineno": 33,
+                "node_id": 132,
+                "src": "1023:4:0"
+              }
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 24,
+              "end_col_offset": 38,
+              "end_lineno": 33,
+              "id": "_auction_start",
+              "lineno": 33,
+              "node_id": 135,
+              "src": "1043:14:0"
+            }
+          },
+          {
+            "ast_type": "Assign",
+            "col_offset": 4,
+            "end_col_offset": 55,
+            "end_lineno": 34,
+            "lineno": 34,
+            "node_id": 137,
+            "src": "1122:51:0",
+            "target": {
+              "ast_type": "Attribute",
+              "attr": "auctionEnd",
+              "col_offset": 4,
+              "end_col_offset": 19,
+              "end_lineno": 34,
+              "lineno": 34,
+              "node_id": 138,
+              "src": "1122:15:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 4,
+                "end_col_offset": 8,
+                "end_lineno": 34,
+                "id": "self",
+                "lineno": 34,
+                "node_id": 139,
+                "src": "1122:4:0"
+              }
+            },
+            "value": {
+              "ast_type": "BinOp",
+              "col_offset": 22,
+              "end_col_offset": 55,
+              "end_lineno": 34,
+              "left": {
+                "ast_type": "Attribute",
+                "attr": "auctionStart",
+                "col_offset": 22,
+                "end_col_offset": 39,
+                "end_lineno": 34,
+                "lineno": 34,
+                "node_id": 143,
+                "src": "1140:17:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 22,
+                  "end_col_offset": 26,
+                  "end_lineno": 34,
+                  "id": "self",
+                  "lineno": 34,
+                  "node_id": 144,
+                  "src": "1140:4:0"
+                }
+              },
+              "lineno": 34,
+              "node_id": 142,
+              "op": {
+                "ast_type": "Add",
+                "col_offset": 22,
+                "end_col_offset": 55,
+                "end_lineno": 34,
+                "lineno": 34,
+                "node_id": 290,
+                "src": "1140:33:0"
+              },
+              "right": {
+                "ast_type": "Name",
+                "col_offset": 42,
+                "end_col_offset": 55,
+                "end_lineno": 34,
+                "id": "_bidding_time",
+                "lineno": 34,
+                "node_id": 148,
+                "src": "1160:13:0"
+              },
+              "src": "1140:33:0"
+            }
+          },
+          {
+            "ast_type": "Assert",
+            "col_offset": 4,
+            "end_col_offset": 44,
+            "end_lineno": 35,
+            "lineno": 35,
+            "msg": null,
+            "node_id": 150,
+            "src": "1178:40:0",
+            "test": {
+              "ast_type": "Compare",
+              "col_offset": 11,
+              "end_col_offset": 44,
+              "end_lineno": 35,
+              "left": {
+                "ast_type": "Attribute",
+                "attr": "timestamp",
+                "col_offset": 11,
+                "end_col_offset": 26,
+                "end_lineno": 35,
+                "lineno": 35,
+                "node_id": 152,
+                "src": "1185:15:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 11,
+                  "end_col_offset": 16,
+                  "end_lineno": 35,
+                  "id": "block",
+                  "lineno": 35,
+                  "node_id": 153,
+                  "src": "1185:5:0"
+                }
+              },
+              "lineno": 35,
+              "node_id": 151,
+              "op": {
+                "ast_type": "Lt",
+                "col_offset": 11,
+                "end_col_offset": 44,
+                "end_lineno": 35,
+                "lineno": 35,
+                "node_id": 308,
+                "src": "1185:33:0"
+              },
+              "right": {
+                "ast_type": "Attribute",
+                "attr": "auctionEnd",
+                "col_offset": 29,
+                "end_col_offset": 44,
+                "end_lineno": 35,
+                "lineno": 35,
+                "node_id": 157,
+                "src": "1203:15:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 29,
+                  "end_col_offset": 33,
+                  "end_lineno": 35,
+                  "id": "self",
+                  "lineno": 35,
+                  "node_id": 158,
+                  "src": "1203:4:0"
+                }
+              },
+              "src": "1185:33:0"
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 29,
+            "id": "external",
+            "lineno": 29,
+            "node_id": 161,
+            "src": "845:8:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 44,
+        "end_lineno": 35,
+        "lineno": 30,
+        "name": "__init__",
+        "node_id": 102,
+        "pos": null,
+        "returns": null,
+        "src": "854:364:0"
+      },
+      {
+        "args": {
+          "args": [
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 18,
+                "end_col_offset": 25,
+                "end_lineno": 43,
+                "id": "uint256",
+                "lineno": 43,
+                "node_id": 166,
+                "src": "1438:7:0"
+              },
+              "arg": "_tokenID",
+              "ast_type": "arg",
+              "col_offset": 8,
+              "end_col_offset": 25,
+              "end_lineno": 43,
+              "lineno": 43,
+              "node_id": 165,
+              "src": "1428:17:0"
+            }
+          ],
+          "ast_type": "arguments",
+          "col_offset": 8,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 25,
+          "end_lineno": 43,
+          "lineno": 43,
+          "node_id": 164,
+          "src": "1428:17:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "Assert",
+            "col_offset": 4,
+            "end_col_offset": 47,
+            "end_lineno": 45,
+            "lineno": 45,
+            "msg": null,
+            "node_id": 168,
+            "src": "1495:43:0",
+            "test": {
+              "ast_type": "Compare",
+              "col_offset": 11,
+              "end_col_offset": 47,
+              "end_lineno": 45,
+              "left": {
+                "ast_type": "Attribute",
+                "attr": "timestamp",
+                "col_offset": 11,
+                "end_col_offset": 26,
+                "end_lineno": 45,
+                "lineno": 45,
+                "node_id": 170,
+                "src": "1502:15:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 11,
+                  "end_col_offset": 16,
+                  "end_lineno": 45,
+                  "id": "block",
+                  "lineno": 45,
+                  "node_id": 171,
+                  "src": "1502:5:0"
+                }
+              },
+              "lineno": 45,
+              "node_id": 169,
+              "op": {
+                "ast_type": "GtE",
+                "col_offset": 11,
+                "end_col_offset": 47,
+                "end_lineno": 45,
+                "lineno": 45,
+                "node_id": 358,
+                "src": "1502:36:0"
+              },
+              "right": {
+                "ast_type": "Attribute",
+                "attr": "auctionStart",
+                "col_offset": 30,
+                "end_col_offset": 47,
+                "end_lineno": 45,
+                "lineno": 45,
+                "node_id": 175,
+                "src": "1521:17:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 30,
+                  "end_col_offset": 34,
+                  "end_lineno": 45,
+                  "id": "self",
+                  "lineno": 45,
+                  "node_id": 176,
+                  "src": "1521:4:0"
+                }
+              },
+              "src": "1502:36:0"
+            }
+          },
+          {
+            "ast_type": "Assert",
+            "col_offset": 4,
+            "end_col_offset": 32,
+            "end_lineno": 46,
+            "lineno": 46,
+            "msg": null,
+            "node_id": 179,
+            "src": "1543:28:0",
+            "test": {
+              "ast_type": "Compare",
+              "col_offset": 11,
+              "end_col_offset": 32,
+              "end_lineno": 46,
+              "left": {
+                "ast_type": "Name",
+                "col_offset": 11,
+                "end_col_offset": 19,
+                "end_lineno": 46,
+                "id": "_tokenID",
+                "lineno": 46,
+                "node_id": 181,
+                "src": "1550:8:0"
+              },
+              "lineno": 46,
+              "node_id": 180,
+              "op": {
+                "ast_type": "Lt",
+                "col_offset": 11,
+                "end_col_offset": 32,
+                "end_lineno": 46,
+                "lineno": 46,
+                "node_id": 308,
+                "src": "1550:21:0"
+              },
+              "right": {
+                "ast_type": "Attribute",
+                "attr": "items",
+                "col_offset": 22,
+                "end_col_offset": 32,
+                "end_lineno": 46,
+                "lineno": 46,
+                "node_id": 184,
+                "src": "1561:10:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 22,
+                  "end_col_offset": 26,
+                  "end_lineno": 46,
+                  "id": "self",
+                  "lineno": 46,
+                  "node_id": 185,
+                  "src": "1561:4:0"
+                }
+              },
+              "src": "1550:21:0"
+            }
+          },
+          {
+            "ast_type": "Assert",
+            "col_offset": 4,
+            "end_col_offset": 44,
+            "end_lineno": 48,
+            "lineno": 48,
+            "msg": null,
+            "node_id": 188,
+            "src": "1615:40:0",
+            "test": {
+              "ast_type": "Compare",
+              "col_offset": 11,
+              "end_col_offset": 44,
+              "end_lineno": 48,
+              "left": {
+                "ast_type": "Attribute",
+                "attr": "timestamp",
+                "col_offset": 11,
+                "end_col_offset": 26,
+                "end_lineno": 48,
+                "lineno": 48,
+                "node_id": 190,
+                "src": "1622:15:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 11,
+                  "end_col_offset": 16,
+                  "end_lineno": 48,
+                  "id": "block",
+                  "lineno": 48,
+                  "node_id": 191,
+                  "src": "1622:5:0"
+                }
+              },
+              "lineno": 48,
+              "node_id": 189,
+              "op": {
+                "ast_type": "Lt",
+                "col_offset": 11,
+                "end_col_offset": 44,
+                "end_lineno": 48,
+                "lineno": 48,
+                "node_id": 308,
+                "src": "1622:33:0"
+              },
+              "right": {
+                "ast_type": "Attribute",
+                "attr": "auctionEnd",
+                "col_offset": 29,
+                "end_col_offset": 44,
+                "end_lineno": 48,
+                "lineno": 48,
+                "node_id": 195,
+                "src": "1640:15:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 29,
+                  "end_col_offset": 33,
+                  "end_lineno": 48,
+                  "id": "self",
+                  "lineno": 48,
+                  "node_id": 196,
+                  "src": "1640:4:0"
+                }
+              },
+              "src": "1622:33:0"
+            }
+          },
+          {
+            "ast_type": "Assert",
+            "col_offset": 4,
+            "end_col_offset": 48,
+            "end_lineno": 50,
+            "lineno": 50,
+            "msg": null,
+            "node_id": 199,
+            "src": "1694:44:0",
+            "test": {
+              "ast_type": "Compare",
+              "col_offset": 11,
+              "end_col_offset": 48,
+              "end_lineno": 50,
+              "left": {
+                "ast_type": "Attribute",
+                "attr": "value",
+                "col_offset": 11,
+                "end_col_offset": 20,
+                "end_lineno": 50,
+                "lineno": 50,
+                "node_id": 201,
+                "src": "1701:9:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 11,
+                  "end_col_offset": 14,
+                  "end_lineno": 50,
+                  "id": "msg",
+                  "lineno": 50,
+                  "node_id": 202,
+                  "src": "1701:3:0"
+                }
+              },
+              "lineno": 50,
+              "node_id": 200,
+              "op": {
+                "ast_type": "Gt",
+                "col_offset": 11,
+                "end_col_offset": 48,
+                "end_lineno": 50,
+                "lineno": 50,
+                "node_id": 205,
+                "src": "1701:37:0"
+              },
+              "right": {
+                "ast_type": "Subscript",
+                "col_offset": 23,
+                "end_col_offset": 48,
+                "end_lineno": 50,
+                "lineno": 50,
+                "node_id": 206,
+                "slice": {
+                  "ast_type": "Index",
+                  "col_offset": 23,
+                  "end_col_offset": 48,
+                  "end_lineno": 50,
+                  "lineno": 50,
+                  "node_id": 214,
+                  "src": "1713:25:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 39,
+                    "end_col_offset": 47,
+                    "end_lineno": 50,
+                    "id": "_tokenID",
+                    "lineno": 50,
+                    "node_id": 211,
+                    "src": "1729:8:0"
+                  }
+                },
+                "src": "1713:25:0",
+                "value": {
+                  "ast_type": "Attribute",
+                  "attr": "highestBid",
+                  "col_offset": 23,
+                  "end_col_offset": 38,
+                  "end_lineno": 50,
+                  "lineno": 50,
+                  "node_id": 207,
+                  "src": "1713:15:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 23,
+                    "end_col_offset": 27,
+                    "end_lineno": 50,
+                    "id": "self",
+                    "lineno": 50,
+                    "node_id": 208,
+                    "src": "1713:4:0"
+                  }
+                }
+              },
+              "src": "1701:37:0"
+            }
+          },
+          {
+            "ast_type": "AugAssign",
+            "col_offset": 4,
+            "end_col_offset": 82,
+            "end_lineno": 52,
+            "lineno": 52,
+            "node_id": 215,
+            "op": {
+              "ast_type": "Add",
+              "col_offset": 4,
+              "end_col_offset": 82,
+              "end_lineno": 52,
+              "lineno": 52,
+              "node_id": 290,
+              "src": "1795:78:0"
+            },
+            "src": "1795:78:0",
+            "target": {
+              "ast_type": "Subscript",
+              "col_offset": 4,
+              "end_col_offset": 53,
+              "end_lineno": 52,
+              "lineno": 52,
+              "node_id": 216,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 4,
+                "end_col_offset": 53,
+                "end_lineno": 52,
+                "lineno": 52,
+                "node_id": 231,
+                "src": "1795:49:0",
+                "value": {
+                  "ast_type": "Subscript",
+                  "col_offset": 24,
+                  "end_col_offset": 52,
+                  "end_lineno": 52,
+                  "lineno": 52,
+                  "node_id": 221,
+                  "slice": {
+                    "ast_type": "Index",
+                    "col_offset": 24,
+                    "end_col_offset": 52,
+                    "end_lineno": 52,
+                    "lineno": 52,
+                    "node_id": 229,
+                    "src": "1815:28:0",
+                    "value": {
+                      "ast_type": "Name",
+                      "col_offset": 43,
+                      "end_col_offset": 51,
+                      "end_lineno": 52,
+                      "id": "_tokenID",
+                      "lineno": 52,
+                      "node_id": 226,
+                      "src": "1834:8:0"
+                    }
+                  },
+                  "src": "1815:28:0",
+                  "value": {
+                    "ast_type": "Attribute",
+                    "attr": "highestBidder",
+                    "col_offset": 24,
+                    "end_col_offset": 42,
+                    "end_lineno": 52,
+                    "lineno": 52,
+                    "node_id": 222,
+                    "src": "1815:18:0",
+                    "value": {
+                      "ast_type": "Name",
+                      "col_offset": 24,
+                      "end_col_offset": 28,
+                      "end_lineno": 52,
+                      "id": "self",
+                      "lineno": 52,
+                      "node_id": 223,
+                      "src": "1815:4:0"
+                    }
+                  }
+                }
+              },
+              "src": "1795:49:0",
+              "value": {
+                "ast_type": "Attribute",
+                "attr": "pendingReturns",
+                "col_offset": 4,
+                "end_col_offset": 23,
+                "end_lineno": 52,
+                "lineno": 52,
+                "node_id": 217,
+                "src": "1795:19:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 4,
+                  "end_col_offset": 8,
+                  "end_lineno": 52,
+                  "id": "self",
+                  "lineno": 52,
+                  "node_id": 218,
+                  "src": "1795:4:0"
+                }
+              }
+            },
+            "value": {
+              "ast_type": "Subscript",
+              "col_offset": 57,
+              "end_col_offset": 82,
+              "end_lineno": 52,
+              "lineno": 52,
+              "node_id": 233,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 57,
+                "end_col_offset": 82,
+                "end_lineno": 52,
+                "lineno": 52,
+                "node_id": 241,
+                "src": "1848:25:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 73,
+                  "end_col_offset": 81,
+                  "end_lineno": 52,
+                  "id": "_tokenID",
+                  "lineno": 52,
+                  "node_id": 238,
+                  "src": "1864:8:0"
+                }
+              },
+              "src": "1848:25:0",
+              "value": {
+                "ast_type": "Attribute",
+                "attr": "highestBid",
+                "col_offset": 57,
+                "end_col_offset": 72,
+                "end_lineno": 52,
+                "lineno": 52,
+                "node_id": 234,
+                "src": "1848:15:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 57,
+                  "end_col_offset": 61,
+                  "end_lineno": 52,
+                  "id": "self",
+                  "lineno": 52,
+                  "node_id": 235,
+                  "src": "1848:4:0"
+                }
+              }
+            }
+          },
+          {
+            "ast_type": "AugAssign",
+            "col_offset": 4,
+            "end_col_offset": 46,
+            "end_lineno": 54,
+            "lineno": 54,
+            "node_id": 242,
+            "op": {
+              "ast_type": "Sub",
+              "col_offset": 4,
+              "end_col_offset": 46,
+              "end_lineno": 54,
+              "lineno": 54,
+              "node_id": 247,
+              "src": "1920:42:0"
+            },
+            "src": "1920:42:0",
+            "target": {
+              "ast_type": "Attribute",
+              "attr": "finalSum",
+              "col_offset": 4,
+              "end_col_offset": 17,
+              "end_lineno": 54,
+              "lineno": 54,
+              "node_id": 243,
+              "src": "1920:13:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 4,
+                "end_col_offset": 8,
+                "end_lineno": 54,
+                "id": "self",
+                "lineno": 54,
+                "node_id": 244,
+                "src": "1920:4:0"
+              }
+            },
+            "value": {
+              "ast_type": "Subscript",
+              "col_offset": 21,
+              "end_col_offset": 46,
+              "end_lineno": 54,
+              "lineno": 54,
+              "node_id": 248,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 21,
+                "end_col_offset": 46,
+                "end_lineno": 54,
+                "lineno": 54,
+                "node_id": 256,
+                "src": "1937:25:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 37,
+                  "end_col_offset": 45,
+                  "end_lineno": 54,
+                  "id": "_tokenID",
+                  "lineno": 54,
+                  "node_id": 253,
+                  "src": "1953:8:0"
+                }
+              },
+              "src": "1937:25:0",
+              "value": {
+                "ast_type": "Attribute",
+                "attr": "highestBid",
+                "col_offset": 21,
+                "end_col_offset": 36,
+                "end_lineno": 54,
+                "lineno": 54,
+                "node_id": 249,
+                "src": "1937:15:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 21,
+                  "end_col_offset": 25,
+                  "end_lineno": 54,
+                  "id": "self",
+                  "lineno": 54,
+                  "node_id": 250,
+                  "src": "1937:4:0"
+                }
+              }
+            }
+          },
+          {
+            "ast_type": "Assign",
+            "col_offset": 4,
+            "end_col_offset": 45,
+            "end_lineno": 56,
+            "lineno": 56,
+            "node_id": 257,
+            "src": "1984:41:0",
+            "target": {
+              "ast_type": "Subscript",
+              "col_offset": 4,
+              "end_col_offset": 32,
+              "end_lineno": 56,
+              "lineno": 56,
+              "node_id": 258,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 4,
+                "end_col_offset": 32,
+                "end_lineno": 56,
+                "lineno": 56,
+                "node_id": 266,
+                "src": "1984:28:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 23,
+                  "end_col_offset": 31,
+                  "end_lineno": 56,
+                  "id": "_tokenID",
+                  "lineno": 56,
+                  "node_id": 263,
+                  "src": "2003:8:0"
+                }
+              },
+              "src": "1984:28:0",
+              "value": {
+                "ast_type": "Attribute",
+                "attr": "highestBidder",
+                "col_offset": 4,
+                "end_col_offset": 22,
+                "end_lineno": 56,
+                "lineno": 56,
+                "node_id": 259,
+                "src": "1984:18:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 4,
+                  "end_col_offset": 8,
+                  "end_lineno": 56,
+                  "id": "self",
+                  "lineno": 56,
+                  "node_id": 260,
+                  "src": "1984:4:0"
+                }
+              }
+            },
+            "value": {
+              "ast_type": "Attribute",
+              "attr": "sender",
+              "col_offset": 35,
+              "end_col_offset": 45,
+              "end_lineno": 56,
+              "lineno": 56,
+              "node_id": 267,
+              "src": "2015:10:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 35,
+                "end_col_offset": 38,
+                "end_lineno": 56,
+                "id": "msg",
+                "lineno": 56,
+                "node_id": 268,
+                "src": "2015:3:0"
+              }
+            }
+          },
+          {
+            "ast_type": "Assign",
+            "col_offset": 4,
+            "end_col_offset": 41,
+            "end_lineno": 57,
+            "lineno": 57,
+            "node_id": 271,
+            "src": "2030:37:0",
+            "target": {
+              "ast_type": "Subscript",
+              "col_offset": 4,
+              "end_col_offset": 29,
+              "end_lineno": 57,
+              "lineno": 57,
+              "node_id": 272,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 4,
+                "end_col_offset": 29,
+                "end_lineno": 57,
+                "lineno": 57,
+                "node_id": 280,
+                "src": "2030:25:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 20,
+                  "end_col_offset": 28,
+                  "end_lineno": 57,
+                  "id": "_tokenID",
+                  "lineno": 57,
+                  "node_id": 277,
+                  "src": "2046:8:0"
+                }
+              },
+              "src": "2030:25:0",
+              "value": {
+                "ast_type": "Attribute",
+                "attr": "highestBid",
+                "col_offset": 4,
+                "end_col_offset": 19,
+                "end_lineno": 57,
+                "lineno": 57,
+                "node_id": 273,
+                "src": "2030:15:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 4,
+                  "end_col_offset": 8,
+                  "end_lineno": 57,
+                  "id": "self",
+                  "lineno": 57,
+                  "node_id": 274,
+                  "src": "2030:4:0"
+                }
+              }
+            },
+            "value": {
+              "ast_type": "Attribute",
+              "attr": "value",
+              "col_offset": 32,
+              "end_col_offset": 41,
+              "end_lineno": 57,
+              "lineno": 57,
+              "node_id": 281,
+              "src": "2058:9:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 32,
+                "end_col_offset": 35,
+                "end_lineno": 57,
+                "id": "msg",
+                "lineno": 57,
+                "node_id": 282,
+                "src": "2058:3:0"
+              }
+            }
+          },
+          {
+            "ast_type": "AugAssign",
+            "col_offset": 4,
+            "end_col_offset": 30,
+            "end_lineno": 59,
+            "lineno": 59,
+            "node_id": 285,
+            "op": {
+              "ast_type": "Add",
+              "col_offset": 4,
+              "end_col_offset": 30,
+              "end_lineno": 59,
+              "lineno": 59,
+              "node_id": 290,
+              "src": "2101:26:0"
+            },
+            "src": "2101:26:0",
+            "target": {
+              "ast_type": "Attribute",
+              "attr": "finalSum",
+              "col_offset": 4,
+              "end_col_offset": 17,
+              "end_lineno": 59,
+              "lineno": 59,
+              "node_id": 286,
+              "src": "2101:13:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 4,
+                "end_col_offset": 8,
+                "end_lineno": 59,
+                "id": "self",
+                "lineno": 59,
+                "node_id": 287,
+                "src": "2101:4:0"
+              }
+            },
+            "value": {
+              "ast_type": "Attribute",
+              "attr": "value",
+              "col_offset": 21,
+              "end_col_offset": 30,
+              "end_lineno": 59,
+              "lineno": 59,
+              "node_id": 291,
+              "src": "2118:9:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 21,
+                "end_col_offset": 24,
+                "end_lineno": 59,
+                "id": "msg",
+                "lineno": 59,
+                "node_id": 292,
+                "src": "2118:3:0"
+              }
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 41,
+            "id": "external",
+            "lineno": 41,
+            "node_id": 295,
+            "src": "1402:8:0"
+          },
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 8,
+            "end_lineno": 42,
+            "id": "payable",
+            "lineno": 42,
+            "node_id": 297,
+            "src": "1412:7:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 30,
+        "end_lineno": 59,
+        "lineno": 43,
+        "name": "bid",
+        "node_id": 163,
+        "pos": null,
+        "returns": null,
+        "src": "1420:707:0"
+      },
+      {
+        "args": {
+          "args": [
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 25,
+                "end_col_offset": 32,
+                "end_lineno": 62,
+                "id": "uint256",
+                "lineno": 62,
+                "node_id": 302,
+                "src": "2167:7:0"
+              },
+              "arg": "_tokenID",
+              "ast_type": "arg",
+              "col_offset": 15,
+              "end_col_offset": 32,
+              "end_lineno": 62,
+              "lineno": 62,
+              "node_id": 301,
+              "src": "2157:17:0"
+            }
+          ],
+          "ast_type": "arguments",
+          "col_offset": 15,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 32,
+          "end_lineno": 62,
+          "lineno": 62,
+          "node_id": 300,
+          "src": "2157:17:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "Assert",
+            "col_offset": 4,
+            "end_col_offset": 32,
+            "end_lineno": 63,
+            "lineno": 63,
+            "msg": null,
+            "node_id": 304,
+            "src": "2192:28:0",
+            "test": {
+              "ast_type": "Compare",
+              "col_offset": 11,
+              "end_col_offset": 32,
+              "end_lineno": 63,
+              "left": {
+                "ast_type": "Name",
+                "col_offset": 11,
+                "end_col_offset": 19,
+                "end_lineno": 63,
+                "id": "_tokenID",
+                "lineno": 63,
+                "node_id": 306,
+                "src": "2199:8:0"
+              },
+              "lineno": 63,
+              "node_id": 305,
+              "op": {
+                "ast_type": "Lt",
+                "col_offset": 11,
+                "end_col_offset": 32,
+                "end_lineno": 63,
+                "lineno": 63,
+                "node_id": 308,
+                "src": "2199:21:0"
+              },
+              "right": {
+                "ast_type": "Attribute",
+                "attr": "items",
+                "col_offset": 22,
+                "end_col_offset": 32,
+                "end_lineno": 63,
+                "lineno": 63,
+                "node_id": 309,
+                "src": "2210:10:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 22,
+                  "end_col_offset": 26,
+                  "end_lineno": 63,
+                  "id": "self",
+                  "lineno": 63,
+                  "node_id": 310,
+                  "src": "2210:4:0"
+                }
+              },
+              "src": "2199:21:0"
+            }
+          },
+          {
+            "ast_type": "Return",
+            "col_offset": 4,
+            "end_col_offset": 36,
+            "end_lineno": 64,
+            "lineno": 64,
+            "node_id": 313,
+            "src": "2225:32:0",
+            "value": {
+              "ast_type": "Subscript",
+              "col_offset": 11,
+              "end_col_offset": 36,
+              "end_lineno": 64,
+              "lineno": 64,
+              "node_id": 314,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 11,
+                "end_col_offset": 36,
+                "end_lineno": 64,
+                "lineno": 64,
+                "node_id": 322,
+                "src": "2232:25:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 27,
+                  "end_col_offset": 35,
+                  "end_lineno": 64,
+                  "id": "_tokenID",
+                  "lineno": 64,
+                  "node_id": 319,
+                  "src": "2248:8:0"
+                }
+              },
+              "src": "2232:25:0",
+              "value": {
+                "ast_type": "Attribute",
+                "attr": "highestBid",
+                "col_offset": 11,
+                "end_col_offset": 26,
+                "end_lineno": 64,
+                "lineno": 64,
+                "node_id": 315,
+                "src": "2232:15:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 11,
+                  "end_col_offset": 15,
+                  "end_lineno": 64,
+                  "id": "self",
+                  "lineno": 64,
+                  "node_id": 316,
+                  "src": "2232:4:0"
+                }
+              }
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 61,
+            "id": "external",
+            "lineno": 61,
+            "node_id": 323,
+            "src": "2133:8:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 36,
+        "end_lineno": 64,
+        "lineno": 62,
+        "name": "currentBid",
+        "node_id": 299,
+        "pos": null,
+        "returns": {
+          "ast_type": "Name",
+          "col_offset": 37,
+          "end_col_offset": 44,
+          "end_lineno": 62,
+          "id": "uint256",
+          "lineno": 62,
+          "node_id": 325,
+          "src": "2179:7:0"
+        },
+        "src": "2142:115:0"
+      },
+      {
+        "args": {
+          "args": [],
+          "ast_type": "arguments",
+          "col_offset": 0,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 3,
+          "end_lineno": 73,
+          "lineno": 73,
+          "node_id": 328,
+          "src": "2526:3:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "Expr",
+            "col_offset": 4,
+            "end_col_offset": 53,
+            "end_lineno": 74,
+            "lineno": 74,
+            "node_id": 329,
+            "src": "2546:49:0",
+            "value": {
+              "args": [
+                {
+                  "ast_type": "Attribute",
+                  "attr": "sender",
+                  "col_offset": 9,
+                  "end_col_offset": 19,
+                  "end_lineno": 74,
+                  "lineno": 74,
+                  "node_id": 333,
+                  "src": "2551:10:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 9,
+                    "end_col_offset": 12,
+                    "end_lineno": 74,
+                    "id": "msg",
+                    "lineno": 74,
+                    "node_id": 334,
+                    "src": "2551:3:0"
+                  }
+                },
+                {
+                  "ast_type": "Subscript",
+                  "col_offset": 21,
+                  "end_col_offset": 52,
+                  "end_lineno": 74,
+                  "lineno": 74,
+                  "node_id": 337,
+                  "slice": {
+                    "ast_type": "Index",
+                    "col_offset": 21,
+                    "end_col_offset": 52,
+                    "end_lineno": 74,
+                    "lineno": 74,
+                    "node_id": 347,
+                    "src": "2563:31:0",
+                    "value": {
+                      "ast_type": "Attribute",
+                      "attr": "sender",
+                      "col_offset": 41,
+                      "end_col_offset": 51,
+                      "end_lineno": 74,
+                      "lineno": 74,
+                      "node_id": 342,
+                      "src": "2583:10:0",
+                      "value": {
+                        "ast_type": "Name",
+                        "col_offset": 41,
+                        "end_col_offset": 44,
+                        "end_lineno": 74,
+                        "id": "msg",
+                        "lineno": 74,
+                        "node_id": 343,
+                        "src": "2583:3:0"
+                      }
+                    }
+                  },
+                  "src": "2563:31:0",
+                  "value": {
+                    "ast_type": "Attribute",
+                    "attr": "pendingReturns",
+                    "col_offset": 21,
+                    "end_col_offset": 40,
+                    "end_lineno": 74,
+                    "lineno": 74,
+                    "node_id": 338,
+                    "src": "2563:19:0",
+                    "value": {
+                      "ast_type": "Name",
+                      "col_offset": 21,
+                      "end_col_offset": 25,
+                      "end_lineno": 74,
+                      "id": "self",
+                      "lineno": 74,
+                      "node_id": 339,
+                      "src": "2563:4:0"
+                    }
+                  }
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 4,
+              "end_col_offset": 53,
+              "end_lineno": 74,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 4,
+                "end_col_offset": 8,
+                "end_lineno": 74,
+                "id": "send",
+                "lineno": 74,
+                "node_id": 331,
+                "src": "2546:4:0"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 74,
+              "node_id": 330,
+              "src": "2546:49:0"
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 72,
+            "id": "external",
+            "lineno": 72,
+            "node_id": 348,
+            "src": "2517:8:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 53,
+        "end_lineno": 74,
+        "lineno": 73,
+        "name": "withdraw",
+        "node_id": 327,
+        "pos": null,
+        "returns": null,
+        "src": "2526:69:0"
+      },
+      {
+        "args": {
+          "args": [],
+          "ast_type": "arguments",
+          "col_offset": 0,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 3,
+          "end_lineno": 79,
+          "lineno": 79,
+          "node_id": 351,
+          "src": "2672:3:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "Assert",
+            "col_offset": 4,
+            "end_col_offset": 45,
+            "end_lineno": 95,
+            "lineno": 95,
+            "msg": null,
+            "node_id": 352,
+            "src": "3412:41:0",
+            "test": {
+              "ast_type": "Compare",
+              "col_offset": 11,
+              "end_col_offset": 45,
+              "end_lineno": 95,
+              "left": {
+                "ast_type": "Attribute",
+                "attr": "timestamp",
+                "col_offset": 11,
+                "end_col_offset": 26,
+                "end_lineno": 95,
+                "lineno": 95,
+                "node_id": 354,
+                "src": "3419:15:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 11,
+                  "end_col_offset": 16,
+                  "end_lineno": 95,
+                  "id": "block",
+                  "lineno": 95,
+                  "node_id": 355,
+                  "src": "3419:5:0"
+                }
+              },
+              "lineno": 95,
+              "node_id": 353,
+              "op": {
+                "ast_type": "GtE",
+                "col_offset": 11,
+                "end_col_offset": 45,
+                "end_lineno": 95,
+                "lineno": 95,
+                "node_id": 358,
+                "src": "3419:34:0"
+              },
+              "right": {
+                "ast_type": "Attribute",
+                "attr": "auctionEnd",
+                "col_offset": 30,
+                "end_col_offset": 45,
+                "end_lineno": 95,
+                "lineno": 95,
+                "node_id": 359,
+                "src": "3438:15:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 30,
+                  "end_col_offset": 34,
+                  "end_lineno": 95,
+                  "id": "self",
+                  "lineno": 95,
+                  "node_id": 360,
+                  "src": "3438:4:0"
+                }
+              },
+              "src": "3419:34:0"
+            }
+          },
+          {
+            "ast_type": "Assert",
+            "col_offset": 4,
+            "end_col_offset": 25,
+            "end_lineno": 97,
+            "lineno": 97,
+            "msg": null,
+            "node_id": 363,
+            "src": "3511:21:0",
+            "test": {
+              "ast_type": "UnaryOp",
+              "col_offset": 11,
+              "end_col_offset": 25,
+              "end_lineno": 97,
+              "lineno": 97,
+              "node_id": 364,
+              "op": {
+                "ast_type": "Not",
+                "col_offset": 11,
+                "end_col_offset": 25,
+                "end_lineno": 97,
+                "lineno": 97,
+                "node_id": 365,
+                "src": "3518:14:0"
+              },
+              "operand": {
+                "ast_type": "Attribute",
+                "attr": "ended",
+                "col_offset": 15,
+                "end_col_offset": 25,
+                "end_lineno": 97,
+                "lineno": 97,
+                "node_id": 366,
+                "src": "3522:10:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 15,
+                  "end_col_offset": 19,
+                  "end_lineno": 97,
+                  "id": "self",
+                  "lineno": 97,
+                  "node_id": 367,
+                  "src": "3522:4:0"
+                }
+              },
+              "src": "3518:14:0"
+            }
+          },
+          {
+            "ast_type": "Assign",
+            "col_offset": 4,
+            "end_col_offset": 21,
+            "end_lineno": 100,
+            "lineno": 100,
+            "node_id": 370,
+            "src": "3555:17:0",
+            "target": {
+              "ast_type": "Attribute",
+              "attr": "ended",
+              "col_offset": 4,
+              "end_col_offset": 14,
+              "end_lineno": 100,
+              "lineno": 100,
+              "node_id": 371,
+              "src": "3555:10:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 4,
+                "end_col_offset": 8,
+                "end_lineno": 100,
+                "id": "self",
+                "lineno": 100,
+                "node_id": 372,
+                "src": "3555:4:0"
+              }
+            },
+            "value": {
+              "ast_type": "NameConstant",
+              "col_offset": 17,
+              "end_col_offset": 21,
+              "end_lineno": 100,
+              "lineno": 100,
+              "node_id": 375,
+              "src": "3568:4:0",
+              "value": true
+            }
+          },
+          {
+            "ast_type": "Expr",
+            "col_offset": 4,
+            "end_col_offset": 41,
+            "end_lineno": 103,
+            "lineno": 103,
+            "node_id": 376,
+            "src": "3602:37:0",
+            "value": {
+              "args": [
+                {
+                  "ast_type": "Attribute",
+                  "attr": "beneficiary",
+                  "col_offset": 9,
+                  "end_col_offset": 25,
+                  "end_lineno": 103,
+                  "lineno": 103,
+                  "node_id": 380,
+                  "src": "3607:16:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 9,
+                    "end_col_offset": 13,
+                    "end_lineno": 103,
+                    "id": "self",
+                    "lineno": 103,
+                    "node_id": 381,
+                    "src": "3607:4:0"
+                  }
+                },
+                {
+                  "ast_type": "Attribute",
+                  "attr": "finalSum",
+                  "col_offset": 27,
+                  "end_col_offset": 40,
+                  "end_lineno": 103,
+                  "lineno": 103,
+                  "node_id": 384,
+                  "src": "3625:13:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 27,
+                    "end_col_offset": 31,
+                    "end_lineno": 103,
+                    "id": "self",
+                    "lineno": 103,
+                    "node_id": 385,
+                    "src": "3625:4:0"
+                  }
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 4,
+              "end_col_offset": 41,
+              "end_lineno": 103,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 4,
+                "end_col_offset": 8,
+                "end_lineno": 103,
+                "id": "send",
+                "lineno": 103,
+                "node_id": 378,
+                "src": "3602:4:0"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 103,
+              "node_id": 377,
+              "src": "3602:37:0"
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 78,
+            "id": "external",
+            "lineno": 78,
+            "node_id": 388,
+            "src": "2663:8:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 41,
+        "end_lineno": 103,
+        "lineno": 79,
+        "name": "endAuction",
+        "node_id": 350,
+        "pos": null,
+        "returns": null,
+        "src": "2672:967:0"
+      },
+      {
+        "ast_type": "EventDef",
+        "body": [
+          {
+            "annotation": {
+              "ast_type": "Name",
+              "col_offset": 12,
+              "end_col_offset": 19,
+              "end_lineno": 109,
+              "id": "uint256",
+              "lineno": 109,
+              "node_id": 394,
+              "src": "3688:7:0"
+            },
+            "ast_type": "AnnAssign",
+            "col_offset": 4,
+            "end_col_offset": 19,
+            "end_lineno": 109,
+            "lineno": 109,
+            "node_id": 391,
+            "simple": 1,
+            "src": "3680:15:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 10,
+              "end_lineno": 109,
+              "id": "amount",
+              "lineno": 109,
+              "node_id": 392,
+              "src": "3680:6:0"
+            },
+            "value": null
+          },
+          {
+            "annotation": {
+              "args": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 20,
+                  "end_col_offset": 27,
+                  "end_lineno": 110,
+                  "id": "address",
+                  "lineno": 110,
+                  "node_id": 402,
+                  "src": "3716:7:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 12,
+              "end_col_offset": 28,
+              "end_lineno": 110,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 12,
+                "end_col_offset": 19,
+                "end_lineno": 110,
+                "id": "indexed",
+                "lineno": 110,
+                "node_id": 400,
+                "src": "3708:7:0"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 110,
+              "node_id": 399,
+              "src": "3708:16:0"
+            },
+            "ast_type": "AnnAssign",
+            "col_offset": 4,
+            "end_col_offset": 28,
+            "end_lineno": 110,
+            "lineno": 110,
+            "node_id": 396,
+            "simple": 1,
+            "src": "3700:24:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 10,
+              "end_lineno": 110,
+              "id": "sender",
+              "lineno": 110,
+              "node_id": 397,
+              "src": "3700:6:0"
+            },
+            "value": null
+          }
+        ],
+        "col_offset": 0,
+        "end_col_offset": 28,
+        "end_lineno": 110,
+        "lineno": 108,
+        "name": "Payment",
+        "node_id": 390,
+        "src": "3661:63:0"
+      },
+      {
+        "args": {
+          "args": [],
+          "ast_type": "arguments",
+          "col_offset": 0,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 3,
+          "end_lineno": 114,
+          "lineno": 114,
+          "node_id": 405,
+          "src": "3745:3:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "Log",
+            "col_offset": 4,
+            "end_col_offset": 38,
+            "end_lineno": 115,
+            "lineno": 115,
+            "node_id": 407,
+            "src": "3768:34:0",
+            "value": {
+              "args": [
+                {
+                  "ast_type": "Attribute",
+                  "attr": "value",
+                  "col_offset": 16,
+                  "end_col_offset": 25,
+                  "end_lineno": 115,
+                  "lineno": 115,
+                  "node_id": 411,
+                  "src": "3780:9:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 16,
+                    "end_col_offset": 19,
+                    "end_lineno": 115,
+                    "id": "msg",
+                    "lineno": 115,
+                    "node_id": 412,
+                    "src": "3780:3:0"
+                  }
+                },
+                {
+                  "ast_type": "Attribute",
+                  "attr": "sender",
+                  "col_offset": 27,
+                  "end_col_offset": 37,
+                  "end_lineno": 115,
+                  "lineno": 115,
+                  "node_id": 415,
+                  "src": "3791:10:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 27,
+                    "end_col_offset": 30,
+                    "end_lineno": 115,
+                    "id": "msg",
+                    "lineno": 115,
+                    "node_id": 416,
+                    "src": "3791:3:0"
+                  }
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 8,
+              "end_col_offset": 38,
+              "end_lineno": 115,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 8,
+                "end_col_offset": 15,
+                "end_lineno": 115,
+                "id": "Payment",
+                "lineno": 115,
+                "node_id": 409,
+                "src": "3772:7:0"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 115,
+              "node_id": 408,
+              "src": "3772:30:0"
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 112,
+            "id": "external",
+            "lineno": 112,
+            "node_id": 419,
+            "src": "3727:8:0"
+          },
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 8,
+            "end_lineno": 113,
+            "id": "payable",
+            "lineno": 113,
+            "node_id": 421,
+            "src": "3737:7:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 38,
+        "end_lineno": 115,
+        "lineno": 114,
+        "name": "__default__",
+        "node_id": 404,
+        "pos": null,
+        "returns": null,
+        "src": "3745:57:0"
+      }
+    ],
+    "col_offset": 0,
+    "doc_string": null,
+    "end_col_offset": 38,
+    "end_lineno": 115,
+    "lineno": 1,
+    "name": "contracts/Auction.vy",
+    "node_id": 0,
+    "src": "0:3802:0"
+  },
+  "bytecode": "0x608061030761014039602061030760c03960c05160a01c610302576101405160055561016051600855610180516003556003546101a05181818301106103025780820190509050600455600454421015610302576102ea56600436101561000d57610254565b600035601c5260005163454a2ab381141561010157600354421061028d57600854600435101561028d5760045442101561028d57600260043560e05260c052604060c0205434111561028d576009600160043560e05260c052604060c0205460e05260c052604060c0208054600260043560e05260c052604060c02054818183011061028d578082019050905081555060068054600260043560e05260c052604060c0205480821061028d578082039050905081555033600160043560e05260c052604060c0205534600260043560e05260c052604060c020556006805434818183011061028d5780820190509050815550005b633c7cfe34811415610138573461028d57600854600435101561028d57600260043560e05260c052604060c0205460005260206000f35b633ccfd60b81141561016b573461028d57600060006000600060093360e05260c052604060c02054336000f11561028d57005b63fe67a54b8114156101a9573461028d57600454421061028d5760075461028d57600160075560006000600060006006546005546000f11561028d57005b634f245ef78114156101c6573461028d5760035460005260206000f35b632a24f46c8114156101e3573461028d5760045460005260206000f35b6312fa6feb811415610200573461028d5760075460005260206000f35b63c06fad0681141561021d573461028d5760085460005260206000f35b6326b387bb811415610252573461028d5760043560a01c61028d57600960043560e05260c052604060c0205460005260206000f35b505b337ff817bef87c74de34ab725f43b121c1dff5324aa363f7b9ac176b9aee5115230e6101408080803481525050602090509050610140a2005b600080fd5b6100586102ea036100586000396100586102ea036000f35b600080fd",
+  "bytecodeSha1": "0bdc7c4037e633309d618e2a7833484f5b7059ee",
+  "compiler": {
+    "evm_version": "istanbul",
+    "version": "0.2.16"
+  },
+  "contractName": "Auction",
+  "coverageMap": {
+    "branches": {
+      "0": {}
+    },
+    "statements": {
+      "0": {
+        "Auction.__default__": {
+          "16": [
+            3768,
+            3802
+          ]
+        },
+        "Auction.bid": {
+          "0": [
+            1495,
+            1538
+          ],
+          "1": [
+            1543,
+            1571
+          ],
+          "2": [
+            1615,
+            1655
+          ],
+          "3": [
+            1694,
+            1738
+          ],
+          "4": [
+            1795,
+            1873
+          ],
+          "5": [
+            1920,
+            1962
+          ],
+          "6": [
+            1984,
+            2025
+          ],
+          "7": [
+            2030,
+            2067
+          ],
+          "8": [
+            2101,
+            2127
+          ]
+        },
+        "Auction.currentBid": {
+          "9": [
+            2192,
+            2220
+          ],
+          "10": [
+            2225,
+            2257
+          ]
+        },
+        "Auction.endAuction": {
+          "12": [
+            3412,
+            3453
+          ],
+          "13": [
+            3511,
+            3532
+          ],
+          "14": [
+            3555,
+            3572
+          ],
+          "15": [
+            3602,
+            3639
+          ]
+        },
+        "Auction.withdraw": {
+          "11": [
+            2546,
+            2595
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "0x600436101561000d57610254565b600035601c5260005163454a2ab381141561010157600354421061028d57600854600435101561028d5760045442101561028d57600260043560e05260c052604060c0205434111561028d576009600160043560e05260c052604060c0205460e05260c052604060c0208054600260043560e05260c052604060c02054818183011061028d578082019050905081555060068054600260043560e05260c052604060c0205480821061028d578082039050905081555033600160043560e05260c052604060c0205534600260043560e05260c052604060c020556006805434818183011061028d5780820190509050815550005b633c7cfe34811415610138573461028d57600854600435101561028d57600260043560e05260c052604060c0205460005260206000f35b633ccfd60b81141561016b573461028d57600060006000600060093360e05260c052604060c02054336000f11561028d57005b63fe67a54b8114156101a9573461028d57600454421061028d5760075461028d57600160075560006000600060006006546005546000f11561028d57005b634f245ef78114156101c6573461028d5760035460005260206000f35b632a24f46c8114156101e3573461028d5760045460005260206000f35b6312fa6feb811415610200573461028d5760075460005260206000f35b63c06fad0681141561021d573461028d5760085460005260206000f35b6326b387bb811415610252573461028d5760043560a01c61028d57600960043560e05260c052604060c0205460005260206000f35b505b337ff817bef87c74de34ab725f43b121c1dff5324aa363f7b9ac176b9aee5115230e6101408080803481525050602090509050610140a2005b600080fd",
+  "deployedSourceMap": "-1:-1:0:-;;;;;:::-;;:::-;:::-;;;;;;;1420:707;;;;;:::-;1521:17;1502:36;:15;-1:-1;1495:43;:::-;1561:10;1550:21;:8;:21;;1543:28;;:::-;1640:15;1622:33;:15;:33;1615:40;;:::-;1713:15;1729:8;-1:-1;;;;;;;;1701:37;:9;:37;1694:44;;:::-;1795:19;1815:18;1834:8;-1:-1;;;;;;;;;1795:78;;;;;;;-1:-1;1795:78;1848:15;1864:8;-1:-1;;;;;;;;1795:78;;;;;-1:-1;1795:78;:::-;;;;;;;;;;;1920:13;;;1937:15;1953:8;-1:-1;;;;;;;;1920:42;;;-1:-1;1920:42;:::-;;;;;;;;;;;2015:10;1984:18;2003:8;-1:-1;;;;;;;;1984:41;2058:9;2030:15;2046:8;-1:-1;;;;;;;;2030:37;2101:13;;;2118:9;2101:26;;;;-1:-1;2101:26;:::-;;;;;;;;;;;1420:707;:::-;2142:115;;;;;:::-;;;:::-;2210:10;2199:21;:8;:21;;2192:28;;:::-;2232:15;2248:8;-1:-1;;;;;;;;2225:32;;;;;;2142:115::-;2526:69;;;;;:::-;;;:::-;2546:49;;;;2563:19;2583:10;-1:-1;;;;;;;2546:49;2551:10;2546:49;;;;:::-;2526:69;:::-;2672:967;;;;;:::-;;;:::-;3438:15;3419:34;:15;-1:-1;3412:41;:::-;3522:10;3518:14;3511:21;:::-;3568:4;3555:10;:17;3602:37;;;;3625:13;3602:37;3607:16;3602:37;;;;;:::-;2672:967;:::-;298:15;;;;;:::-;;;:::-;-1:-1;298:15;;;;;;:::-;326;;;;;:::-;;;:::-;-1:-1;326:15;;;;;;:::-;542:12;;;;;:::-;;;:::-;-1:-1;542:12;;;;;;:::-;562:15;;;;;:::-;;;:::-;-1:-1;562:15;;;;;;:::-;662:33;;;;;:::-;;;:::-;-1:-1;;;;662:33;:::-;-1:-1;;;;;;;;;;662:33;;;;;;:::-;-1:-1;:::-;3791:10;3768:34;;;;;3780:9;-1:-1;3768:34;;;;;;;;;;3745:57;-1:-1::-;;;;",
+  "language": "Vyper",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    0,
+    3802
+  ],
+  "opcodes": "PUSH1 0x4 CALLDATASIZE LT ISZERO PUSH2 0x0D JUMPI PUSH2 0x254 JUMP JUMPDEST PUSH1 0x0 CALLDATALOAD PUSH1 0x1C MSTORE PUSH1 0x0 MLOAD PUSH4 0x454A2AB3 DUP2 EQ ISZERO PUSH2 0x11 JUMPI PUSH1 0x3 SLOAD TIMESTAMP LT PUSH2 0x28D JUMPI PUSH1 0x8 SLOAD PUSH1 0x4 CALLDATALOAD LT ISZERO PUSH2 0x28D JUMPI PUSH1 0x4 SLOAD TIMESTAMP LT ISZERO PUSH2 0x28D JUMPI PUSH1 0x2 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD CALLVALUE GT ISZERO PUSH2 0x28D JUMPI PUSH1 0x9 PUSH1 0x1 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 DUP1 SLOAD PUSH1 0x2 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD DUP2 DUP2 DUP4 ADD LT PUSH2 0x28D JUMPI DUP1 DUP3 ADD SWAP1 POP SWAP1 POP DUP2 SSTORE POP PUSH1 0x6 DUP1 SLOAD PUSH1 0x2 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD DUP1 DUP3 LT PUSH2 0x28D JUMPI DUP1 DUP3 SUB SWAP1 POP SWAP1 POP DUP2 SSTORE POP CALLER PUSH1 0x1 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SSTORE CALLVALUE PUSH1 0x2 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SSTORE PUSH1 0x6 DUP1 SLOAD CALLVALUE DUP2 DUP2 DUP4 ADD LT PUSH2 0x28D JUMPI DUP1 DUP3 ADD SWAP1 POP SWAP1 POP DUP2 SSTORE POP STOP JUMPDEST PUSH4 0x3C7CFE34 DUP2 EQ ISZERO PUSH2 0x138 JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x8 SLOAD PUSH1 0x4 CALLDATALOAD LT ISZERO PUSH2 0x28D JUMPI PUSH1 0x2 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x3CCFD6B DUP2 EQ ISZERO PUSH2 0x16B JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 PUSH1 0x9 CALLER PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD CALLER PUSH1 0x0 CALL ISZERO PUSH2 0x28D JUMPI STOP JUMPDEST PUSH4 0xFE67A54B DUP2 EQ ISZERO PUSH2 0x1A9 JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x4 SLOAD TIMESTAMP LT PUSH2 0x28D JUMPI PUSH1 0x7 SLOAD PUSH2 0x28D JUMPI PUSH1 0x1 PUSH1 0x7 SSTORE PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 PUSH1 0x6 SLOAD PUSH1 0x5 SLOAD PUSH1 0x0 CALL ISZERO PUSH2 0x28D JUMPI STOP JUMPDEST PUSH4 0x4F245EF7 DUP2 EQ ISZERO PUSH2 0x1C6 JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x3 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x2A24F46C DUP2 EQ ISZERO PUSH2 0x1E3 JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x4 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x12FA6FEB DUP2 EQ ISZERO PUSH2 0x20 JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x7 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0xC06FAD6 DUP2 EQ ISZERO PUSH2 0x21D JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x8 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x26B387BB DUP2 EQ ISZERO PUSH2 0x252 JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR PUSH2 0x28D JUMPI PUSH1 0x9 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST POP JUMPDEST CALLER PUSH32 0xF817BEF87C74DE34AB725F43B121C1DFF5324AA363F7B9AC176B9AEE511523E PUSH2 0x140 DUP1 DUP1 DUP1 CALLVALUE DUP2 MSTORE POP POP PUSH1 0x20 SWAP1 POP SWAP1 POP PUSH2 0x140 LOG2 STOP JUMPDEST PUSH1 0x0 DUP1 REVERT",
+  "pcMap": {
+    "0": {
+      "offset": [
+        0,
+        3802
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "2": {
+      "op": "CALLDATASIZE"
+    },
+    "3": {
+      "op": "LT"
+    },
+    "4": {
+      "op": "ISZERO"
+    },
+    "5": {
+      "op": "PUSH2",
+      "value": "0x0D"
+    },
+    "8": {
+      "op": "JUMPI"
+    },
+    "9": {
+      "op": "PUSH2",
+      "value": "0x254"
+    },
+    "12": {
+      "op": "JUMP"
+    },
+    "13": {
+      "op": "JUMPDEST"
+    },
+    "14": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "16": {
+      "op": "CALLDATALOAD"
+    },
+    "17": {
+      "op": "PUSH1",
+      "value": "0x1C"
+    },
+    "19": {
+      "op": "MSTORE"
+    },
+    "20": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "22": {
+      "op": "MLOAD"
+    },
+    "23": {
+      "fn": "Auction.bid",
+      "offset": [
+        1420,
+        2127
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x454A2AB3"
+    },
+    "28": {
+      "fn": "Auction.bid",
+      "offset": [
+        1420,
+        2127
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "29": {
+      "fn": "Auction.bid",
+      "offset": [
+        1420,
+        2127
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "30": {
+      "fn": "Auction.bid",
+      "offset": [
+        1420,
+        2127
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "31": {
+      "fn": "Auction.bid",
+      "offset": [
+        1420,
+        2127
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x11"
+    },
+    "34": {
+      "fn": "Auction.bid",
+      "offset": [
+        1420,
+        2127
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "35": {
+      "fn": "Auction.bid",
+      "offset": [
+        1521,
+        1538
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 0,
+      "value": "0x3"
+    },
+    "37": {
+      "fn": "Auction.bid",
+      "offset": [
+        1502,
+        1538
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "38": {
+      "fn": "Auction.bid",
+      "offset": [
+        1502,
+        1517
+      ],
+      "op": "TIMESTAMP",
+      "path": "0"
+    },
+    "39": {
+      "op": "LT"
+    },
+    "40": {
+      "fn": "Auction.bid",
+      "offset": [
+        1495,
+        1538
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "43": {
+      "fn": "Auction.bid",
+      "offset": [
+        1495,
+        1538
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "44": {
+      "fn": "Auction.bid",
+      "offset": [
+        1561,
+        1571
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 1,
+      "value": "0x8"
+    },
+    "46": {
+      "fn": "Auction.bid",
+      "offset": [
+        1550,
+        1571
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "47": {
+      "fn": "Auction.bid",
+      "offset": [
+        1550,
+        1558
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "49": {
+      "fn": "Auction.bid",
+      "offset": [
+        1550,
+        1571
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "50": {
+      "fn": "Auction.bid",
+      "offset": [
+        1550,
+        1571
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "51": {
+      "fn": "Auction.bid",
+      "offset": [
+        1543,
+        1571
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "52": {
+      "fn": "Auction.bid",
+      "offset": [
+        1543,
+        1571
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "55": {
+      "fn": "Auction.bid",
+      "offset": [
+        1543,
+        1571
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "56": {
+      "fn": "Auction.bid",
+      "offset": [
+        1640,
+        1655
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 2,
+      "value": "0x4"
+    },
+    "58": {
+      "fn": "Auction.bid",
+      "offset": [
+        1622,
+        1655
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "59": {
+      "fn": "Auction.bid",
+      "offset": [
+        1622,
+        1637
+      ],
+      "op": "TIMESTAMP",
+      "path": "0"
+    },
+    "60": {
+      "fn": "Auction.bid",
+      "offset": [
+        1622,
+        1655
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "61": {
+      "fn": "Auction.bid",
+      "offset": [
+        1615,
+        1655
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "62": {
+      "fn": "Auction.bid",
+      "offset": [
+        1615,
+        1655
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "65": {
+      "fn": "Auction.bid",
+      "offset": [
+        1615,
+        1655
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "66": {
+      "fn": "Auction.bid",
+      "offset": [
+        1713,
+        1728
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 3,
+      "value": "0x2"
+    },
+    "68": {
+      "fn": "Auction.bid",
+      "offset": [
+        1729,
+        1737
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "70": {
+      "op": "CALLDATALOAD"
+    },
+    "71": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "73": {
+      "op": "MSTORE"
+    },
+    "74": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "76": {
+      "op": "MSTORE"
+    },
+    "77": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "79": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "81": {
+      "op": "SHA3"
+    },
+    "82": {
+      "fn": "Auction.bid",
+      "offset": [
+        1701,
+        1738
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "83": {
+      "fn": "Auction.bid",
+      "offset": [
+        1701,
+        1710
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "84": {
+      "fn": "Auction.bid",
+      "offset": [
+        1701,
+        1738
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "85": {
+      "fn": "Auction.bid",
+      "offset": [
+        1694,
+        1738
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "86": {
+      "fn": "Auction.bid",
+      "offset": [
+        1694,
+        1738
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "89": {
+      "fn": "Auction.bid",
+      "offset": [
+        1694,
+        1738
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "90": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1814
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 4,
+      "value": "0x9"
+    },
+    "92": {
+      "fn": "Auction.bid",
+      "offset": [
+        1815,
+        1833
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "94": {
+      "fn": "Auction.bid",
+      "offset": [
+        1834,
+        1842
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "96": {
+      "op": "CALLDATALOAD"
+    },
+    "97": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "99": {
+      "op": "MSTORE"
+    },
+    "100": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "102": {
+      "op": "MSTORE"
+    },
+    "103": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "105": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "107": {
+      "op": "SHA3"
+    },
+    "108": {
+      "op": "SLOAD"
+    },
+    "109": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xE0"
+    },
+    "111": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "112": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "114": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "115": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "117": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "119": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "SHA3",
+      "path": "0"
+    },
+    "120": {
+      "op": "DUP1"
+    },
+    "121": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "122": {
+      "fn": "Auction.bid",
+      "offset": [
+        1848,
+        1863
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "124": {
+      "fn": "Auction.bid",
+      "offset": [
+        1864,
+        1872
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "126": {
+      "op": "CALLDATALOAD"
+    },
+    "127": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "129": {
+      "op": "MSTORE"
+    },
+    "130": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "132": {
+      "op": "MSTORE"
+    },
+    "133": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "135": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "137": {
+      "op": "SHA3"
+    },
+    "138": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "139": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "140": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "141": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "142": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "143": {
+      "op": "LT"
+    },
+    "144": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "147": {
+      "dev": "Integer overflow",
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "148": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "149": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "150": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "151": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "152": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "153": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "154": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "155": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "156": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "157": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "158": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1933
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 5,
+      "value": "0x6"
+    },
+    "160": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1933
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "161": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1933
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "162": {
+      "fn": "Auction.bid",
+      "offset": [
+        1937,
+        1952
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "164": {
+      "fn": "Auction.bid",
+      "offset": [
+        1953,
+        1961
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "166": {
+      "op": "CALLDATALOAD"
+    },
+    "167": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "169": {
+      "op": "MSTORE"
+    },
+    "170": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "172": {
+      "op": "MSTORE"
+    },
+    "173": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "175": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "177": {
+      "op": "SHA3"
+    },
+    "178": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "179": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "180": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "181": {
+      "op": "LT"
+    },
+    "182": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "185": {
+      "dev": "Integer underflow",
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "186": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "187": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "188": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "189": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "190": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "191": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "192": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "193": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "194": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "195": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "196": {
+      "fn": "Auction.bid",
+      "offset": [
+        2015,
+        2025
+      ],
+      "op": "CALLER",
+      "path": "0",
+      "statement": 6
+    },
+    "197": {
+      "fn": "Auction.bid",
+      "offset": [
+        1984,
+        2002
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "199": {
+      "fn": "Auction.bid",
+      "offset": [
+        2003,
+        2011
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "201": {
+      "op": "CALLDATALOAD"
+    },
+    "202": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "204": {
+      "op": "MSTORE"
+    },
+    "205": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "207": {
+      "op": "MSTORE"
+    },
+    "208": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "210": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "212": {
+      "op": "SHA3"
+    },
+    "213": {
+      "fn": "Auction.bid",
+      "offset": [
+        1984,
+        2025
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "214": {
+      "fn": "Auction.bid",
+      "offset": [
+        2058,
+        2067
+      ],
+      "op": "CALLVALUE",
+      "path": "0",
+      "statement": 7
+    },
+    "215": {
+      "fn": "Auction.bid",
+      "offset": [
+        2030,
+        2045
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "217": {
+      "fn": "Auction.bid",
+      "offset": [
+        2046,
+        2054
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "219": {
+      "op": "CALLDATALOAD"
+    },
+    "220": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "222": {
+      "op": "MSTORE"
+    },
+    "223": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "225": {
+      "op": "MSTORE"
+    },
+    "226": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "228": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "230": {
+      "op": "SHA3"
+    },
+    "231": {
+      "fn": "Auction.bid",
+      "offset": [
+        2030,
+        2067
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "232": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2114
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 8,
+      "value": "0x6"
+    },
+    "234": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2114
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "235": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2114
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "236": {
+      "fn": "Auction.bid",
+      "offset": [
+        2118,
+        2127
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "237": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "238": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "239": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "240": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "241": {
+      "op": "LT"
+    },
+    "242": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "245": {
+      "dev": "Integer overflow",
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "246": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "247": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "248": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "249": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "250": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "251": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "252": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "253": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "254": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "255": {
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "256": {
+      "fn": "Auction.bid",
+      "offset": [
+        1420,
+        2127
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "257": {
+      "fn": "Auction.bid",
+      "offset": [
+        1420,
+        2127
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "258": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2142,
+        2257
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x3C7CFE34"
+    },
+    "263": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2142,
+        2257
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "264": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2142,
+        2257
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "265": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2142,
+        2257
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "266": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2142,
+        2257
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x138"
+    },
+    "269": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2142,
+        2257
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "270": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2142,
+        2257
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "271": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2142,
+        2257
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "274": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "Auction.currentBid",
+      "offset": [
+        2142,
+        2257
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "275": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2210,
+        2220
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 9,
+      "value": "0x8"
+    },
+    "277": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2199,
+        2220
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "278": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2199,
+        2207
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "280": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2199,
+        2220
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "281": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2199,
+        2220
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "282": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2192,
+        2220
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "283": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2192,
+        2220
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "286": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2192,
+        2220
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "287": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2232,
+        2247
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 10,
+      "value": "0x2"
+    },
+    "289": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2248,
+        2256
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "291": {
+      "op": "CALLDATALOAD"
+    },
+    "292": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "294": {
+      "op": "MSTORE"
+    },
+    "295": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "297": {
+      "op": "MSTORE"
+    },
+    "298": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "300": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "302": {
+      "op": "SHA3"
+    },
+    "303": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2225,
+        2257
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "304": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2225,
+        2257
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "306": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2225,
+        2257
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "307": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2225,
+        2257
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "309": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2225,
+        2257
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "311": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2225,
+        2257
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "312": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2142,
+        2257
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "313": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2526,
+        2595
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x3CCFD6B"
+    },
+    "318": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2526,
+        2595
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "319": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2526,
+        2595
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "320": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2526,
+        2595
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "321": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2526,
+        2595
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x16B"
+    },
+    "324": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2526,
+        2595
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "325": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2526,
+        2595
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "326": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2526,
+        2595
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "329": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "Auction.withdraw",
+      "offset": [
+        2526,
+        2595
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "330": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2546,
+        2595
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 11,
+      "value": "0x0"
+    },
+    "332": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2546,
+        2595
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "334": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2546,
+        2595
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "336": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2546,
+        2595
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "338": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2563,
+        2582
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x9"
+    },
+    "340": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2583,
+        2593
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "341": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "343": {
+      "op": "MSTORE"
+    },
+    "344": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "346": {
+      "op": "MSTORE"
+    },
+    "347": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "349": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "351": {
+      "op": "SHA3"
+    },
+    "352": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2546,
+        2595
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "353": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2551,
+        2561
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "354": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2546,
+        2595
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "356": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2546,
+        2595
+      ],
+      "op": "CALL",
+      "path": "0"
+    },
+    "357": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2546,
+        2595
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "358": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2546,
+        2595
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "361": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2546,
+        2595
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "362": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2526,
+        2595
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "363": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2526,
+        2595
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "364": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        2672,
+        3639
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xFE67A54B"
+    },
+    "369": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        2672,
+        3639
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "370": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        2672,
+        3639
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "371": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        2672,
+        3639
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "372": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        2672,
+        3639
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1A9"
+    },
+    "375": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        2672,
+        3639
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "376": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        2672,
+        3639
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "377": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        2672,
+        3639
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "380": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "Auction.endAuction",
+      "offset": [
+        2672,
+        3639
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "381": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3438,
+        3453
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 12,
+      "value": "0x4"
+    },
+    "383": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3419,
+        3453
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "384": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3419,
+        3434
+      ],
+      "op": "TIMESTAMP",
+      "path": "0"
+    },
+    "385": {
+      "op": "LT"
+    },
+    "386": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3412,
+        3453
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "389": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3412,
+        3453
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "390": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3522,
+        3532
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 13,
+      "value": "0x7"
+    },
+    "392": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3518,
+        3532
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "393": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3511,
+        3532
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "396": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3511,
+        3532
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "397": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3568,
+        3572
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 14,
+      "value": "0x1"
+    },
+    "399": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3555,
+        3565
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x7"
+    },
+    "401": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3555,
+        3572
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "402": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3602,
+        3639
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 15,
+      "value": "0x0"
+    },
+    "404": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3602,
+        3639
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "406": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3602,
+        3639
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "408": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3602,
+        3639
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "410": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3625,
+        3638
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x6"
+    },
+    "412": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3602,
+        3639
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "413": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3607,
+        3623
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x5"
+    },
+    "415": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3602,
+        3639
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "416": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3602,
+        3639
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "418": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3602,
+        3639
+      ],
+      "op": "CALL",
+      "path": "0"
+    },
+    "419": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3602,
+        3639
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "420": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3602,
+        3639
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "423": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3602,
+        3639
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "424": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        2672,
+        3639
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "425": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        2672,
+        3639
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "426": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x4F245EF7"
+    },
+    "431": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "432": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "433": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "434": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1C6"
+    },
+    "437": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "438": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "439": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "442": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "443": {
+      "op": "PUSH1",
+      "value": "0x3"
+    },
+    "445": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "446": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "448": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "449": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "451": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "453": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "454": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "455": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x2A24F46C"
+    },
+    "460": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "461": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "462": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "463": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1E3"
+    },
+    "466": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "467": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "468": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "471": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "472": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "474": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "475": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "477": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "478": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "480": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "482": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "483": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "484": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x12FA6FEB"
+    },
+    "489": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "490": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "491": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "492": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x20"
+    },
+    "495": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "496": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "497": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "500": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "501": {
+      "op": "PUSH1",
+      "value": "0x7"
+    },
+    "503": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "504": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "506": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "507": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "509": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "511": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "512": {
+      "offset": [
+        542,
+        554
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "513": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xC06FAD6"
+    },
+    "518": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "519": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "520": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "521": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x21D"
+    },
+    "524": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "525": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "526": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "529": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "530": {
+      "op": "PUSH1",
+      "value": "0x8"
+    },
+    "532": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "533": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "535": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "536": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "538": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "540": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "541": {
+      "offset": [
+        562,
+        577
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "542": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x26B387BB"
+    },
+    "547": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "548": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "549": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "550": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x252"
+    },
+    "553": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "554": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "555": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "558": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "559": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "561": {
+      "op": "CALLDATALOAD"
+    },
+    "562": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "564": {
+      "op": "SHR"
+    },
+    "565": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28D"
+    },
+    "568": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "569": {
+      "op": "PUSH1",
+      "value": "0x9"
+    },
+    "571": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "573": {
+      "op": "CALLDATALOAD"
+    },
+    "574": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "576": {
+      "op": "MSTORE"
+    },
+    "577": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "579": {
+      "op": "MSTORE"
+    },
+    "580": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "582": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "584": {
+      "op": "SHA3"
+    },
+    "585": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "586": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "588": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "589": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "591": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "593": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "594": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "595": {
+      "op": "POP"
+    },
+    "596": {
+      "op": "JUMPDEST"
+    },
+    "597": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3791,
+        3801
+      ],
+      "op": "CALLER",
+      "path": "0",
+      "statement": 16
+    },
+    "598": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3768,
+        3802
+      ],
+      "op": "PUSH32",
+      "path": "0",
+      "value": "0xF817BEF87C74DE34AB725F43B121C1DFF5324AA363F7B9AC176B9AEE511523E"
+    },
+    "631": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3768,
+        3802
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x140"
+    },
+    "634": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3768,
+        3802
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "635": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3768,
+        3802
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "636": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3768,
+        3802
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "637": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3780,
+        3789
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "638": {
+      "op": "DUP2"
+    },
+    "639": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3768,
+        3802
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "640": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3768,
+        3802
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "641": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3768,
+        3802
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "642": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3768,
+        3802
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "644": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3768,
+        3802
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "645": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3768,
+        3802
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "646": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3768,
+        3802
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "647": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3768,
+        3802
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "648": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3768,
+        3802
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x140"
+    },
+    "651": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3768,
+        3802
+      ],
+      "op": "LOG2",
+      "path": "0"
+    },
+    "652": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3745,
+        3802
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "653": {
+      "op": "JUMPDEST"
+    },
+    "654": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "656": {
+      "op": "DUP1"
+    },
+    "657": {
+      "op": "REVERT",
+      "optimizer_revert": true
+    }
+  },
+  "sha1": "47bef5929ea65839eefb3fe3582a354357c719f6",
+  "source": "# @version ^0.2.0\n# Open Auction\n\n# Auction params\n# Beneficiary receives money from the highest bidder\nidToWinner: HashMap[uint256, address]\nhighestBidder: HashMap[uint256, address]\nhighestBid: HashMap[uint256, uint256]\n\n#beneficiaries(_tokenID uint256): public(idToWinner(address))\nauctionStart: public(uint256)\nauctionEnd: public(uint256)\n\n# Current state of auction\n#highestBidder: public(HashMap[uint256, address])\n#highestBid: public(uint256)\nbeneficiary: address\nfinalSum: uint256\n# Set to true at the end, disallows any change\nended: public(bool)\nitems: public(uint256)\n# Keep track of refunded bids so we can follow the withdraw pattern\npendingReturns: public(HashMap[address, uint256])\n\n\n# Create a simple auction with `_auction_start` and\n# `_bidding_time` seconds bidding time on behalf of the\n# beneficiary address `_beneficiary`.\n@external\ndef __init__(_auctionowner: address, _items: uint256, _auction_start: uint256, _bidding_time: uint256):\n    self.beneficiary = _auctionowner\n    self.items = _items\n    self.auctionStart = _auction_start  # auction start time can be in the past, present or future\n    self.auctionEnd = self.auctionStart + _bidding_time\n    assert block.timestamp < self.auctionEnd # auction end time should be in the future\n\n# Bid on the auction with the value sent\n# together with this transaction.\n# The value will only be refunded if the\n# auction is not won.\n@external\n@payable\ndef bid(_tokenID: uint256):\n    # Check if bidding period has started.\n    assert block.timestamp >= self.auctionStart\n    assert _tokenID < self.items\n    # Check if bidding period is over.\n    assert block.timestamp < self.auctionEnd\n    # Check if bid is high enough\n    assert msg.value > self.highestBid[_tokenID]\n    # Track the refund for the previous high bidder\n    self.pendingReturns[self.highestBidder[_tokenID]] += self.highestBid[_tokenID]\n    #remove the refund from the sum total\n    self.finalSum -= self.highestBid[_tokenID]\n    # Assign bid\n    self.highestBidder[_tokenID] = msg.sender\n    self.highestBid[_tokenID] = msg.value\n    # Increment total output\n    self.finalSum += msg.value   \n\n@external\ndef currentBid(_tokenID: uint256) -> uint256:\n    assert _tokenID < self.items\n    return self.highestBid[_tokenID]\n\n\n\n# Withdraw a previously refunded bid. The withdraw pattern is\n# used here to avoid a security issue. If refunds were directly\n# sent as part of bid(), a malicious bidding contract could block\n# those refunds and thus block new higher bids from coming in.\n@external\ndef withdraw():\n    send(msg.sender, self.pendingReturns[msg.sender])\n\n# End the auction and send the highest bid\n# to the beneficiary.\n@external\ndef endAuction():\n    # It is a good guideline to structure functions that interact\n    # with other contracts (i.e. they call functions or send Ether)\n    # into three phases:\n    # 1. checking conditions\n    # 2. performing actions (potentially changing conditions)\n    # 3. interacting with other contracts\n    # If these phases are mixed up, the other contract could call\n    # back into the current contract and modify the state or cause\n    # effects (Ether payout) to be performed multiple times.\n    # If functions called internally include interaction with external\n    # contracts, they also have to be considered interaction with\n    # external contracts.\n\n    # 1. Conditions\n    # Check if auction endtime has been reached\n    assert block.timestamp >= self.auctionEnd\n    # Check if this function has already been called\n    assert not self.ended\n\n    # 2. Effects\n    self.ended = True\n\n    # 3. Interaction   \n    send(self.beneficiary, self.finalSum)\n\n\n\n#Default function\nevent Payment:\n    amount: uint256\n    sender: indexed(address)\n\n@external\n@payable\ndef __default__():\n    log Payment(msg.value, msg.sender)",
+  "sourceMap": "",
+  "sourcePath": "contracts/Auction.vy",
+  "type": "contract"
+}
