@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import pytest
+import time
 from brownie import compile_source
 from brownie.network.account import Account, Accounts, EthAddress
 from brownie.network.contract import Contract, ContractContainer
@@ -15,7 +16,7 @@ def isolate(fn_isolation):
 
 @pytest.fixture(scope="module")
 def nft(Token, accounts):
-    return Token.deploy("Test NFT", "TEST", "metadata", {'from': accounts[1]})
+    return Token.deploy("Test NFT", "TEST", 50, "metadata", {'from': accounts[1]})
 
 
 @pytest.fixture(scope="module")
@@ -64,3 +65,15 @@ def receiver_valid(accounts):
     compiled = compile_source(receiver_valid_src)
     receiver = compiled.Valid.deploy({'from': accounts[1]})
     return receiver
+
+
+
+@pytest.fixture(scope="module")
+def auction(Auction, accounts):
+    #Start the auction 5 seconds ago
+    start = time.time() - 5;
+    end   = time.time() + 60*60;
+    auct  = Auction.deploy(accounts[0], 50, start, end, {'from': accounts[0]})
+
+
+

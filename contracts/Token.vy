@@ -76,6 +76,9 @@ tokenName: String[64]
 # @notice An abbreviated name for NFTs in this contract
 tokenSymbol: String[32]
 
+# @notice token supply
+supply: uint256
+
 # @notice A distinct Uniform Resource Identifier (URI) for a given asset.
 # @dev Throws if `_tokenId` is not a valid NFT. URIs are defined in RFC
 #   3986. The URI may point to a JSON file that conforms to the "ERC721
@@ -141,19 +144,24 @@ ERC721_TOKEN_RECEIVER_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000
 ERC721_METADATA_INTERFACE_ID: constant(bytes32) = 0x000000000000000000000000000000000000000000000000000000005b5e139f
 
 @external
-def __init__(name: String[64], symbol: String[32], tokenURI: String[64]):
+def __init__(name: String[64], symbol: String[32], supply: uint256, tokenURI: String[64]):
     """
     @dev Contract constructor.
     """
     self.tokenName = name
     self.tokenSymbol = symbol
     self.token_uri = tokenURI
+    self.supply = supply
     self.supportedInterfaces[ERC165_INTERFACE_ID] = True
     self.supportedInterfaces[ERC721_INTERFACE_ID] = True
     self.supportedInterfaces[ERC721_TOKEN_RECEIVER_INTERFACE_ID] = True
     self.supportedInterfaces[ERC721_METADATA_INTERFACE_ID] = True
     self.minter = msg.sender
 
+@view
+@external
+def totalSupply() -> uint256:
+    return self.supply
 
 @view
 @external
@@ -427,7 +435,7 @@ def mint(_to: address, _tokenId: uint256) -> bool:
     # Throws if `_to` is zero address
     assert _to != ZERO_ADDRESS
     # Add NFT. Throws if `_tokenId` is owned by someone
-    #self._addTokenTo(_to, _tokenId)
+    self._addTokenTo(_to, _tokenId)
     
     log Transfer(ZERO_ADDRESS, _to, _tokenId)
     return True
