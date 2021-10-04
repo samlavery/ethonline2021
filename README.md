@@ -1,2 +1,2 @@
 # ethonline2021
-Repository for ethglobal 2021 hackathon code
+Deterministic fractal NFTs keyed to a user's Ethereum address and purchased via an on-chain auction.
