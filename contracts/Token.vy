@@ -100,6 +100,10 @@ ownerToOperators: HashMap[address, HashMap[address, bool]]
 # @dev Address of minter, who can mint a token
 minter: address
 
+owner_to_tokens: HashMap[address, uint256[MAX_UINT256]]
+owner_to_token_to_index: HashMap[address, HashMap[uint256, uint256]]
+index_to_token: HashMap[uint256, uint256]
+
 # @dev Mapping of interface id to bool about whether or not it's supported
 supportedInterfaces: HashMap[bytes32, bool]
 
@@ -143,19 +147,25 @@ ERC721_TOKEN_RECEIVER_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000
 
 ERC721_METADATA_INTERFACE_ID: constant(bytes32) = 0x000000000000000000000000000000000000000000000000000000005b5e139f
 
+
+# @dev
+#     Enumberable interface
+ERC721_ENUMBERABLE_INTERFACE_ID: constant(bytes32) = 0x00000000000000000000000000000000000000000000000000000000780e9d63
+
 @external
-def __init__(name: String[64], symbol: String[32], supply: uint256, tokenURI: String[64]):
+def __init__(name: String[64], symbol: String[32], tokenURI: String[64]):
     """
     @dev Contract constructor.
     """
     self.tokenName = name
     self.tokenSymbol = symbol
     self.token_uri = tokenURI
-    self.supply = supply
+    self.supply = 0
     self.supportedInterfaces[ERC165_INTERFACE_ID] = True
     self.supportedInterfaces[ERC721_INTERFACE_ID] = True
     self.supportedInterfaces[ERC721_TOKEN_RECEIVER_INTERFACE_ID] = True
     self.supportedInterfaces[ERC721_METADATA_INTERFACE_ID] = True
+    self.supportedInterfaces[ERC721_ENUMBERABLE_INTERFACE_ID] = True
     self.minter = msg.sender
 
 @view
@@ -194,6 +204,42 @@ def tokenURI() -> String[64]:
 
 
 ### VIEW FUNCTIONS ###
+
+@view
+@external
+def tokenByIndex(_index: uint256) -> uint256:
+    """
+    @notice Enumerate valid NFTs
+    @dev Throws if `_index` >= `totalSupply()`. Since token identifiers
+        are generated incrementally from 0, this just returns the arg
+        given.
+    @param _index A value less than `totalSupply()`
+    @return The token identifier for the `_index`th NFT,
+        (sort order not specified)
+    """
+    assert _index < self.supply  # dev: Invalid index
+
+    return self.index_to_token[_index]
+
+
+@view
+@external
+def tokenOfOwnerByIndex(_owner: address, _index: uint256) -> uint256:
+    """
+    @notice Enumerate NFTs assigned to an owner
+    @dev Throws if `_index` >= `balanceOf(_owner)` or if
+        `_owner` is the zero address, representing invalid NFTs.
+    @param _owner An address where we are interested in NFTs owned by them
+    @param _index A counter less than `balanceOf(_owner)`
+    @return The token identifier for the `_index`th NFT assigned to `_owner`,
+        (sort order not specified)
+    """
+    assert _index < self.ownerToNFTokenCount[_owner]  # dev: Invalid index
+
+    return self.owner_to_tokens[_owner][_index]
+
+
+
 
 @view
 @external
@@ -434,9 +480,15 @@ def mint(_to: address, _tokenId: uint256) -> bool:
     assert msg.sender == self.minter
     # Throws if `_to` is zero address
     assert _to != ZERO_ADDRESS
+
+    self.index_to_token[self.supply] = _tokenId
+    self.owner_to_tokens[_to][self.ownerToNFTokenCount[_to]] = _tokenId
+    self.owner_to_token_to_index[_to][self.ownerToNFTokenCount[_to]] = _tokenId
+
     # Add NFT. Throws if `_tokenId` is owned by someone
     self._addTokenTo(_to, _tokenId)
-    
+
+    self.supply += 1
     log Transfer(ZERO_ADDRESS, _to, _tokenId)
     return True
 
@@ -457,4 +509,5 @@ def burn(_tokenId: uint256):
     assert owner != ZERO_ADDRESS
     self._clearApproval(owner, _tokenId)
     self._removeTokenFrom(owner, _tokenId)
+    self.supply -= 1
     log Transfer(owner, ZERO_ADDRESS, _tokenId)

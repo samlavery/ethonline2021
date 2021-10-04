@@ -16,7 +16,7 @@ def isolate(fn_isolation):
 
 @pytest.fixture(scope="module")
 def nft(Token, accounts):
-    return Token.deploy("Test NFT", "TEST", 50, "metadata", {'from': accounts[1]})
+    return Token.deploy("Test NFT", "TEST",  "metadata", {'from': accounts[1]})
 
 
 @pytest.fixture(scope="module")
