@@ -263,7 +263,7 @@ def ownerOf(_tokenId: uint256) -> address:
     """
     owner: address = self.idToOwner[_tokenId]
     # Throws if `_tokenId` is not a valid NFT
-    assert owner != ZERO_ADDRESS
+    assert owner != ZERO_ADDRESS, "Query for nonexistent token"
     return owner
 
 
@@ -345,7 +345,7 @@ def _clearApproval(_owner: address, _tokenId: uint256):
          Throws if `_owner` is not the current owner.
     """
     # Throws if `_owner` is not the current owner
-    assert self.idToOwner[_tokenId] == _owner
+    assert self.idToOwner[_tokenId] == _owner, "Transfer of unowned token"
     if self.idToApprovals[_tokenId] != ZERO_ADDRESS:
         # Reset approvals
         self.idToApprovals[_tokenId] = ZERO_ADDRESS
@@ -362,9 +362,12 @@ def _transferFrom(_from: address, _to: address, _tokenId: uint256, _sender: addr
          Throws if `_tokenId` is not a valid NFT.
     """
     # Check requirements
-    assert self._isApprovedOrOwner(_sender, _tokenId)
     # Throws if `_to` is the zero address
-    assert _to != ZERO_ADDRESS
+    assert _to != ZERO_ADDRESS, "Transfer to the zero address"
+
+    assert self._isApprovedOrOwner(_sender, _tokenId), "Caller is not owner nor approved"
+
+
     # Clear approval. Throws if `_from` is not the current owner
     self._clearApproval(_from, _tokenId)
     # Remove NFT. Throws if `_tokenId` is not a valid NFT
@@ -420,7 +423,7 @@ def safeTransferFrom(
     if _to.is_contract: # check if `_to` is a contract address
         returnValue: bytes32 = ERC721Receiver(_to).onERC721Received(msg.sender, _from, _tokenId, _data)
         # Throws if transfer destination is a contract which does not implement 'onERC721Received'
-        assert returnValue == method_id("onERC721Received(address,address,uint256,bytes)", output_type=bytes32)
+        assert returnValue == method_id("onERC721Received(address,address,uint256,bytes)", output_type=bytes32), "Transfer to non ERC721 receiver"
 
 
 @external
