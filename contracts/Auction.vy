@@ -1,4 +1,4 @@
-# @version ^0.2.0
+# @version ^0.3.0
 # Open Auction
 
 # Auction params
@@ -56,7 +56,7 @@ def bid(_tokenID: uint256):
     self.highestBidder[_tokenID] = msg.sender
     self.highestBid[_tokenID] = msg.value
     # Increment total output
-    self.finalSum += msg.value   
+    self.finalSum += msg.value
 
 @external
 def currentBid(_tokenID: uint256) -> uint256:

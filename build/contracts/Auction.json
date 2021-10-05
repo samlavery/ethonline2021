@@ -41,7 +41,7 @@
       "type": "constructor"
     },
     {
-      "gas": 185013,
+      "gas": 185143,
       "inputs": [
         {
           "name": "_tokenID",
@@ -54,7 +54,7 @@
       "type": "function"
     },
     {
-      "gas": 2220,
+      "gas": 2358,
       "inputs": [
         {
           "name": "_tokenID",
@@ -72,7 +72,7 @@
       "type": "function"
     },
     {
-      "gas": 36109,
+      "gas": 36149,
       "inputs": [],
       "name": "withdraw",
       "outputs": [],
@@ -80,7 +80,7 @@
       "type": "function"
     },
     {
-      "gas": 73626,
+      "gas": 73666,
       "inputs": [],
       "name": "endAuction",
       "outputs": [],
@@ -92,7 +92,7 @@
       "type": "fallback"
     },
     {
-      "gas": 1298,
+      "gas": 1436,
       "inputs": [],
       "name": "auctionStart",
       "outputs": [
@@ -105,7 +105,7 @@
       "type": "function"
     },
     {
-      "gas": 1328,
+      "gas": 1466,
       "inputs": [],
       "name": "auctionEnd",
       "outputs": [
@@ -118,7 +118,7 @@
       "type": "function"
     },
     {
-      "gas": 1358,
+      "gas": 1496,
       "inputs": [],
       "name": "ended",
       "outputs": [
@@ -131,7 +131,7 @@
       "type": "function"
     },
     {
-      "gas": 1388,
+      "gas": 1526,
       "inputs": [],
       "name": "items",
       "outputs": [
@@ -144,7 +144,7 @@
       "type": "function"
     },
     {
-      "gas": 1633,
+      "gas": 1828,
       "inputs": [
         {
           "name": "arg0",
@@ -1993,7 +1993,7 @@
                 "id": "uint256",
                 "lineno": 62,
                 "node_id": 302,
-                "src": "2167:7:0"
+                "src": "2164:7:0"
               },
               "arg": "_tokenID",
               "ast_type": "arg",
@@ -2002,7 +2002,7 @@
               "end_lineno": 62,
               "lineno": 62,
               "node_id": 301,
-              "src": "2157:17:0"
+              "src": "2154:17:0"
             }
           ],
           "ast_type": "arguments",
@@ -2013,7 +2013,7 @@
           "end_lineno": 62,
           "lineno": 62,
           "node_id": 300,
-          "src": "2157:17:0"
+          "src": "2154:17:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -2025,7 +2025,7 @@
             "lineno": 63,
             "msg": null,
             "node_id": 304,
-            "src": "2192:28:0",
+            "src": "2189:28:0",
             "test": {
               "ast_type": "Compare",
               "col_offset": 11,
@@ -2039,7 +2039,7 @@
                 "id": "_tokenID",
                 "lineno": 63,
                 "node_id": 306,
-                "src": "2199:8:0"
+                "src": "2196:8:0"
               },
               "lineno": 63,
               "node_id": 305,
@@ -2050,7 +2050,7 @@
                 "end_lineno": 63,
                 "lineno": 63,
                 "node_id": 308,
-                "src": "2199:21:0"
+                "src": "2196:21:0"
               },
               "right": {
                 "ast_type": "Attribute",
@@ -2060,7 +2060,7 @@
                 "end_lineno": 63,
                 "lineno": 63,
                 "node_id": 309,
-                "src": "2210:10:0",
+                "src": "2207:10:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 22,
@@ -2069,10 +2069,10 @@
                   "id": "self",
                   "lineno": 63,
                   "node_id": 310,
-                  "src": "2210:4:0"
+                  "src": "2207:4:0"
                 }
               },
-              "src": "2199:21:0"
+              "src": "2196:21:0"
             }
           },
           {
@@ -2082,7 +2082,7 @@
             "end_lineno": 64,
             "lineno": 64,
             "node_id": 313,
-            "src": "2225:32:0",
+            "src": "2222:32:0",
             "value": {
               "ast_type": "Subscript",
               "col_offset": 11,
@@ -2097,7 +2097,7 @@
                 "end_lineno": 64,
                 "lineno": 64,
                 "node_id": 322,
-                "src": "2232:25:0",
+                "src": "2229:25:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 27,
@@ -2106,10 +2106,10 @@
                   "id": "_tokenID",
                   "lineno": 64,
                   "node_id": 319,
-                  "src": "2248:8:0"
+                  "src": "2245:8:0"
                 }
               },
-              "src": "2232:25:0",
+              "src": "2229:25:0",
               "value": {
                 "ast_type": "Attribute",
                 "attr": "highestBid",
@@ -2118,7 +2118,7 @@
                 "end_lineno": 64,
                 "lineno": 64,
                 "node_id": 315,
-                "src": "2232:15:0",
+                "src": "2229:15:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 11,
@@ -2127,7 +2127,7 @@
                   "id": "self",
                   "lineno": 64,
                   "node_id": 316,
-                  "src": "2232:4:0"
+                  "src": "2229:4:0"
                 }
               }
             }
@@ -2143,7 +2143,7 @@
             "id": "external",
             "lineno": 61,
             "node_id": 323,
-            "src": "2133:8:0"
+            "src": "2130:8:0"
           }
         ],
         "doc_string": null,
@@ -2161,9 +2161,9 @@
           "id": "uint256",
           "lineno": 62,
           "node_id": 325,
-          "src": "2179:7:0"
+          "src": "2176:7:0"
         },
-        "src": "2142:115:0"
+        "src": "2139:115:0"
       },
       {
         "args": {
@@ -2176,7 +2176,7 @@
           "end_lineno": 73,
           "lineno": 73,
           "node_id": 328,
-          "src": "2526:3:0"
+          "src": "2523:3:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -2187,7 +2187,7 @@
             "end_lineno": 74,
             "lineno": 74,
             "node_id": 329,
-            "src": "2546:49:0",
+            "src": "2543:49:0",
             "value": {
               "args": [
                 {
@@ -2198,7 +2198,7 @@
                   "end_lineno": 74,
                   "lineno": 74,
                   "node_id": 333,
-                  "src": "2551:10:0",
+                  "src": "2548:10:0",
                   "value": {
                     "ast_type": "Name",
                     "col_offset": 9,
@@ -2207,7 +2207,7 @@
                     "id": "msg",
                     "lineno": 74,
                     "node_id": 334,
-                    "src": "2551:3:0"
+                    "src": "2548:3:0"
                   }
                 },
                 {
@@ -2224,7 +2224,7 @@
                     "end_lineno": 74,
                     "lineno": 74,
                     "node_id": 347,
-                    "src": "2563:31:0",
+                    "src": "2560:31:0",
                     "value": {
                       "ast_type": "Attribute",
                       "attr": "sender",
@@ -2233,7 +2233,7 @@
                       "end_lineno": 74,
                       "lineno": 74,
                       "node_id": 342,
-                      "src": "2583:10:0",
+                      "src": "2580:10:0",
                       "value": {
                         "ast_type": "Name",
                         "col_offset": 41,
@@ -2242,11 +2242,11 @@
                         "id": "msg",
                         "lineno": 74,
                         "node_id": 343,
-                        "src": "2583:3:0"
+                        "src": "2580:3:0"
                       }
                     }
                   },
-                  "src": "2563:31:0",
+                  "src": "2560:31:0",
                   "value": {
                     "ast_type": "Attribute",
                     "attr": "pendingReturns",
@@ -2255,7 +2255,7 @@
                     "end_lineno": 74,
                     "lineno": 74,
                     "node_id": 338,
-                    "src": "2563:19:0",
+                    "src": "2560:19:0",
                     "value": {
                       "ast_type": "Name",
                       "col_offset": 21,
@@ -2264,7 +2264,7 @@
                       "id": "self",
                       "lineno": 74,
                       "node_id": 339,
-                      "src": "2563:4:0"
+                      "src": "2560:4:0"
                     }
                   }
                 }
@@ -2281,13 +2281,13 @@
                 "id": "send",
                 "lineno": 74,
                 "node_id": 331,
-                "src": "2546:4:0"
+                "src": "2543:4:0"
               },
               "keyword": null,
               "keywords": [],
               "lineno": 74,
               "node_id": 330,
-              "src": "2546:49:0"
+              "src": "2543:49:0"
             }
           }
         ],
@@ -2301,7 +2301,7 @@
             "id": "external",
             "lineno": 72,
             "node_id": 348,
-            "src": "2517:8:0"
+            "src": "2514:8:0"
           }
         ],
         "doc_string": null,
@@ -2312,7 +2312,7 @@
         "node_id": 327,
         "pos": null,
         "returns": null,
-        "src": "2526:69:0"
+        "src": "2523:69:0"
       },
       {
         "args": {
@@ -2325,7 +2325,7 @@
           "end_lineno": 79,
           "lineno": 79,
           "node_id": 351,
-          "src": "2672:3:0"
+          "src": "2669:3:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -2337,7 +2337,7 @@
             "lineno": 95,
             "msg": null,
             "node_id": 352,
-            "src": "3412:41:0",
+            "src": "3409:41:0",
             "test": {
               "ast_type": "Compare",
               "col_offset": 11,
@@ -2351,7 +2351,7 @@
                 "end_lineno": 95,
                 "lineno": 95,
                 "node_id": 354,
-                "src": "3419:15:0",
+                "src": "3416:15:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 11,
@@ -2360,7 +2360,7 @@
                   "id": "block",
                   "lineno": 95,
                   "node_id": 355,
-                  "src": "3419:5:0"
+                  "src": "3416:5:0"
                 }
               },
               "lineno": 95,
@@ -2372,7 +2372,7 @@
                 "end_lineno": 95,
                 "lineno": 95,
                 "node_id": 358,
-                "src": "3419:34:0"
+                "src": "3416:34:0"
               },
               "right": {
                 "ast_type": "Attribute",
@@ -2382,7 +2382,7 @@
                 "end_lineno": 95,
                 "lineno": 95,
                 "node_id": 359,
-                "src": "3438:15:0",
+                "src": "3435:15:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 30,
@@ -2391,10 +2391,10 @@
                   "id": "self",
                   "lineno": 95,
                   "node_id": 360,
-                  "src": "3438:4:0"
+                  "src": "3435:4:0"
                 }
               },
-              "src": "3419:34:0"
+              "src": "3416:34:0"
             }
           },
           {
@@ -2405,7 +2405,7 @@
             "lineno": 97,
             "msg": null,
             "node_id": 363,
-            "src": "3511:21:0",
+            "src": "3508:21:0",
             "test": {
               "ast_type": "UnaryOp",
               "col_offset": 11,
@@ -2420,7 +2420,7 @@
                 "end_lineno": 97,
                 "lineno": 97,
                 "node_id": 365,
-                "src": "3518:14:0"
+                "src": "3515:14:0"
               },
               "operand": {
                 "ast_type": "Attribute",
@@ -2430,7 +2430,7 @@
                 "end_lineno": 97,
                 "lineno": 97,
                 "node_id": 366,
-                "src": "3522:10:0",
+                "src": "3519:10:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 15,
@@ -2439,10 +2439,10 @@
                   "id": "self",
                   "lineno": 97,
                   "node_id": 367,
-                  "src": "3522:4:0"
+                  "src": "3519:4:0"
                 }
               },
-              "src": "3518:14:0"
+              "src": "3515:14:0"
             }
           },
           {
@@ -2452,7 +2452,7 @@
             "end_lineno": 100,
             "lineno": 100,
             "node_id": 370,
-            "src": "3555:17:0",
+            "src": "3552:17:0",
             "target": {
               "ast_type": "Attribute",
               "attr": "ended",
@@ -2461,7 +2461,7 @@
               "end_lineno": 100,
               "lineno": 100,
               "node_id": 371,
-              "src": "3555:10:0",
+              "src": "3552:10:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 4,
@@ -2470,7 +2470,7 @@
                 "id": "self",
                 "lineno": 100,
                 "node_id": 372,
-                "src": "3555:4:0"
+                "src": "3552:4:0"
               }
             },
             "value": {
@@ -2480,7 +2480,7 @@
               "end_lineno": 100,
               "lineno": 100,
               "node_id": 375,
-              "src": "3568:4:0",
+              "src": "3565:4:0",
               "value": true
             }
           },
@@ -2491,7 +2491,7 @@
             "end_lineno": 103,
             "lineno": 103,
             "node_id": 376,
-            "src": "3602:37:0",
+            "src": "3599:37:0",
             "value": {
               "args": [
                 {
@@ -2502,7 +2502,7 @@
                   "end_lineno": 103,
                   "lineno": 103,
                   "node_id": 380,
-                  "src": "3607:16:0",
+                  "src": "3604:16:0",
                   "value": {
                     "ast_type": "Name",
                     "col_offset": 9,
@@ -2511,7 +2511,7 @@
                     "id": "self",
                     "lineno": 103,
                     "node_id": 381,
-                    "src": "3607:4:0"
+                    "src": "3604:4:0"
                   }
                 },
                 {
@@ -2522,7 +2522,7 @@
                   "end_lineno": 103,
                   "lineno": 103,
                   "node_id": 384,
-                  "src": "3625:13:0",
+                  "src": "3622:13:0",
                   "value": {
                     "ast_type": "Name",
                     "col_offset": 27,
@@ -2531,7 +2531,7 @@
                     "id": "self",
                     "lineno": 103,
                     "node_id": 385,
-                    "src": "3625:4:0"
+                    "src": "3622:4:0"
                   }
                 }
               ],
@@ -2547,13 +2547,13 @@
                 "id": "send",
                 "lineno": 103,
                 "node_id": 378,
-                "src": "3602:4:0"
+                "src": "3599:4:0"
               },
               "keyword": null,
               "keywords": [],
               "lineno": 103,
               "node_id": 377,
-              "src": "3602:37:0"
+              "src": "3599:37:0"
             }
           }
         ],
@@ -2567,7 +2567,7 @@
             "id": "external",
             "lineno": 78,
             "node_id": 388,
-            "src": "2663:8:0"
+            "src": "2660:8:0"
           }
         ],
         "doc_string": null,
@@ -2578,7 +2578,7 @@
         "node_id": 350,
         "pos": null,
         "returns": null,
-        "src": "2672:967:0"
+        "src": "2669:967:0"
       },
       {
         "ast_type": "EventDef",
@@ -2592,7 +2592,7 @@
               "id": "uint256",
               "lineno": 109,
               "node_id": 394,
-              "src": "3688:7:0"
+              "src": "3685:7:0"
             },
             "ast_type": "AnnAssign",
             "col_offset": 4,
@@ -2601,7 +2601,7 @@
             "lineno": 109,
             "node_id": 391,
             "simple": 1,
-            "src": "3680:15:0",
+            "src": "3677:15:0",
             "target": {
               "ast_type": "Name",
               "col_offset": 4,
@@ -2610,7 +2610,7 @@
               "id": "amount",
               "lineno": 109,
               "node_id": 392,
-              "src": "3680:6:0"
+              "src": "3677:6:0"
             },
             "value": null
           },
@@ -2625,7 +2625,7 @@
                   "id": "address",
                   "lineno": 110,
                   "node_id": 402,
-                  "src": "3716:7:0"
+                  "src": "3713:7:0"
                 }
               ],
               "ast_type": "Call",
@@ -2640,13 +2640,13 @@
                 "id": "indexed",
                 "lineno": 110,
                 "node_id": 400,
-                "src": "3708:7:0"
+                "src": "3705:7:0"
               },
               "keyword": null,
               "keywords": [],
               "lineno": 110,
               "node_id": 399,
-              "src": "3708:16:0"
+              "src": "3705:16:0"
             },
             "ast_type": "AnnAssign",
             "col_offset": 4,
@@ -2655,7 +2655,7 @@
             "lineno": 110,
             "node_id": 396,
             "simple": 1,
-            "src": "3700:24:0",
+            "src": "3697:24:0",
             "target": {
               "ast_type": "Name",
               "col_offset": 4,
@@ -2664,7 +2664,7 @@
               "id": "sender",
               "lineno": 110,
               "node_id": 397,
-              "src": "3700:6:0"
+              "src": "3697:6:0"
             },
             "value": null
           }
@@ -2675,7 +2675,7 @@
         "lineno": 108,
         "name": "Payment",
         "node_id": 390,
-        "src": "3661:63:0"
+        "src": "3658:63:0"
       },
       {
         "args": {
@@ -2688,7 +2688,7 @@
           "end_lineno": 114,
           "lineno": 114,
           "node_id": 405,
-          "src": "3745:3:0"
+          "src": "3742:3:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -2699,7 +2699,7 @@
             "end_lineno": 115,
             "lineno": 115,
             "node_id": 407,
-            "src": "3768:34:0",
+            "src": "3765:34:0",
             "value": {
               "args": [
                 {
@@ -2710,7 +2710,7 @@
                   "end_lineno": 115,
                   "lineno": 115,
                   "node_id": 411,
-                  "src": "3780:9:0",
+                  "src": "3777:9:0",
                   "value": {
                     "ast_type": "Name",
                     "col_offset": 16,
@@ -2719,7 +2719,7 @@
                     "id": "msg",
                     "lineno": 115,
                     "node_id": 412,
-                    "src": "3780:3:0"
+                    "src": "3777:3:0"
                   }
                 },
                 {
@@ -2730,7 +2730,7 @@
                   "end_lineno": 115,
                   "lineno": 115,
                   "node_id": 415,
-                  "src": "3791:10:0",
+                  "src": "3788:10:0",
                   "value": {
                     "ast_type": "Name",
                     "col_offset": 27,
@@ -2739,7 +2739,7 @@
                     "id": "msg",
                     "lineno": 115,
                     "node_id": 416,
-                    "src": "3791:3:0"
+                    "src": "3788:3:0"
                   }
                 }
               ],
@@ -2755,13 +2755,13 @@
                 "id": "Payment",
                 "lineno": 115,
                 "node_id": 409,
-                "src": "3772:7:0"
+                "src": "3769:7:0"
               },
               "keyword": null,
               "keywords": [],
               "lineno": 115,
               "node_id": 408,
-              "src": "3772:30:0"
+              "src": "3769:30:0"
             }
           }
         ],
@@ -2775,7 +2775,7 @@
             "id": "external",
             "lineno": 112,
             "node_id": 419,
-            "src": "3727:8:0"
+            "src": "3724:8:0"
           },
           {
             "ast_type": "Name",
@@ -2785,7 +2785,7 @@
             "id": "payable",
             "lineno": 113,
             "node_id": 421,
-            "src": "3737:7:0"
+            "src": "3734:7:0"
           }
         ],
         "doc_string": null,
@@ -2796,7 +2796,7 @@
         "node_id": 404,
         "pos": null,
         "returns": null,
-        "src": "3745:57:0"
+        "src": "3742:57:0"
       }
     ],
     "col_offset": 0,
@@ -2806,13 +2806,13 @@
     "lineno": 1,
     "name": "contracts/Auction.vy",
     "node_id": 0,
-    "src": "0:3802:0"
+    "src": "0:3799:0"
   },
-  "bytecode": "0x608061030761014039602061030760c03960c05160a01c610302576101405160055561016051600855610180516003556003546101a05181818301106103025780820190509050600455600454421015610302576102ea56600436101561000d57610254565b600035601c5260005163454a2ab381141561010157600354421061028d57600854600435101561028d5760045442101561028d57600260043560e05260c052604060c0205434111561028d576009600160043560e05260c052604060c0205460e05260c052604060c0208054600260043560e05260c052604060c02054818183011061028d578082019050905081555060068054600260043560e05260c052604060c0205480821061028d578082039050905081555033600160043560e05260c052604060c0205534600260043560e05260c052604060c020556006805434818183011061028d5780820190509050815550005b633c7cfe34811415610138573461028d57600854600435101561028d57600260043560e05260c052604060c0205460005260206000f35b633ccfd60b81141561016b573461028d57600060006000600060093360e05260c052604060c02054336000f11561028d57005b63fe67a54b8114156101a9573461028d57600454421061028d5760075461028d57600160075560006000600060006006546005546000f11561028d57005b634f245ef78114156101c6573461028d5760035460005260206000f35b632a24f46c8114156101e3573461028d5760045460005260206000f35b6312fa6feb811415610200573461028d5760075460005260206000f35b63c06fad0681141561021d573461028d5760085460005260206000f35b6326b387bb811415610252573461028d5760043560a01c61028d57600960043560e05260c052604060c0205460005260206000f35b505b337ff817bef87c74de34ab725f43b121c1dff5324aa363f7b9ac176b9aee5115230e6101408080803481525050602090509050610140a2005b600080fd5b6100586102ea036100586000396100586102ea036000f35b600080fd",
-  "bytecodeSha1": "0bdc7c4037e633309d618e2a7833484f5b7059ee",
+  "bytecode": "0x602061033060c03960c0518060a01c61032b578090506101405261014051600555602060206103300160c03960c051600855602060406103300160c03960c051600355600354602060606103300160c03960c051818183011061032b578082019050905060045560045442101561032b5761031356600436101561000d5761026a565b60046000601c3760005163454a2ab38114156101025760035442106102995760085460043510156102995760045442101561029957600260043560e05260c052604060c02054341115610299576009600160043560e05260c052604060c0205460e05260c052604060c0208054600260043560e05260c052604060c020548181830110610299578082019050905081555060068054600260043560e05260c052604060c02054808210610299578082039050905081555033600160043560e05260c052604060c0205534600260043560e05260c052604060c02055600680543481818301106102995780820190509050815550005b633c7cfe3481141561013b573461029957600854600435101561029957600260043560e05260c052604060c02054610140526020610140f35b633ccfd60b81141561016e573461029957600060006000600060093360e05260c052604060c02054336000f11561029957005b63fe67a54b8114156101ac57346102995760045442106102995760075461029957600160075560006000600060006006546005546000f11561029957005b634f245ef78114156101cb573461029957600354610140526020610140f35b632a24f46c8114156101ea573461029957600454610140526020610140f35b6312fa6feb811415610209573461029957600754610140526020610140f35b63c06fad06811415610228573461029957600854610140526020610140f35b6326b387bb811415610268576004358060a01c6102995780905061014052346102995760096101405160e05260c052604060c02054610160526020610160f35b505b337ff817bef87c74de34ab725f43b121c1dff5324aa363f7b9ac176b9aee5115230e34610140526020610140a2005b600080fd5b61007561031303610075600039610075610313036000f35b600080fd",
+  "bytecodeSha1": "6cb0e66fb837b1b674ed4de1a349ff4209919fab",
   "compiler": {
     "evm_version": "istanbul",
-    "version": "0.2.16"
+    "version": "0.3.0"
   },
   "contractName": "Auction",
   "coverageMap": {
@@ -2823,8 +2823,8 @@
       "0": {
         "Auction.__default__": {
           "16": [
-            3768,
-            3802
+            3765,
+            3799
           ]
         },
         "Auction.bid": {
@@ -2867,58 +2867,58 @@
         },
         "Auction.currentBid": {
           "9": [
-            2192,
-            2220
+            2189,
+            2217
           ],
           "10": [
-            2225,
-            2257
+            2222,
+            2254
           ]
         },
         "Auction.endAuction": {
           "12": [
-            3412,
-            3453
+            3409,
+            3450
           ],
           "13": [
-            3511,
-            3532
+            3508,
+            3529
           ],
           "14": [
-            3555,
-            3572
+            3552,
+            3569
           ],
           "15": [
-            3602,
-            3639
+            3599,
+            3636
           ]
         },
         "Auction.withdraw": {
           "11": [
-            2546,
-            2595
+            2543,
+            2592
           ]
         }
       }
     }
   },
   "dependencies": [],
-  "deployedBytecode": "0x600436101561000d57610254565b600035601c5260005163454a2ab381141561010157600354421061028d57600854600435101561028d5760045442101561028d57600260043560e05260c052604060c0205434111561028d576009600160043560e05260c052604060c0205460e05260c052604060c0208054600260043560e05260c052604060c02054818183011061028d578082019050905081555060068054600260043560e05260c052604060c0205480821061028d578082039050905081555033600160043560e05260c052604060c0205534600260043560e05260c052604060c020556006805434818183011061028d5780820190509050815550005b633c7cfe34811415610138573461028d57600854600435101561028d57600260043560e05260c052604060c0205460005260206000f35b633ccfd60b81141561016b573461028d57600060006000600060093360e05260c052604060c02054336000f11561028d57005b63fe67a54b8114156101a9573461028d57600454421061028d5760075461028d57600160075560006000600060006006546005546000f11561028d57005b634f245ef78114156101c6573461028d5760035460005260206000f35b632a24f46c8114156101e3573461028d5760045460005260206000f35b6312fa6feb811415610200573461028d5760075460005260206000f35b63c06fad0681141561021d573461028d5760085460005260206000f35b6326b387bb811415610252573461028d5760043560a01c61028d57600960043560e05260c052604060c0205460005260206000f35b505b337ff817bef87c74de34ab725f43b121c1dff5324aa363f7b9ac176b9aee5115230e6101408080803481525050602090509050610140a2005b600080fd",
-  "deployedSourceMap": "-1:-1:0:-;;;;;:::-;;:::-;:::-;;;;;;;1420:707;;;;;:::-;1521:17;1502:36;:15;-1:-1;1495:43;:::-;1561:10;1550:21;:8;:21;;1543:28;;:::-;1640:15;1622:33;:15;:33;1615:40;;:::-;1713:15;1729:8;-1:-1;;;;;;;;1701:37;:9;:37;1694:44;;:::-;1795:19;1815:18;1834:8;-1:-1;;;;;;;;;1795:78;;;;;;;-1:-1;1795:78;1848:15;1864:8;-1:-1;;;;;;;;1795:78;;;;;-1:-1;1795:78;:::-;;;;;;;;;;;1920:13;;;1937:15;1953:8;-1:-1;;;;;;;;1920:42;;;-1:-1;1920:42;:::-;;;;;;;;;;;2015:10;1984:18;2003:8;-1:-1;;;;;;;;1984:41;2058:9;2030:15;2046:8;-1:-1;;;;;;;;2030:37;2101:13;;;2118:9;2101:26;;;;-1:-1;2101:26;:::-;;;;;;;;;;;1420:707;:::-;2142:115;;;;;:::-;;;:::-;2210:10;2199:21;:8;:21;;2192:28;;:::-;2232:15;2248:8;-1:-1;;;;;;;;2225:32;;;;;;2142:115::-;2526:69;;;;;:::-;;;:::-;2546:49;;;;2563:19;2583:10;-1:-1;;;;;;;2546:49;2551:10;2546:49;;;;:::-;2526:69;:::-;2672:967;;;;;:::-;;;:::-;3438:15;3419:34;:15;-1:-1;3412:41;:::-;3522:10;3518:14;3511:21;:::-;3568:4;3555:10;:17;3602:37;;;;3625:13;3602:37;3607:16;3602:37;;;;;:::-;2672:967;:::-;298:15;;;;;:::-;;;:::-;-1:-1;298:15;;;;;;:::-;326;;;;;:::-;;;:::-;-1:-1;326:15;;;;;;:::-;542:12;;;;;:::-;;;:::-;-1:-1;542:12;;;;;;:::-;562:15;;;;;:::-;;;:::-;-1:-1;562:15;;;;;;:::-;662:33;;;;;:::-;;;:::-;-1:-1;;;;662:33;:::-;-1:-1;;;;;;;;;;662:33;;;;;;:::-;-1:-1;:::-;3791:10;3768:34;;;;;3780:9;-1:-1;3768:34;;;;;;;;;;3745:57;-1:-1::-;;;;",
+  "deployedBytecode": "0x600436101561000d5761026a565b60046000601c3760005163454a2ab38114156101025760035442106102995760085460043510156102995760045442101561029957600260043560e05260c052604060c02054341115610299576009600160043560e05260c052604060c0205460e05260c052604060c0208054600260043560e05260c052604060c020548181830110610299578082019050905081555060068054600260043560e05260c052604060c02054808210610299578082039050905081555033600160043560e05260c052604060c0205534600260043560e05260c052604060c02055600680543481818301106102995780820190509050815550005b633c7cfe3481141561013b573461029957600854600435101561029957600260043560e05260c052604060c02054610140526020610140f35b633ccfd60b81141561016e573461029957600060006000600060093360e05260c052604060c02054336000f11561029957005b63fe67a54b8114156101ac57346102995760045442106102995760075461029957600160075560006000600060006006546005546000f11561029957005b634f245ef78114156101cb573461029957600354610140526020610140f35b632a24f46c8114156101ea573461029957600454610140526020610140f35b6312fa6feb811415610209573461029957600754610140526020610140f35b63c06fad06811415610228573461029957600854610140526020610140f35b6326b387bb811415610268576004358060a01c6102995780905061014052346102995760096101405160e05260c052604060c02054610160526020610160f35b505b337ff817bef87c74de34ab725f43b121c1dff5324aa363f7b9ac176b9aee5115230e34610140526020610140a2005b600080fd",
+  "deployedSourceMap": "-1:-1:0:-;;;;;:::-;;:::-;:::-;;;;;;;1420:707;;;;;:::-;1521:17;1502:36;:15;-1:-1;1495:43;:::-;1561:10;1550:21;:8;:21;;1543:28;;:::-;1640:15;1622:33;:15;:33;1615:40;;:::-;1713:15;1550:8;-1:-1;;;;;;;;1701:37;:9;:37;1694:44;;:::-;1795:19;1815:18;1550:8;-1:-1;;;;;;;;;1795:78;;;;;;;-1:-1;1795:78;1848:15;1550:8;-1:-1;;;;;;;;1795:78;;;;;-1:-1;1795:78;:::-;;;;;;;;;;;1920:13;;;1937:15;1550:8;-1:-1;;;;;;;;1920:42;;;-1:-1;1920:42;:::-;;;;;;;;;;;2015:10;1984:18;1550:8;-1:-1;;;;;;;;1984:41;2058:9;2030:15;1550:8;-1:-1;;;;;;;;2030:37;2101:13;;;2118:9;2101:26;;;;-1:-1;2101:26;:::-;;;;;;;;;;;1420:707;:::-;2139:115;;;;;:::-;;;:::-;2207:10;2196:21;:8;:21;;2189:28;;:::-;2229:15;2196:8;-1:-1;;;;;;;;;2222:32;-1:-1;2222:32;-1:-1;2139:115;:::-;2523:69;;;;;:::-;;;:::-;2543:49;;;;2560:19;2580:10;-1:-1;;;;;;;2543:49;2548:10;2543:49;;;;:::-;2523:69;:::-;2669:967;;;;;:::-;;;:::-;3435:15;3416:34;:15;-1:-1;3409:41;:::-;3519:10;3515:14;3508:21;:::-;3565:4;3552:10;:17;3599:37;;;;3622:13;3599:37;3604:16;3599:37;;;;;:::-;2669:967;:::-;298:15;;;;;:::-;;;:::-;-1:-1;;298:15;-1:-1;298:15;-1:-1;298:15;:::-;326;;;;;:::-;;;:::-;-1:-1;;326:15;-1:-1;326:15;-1:-1;326:15;:::-;542:12;;;;;:::-;;;:::-;-1:-1;;542:12;-1:-1;542:12;-1:-1;542:12;:::-;562:15;;;;;:::-;;;:::-;-1:-1;;562:15;-1:-1;562:15;-1:-1;562:15;:::-;662:33;;;;;:::-;-1:-1;;;;;;:::-;;;;;662:33;;;:::-;-1:-1;;;;;;;;;;;662:33;-1:-1;662:33;-1:-1;662:33;:::-;-1:-1;:::-;3788:10;3765:34;3777:9;3765:34;-1:-1;3765:34;;;3742:57;-1:-1::-;;;;",
   "language": "Vyper",
   "natspec": {
     "methods": {}
   },
   "offset": [
     0,
-    3802
+    3799
   ],
-  "opcodes": "PUSH1 0x4 CALLDATASIZE LT ISZERO PUSH2 0x0D JUMPI PUSH2 0x254 JUMP JUMPDEST PUSH1 0x0 CALLDATALOAD PUSH1 0x1C MSTORE PUSH1 0x0 MLOAD PUSH4 0x454A2AB3 DUP2 EQ ISZERO PUSH2 0x11 JUMPI PUSH1 0x3 SLOAD TIMESTAMP LT PUSH2 0x28D JUMPI PUSH1 0x8 SLOAD PUSH1 0x4 CALLDATALOAD LT ISZERO PUSH2 0x28D JUMPI PUSH1 0x4 SLOAD TIMESTAMP LT ISZERO PUSH2 0x28D JUMPI PUSH1 0x2 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD CALLVALUE GT ISZERO PUSH2 0x28D JUMPI PUSH1 0x9 PUSH1 0x1 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 DUP1 SLOAD PUSH1 0x2 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD DUP2 DUP2 DUP4 ADD LT PUSH2 0x28D JUMPI DUP1 DUP3 ADD SWAP1 POP SWAP1 POP DUP2 SSTORE POP PUSH1 0x6 DUP1 SLOAD PUSH1 0x2 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD DUP1 DUP3 LT PUSH2 0x28D JUMPI DUP1 DUP3 SUB SWAP1 POP SWAP1 POP DUP2 SSTORE POP CALLER PUSH1 0x1 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SSTORE CALLVALUE PUSH1 0x2 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SSTORE PUSH1 0x6 DUP1 SLOAD CALLVALUE DUP2 DUP2 DUP4 ADD LT PUSH2 0x28D JUMPI DUP1 DUP3 ADD SWAP1 POP SWAP1 POP DUP2 SSTORE POP STOP JUMPDEST PUSH4 0x3C7CFE34 DUP2 EQ ISZERO PUSH2 0x138 JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x8 SLOAD PUSH1 0x4 CALLDATALOAD LT ISZERO PUSH2 0x28D JUMPI PUSH1 0x2 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x3CCFD6B DUP2 EQ ISZERO PUSH2 0x16B JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 PUSH1 0x9 CALLER PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD CALLER PUSH1 0x0 CALL ISZERO PUSH2 0x28D JUMPI STOP JUMPDEST PUSH4 0xFE67A54B DUP2 EQ ISZERO PUSH2 0x1A9 JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x4 SLOAD TIMESTAMP LT PUSH2 0x28D JUMPI PUSH1 0x7 SLOAD PUSH2 0x28D JUMPI PUSH1 0x1 PUSH1 0x7 SSTORE PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 PUSH1 0x6 SLOAD PUSH1 0x5 SLOAD PUSH1 0x0 CALL ISZERO PUSH2 0x28D JUMPI STOP JUMPDEST PUSH4 0x4F245EF7 DUP2 EQ ISZERO PUSH2 0x1C6 JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x3 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x2A24F46C DUP2 EQ ISZERO PUSH2 0x1E3 JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x4 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x12FA6FEB DUP2 EQ ISZERO PUSH2 0x20 JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x7 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0xC06FAD6 DUP2 EQ ISZERO PUSH2 0x21D JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x8 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x26B387BB DUP2 EQ ISZERO PUSH2 0x252 JUMPI CALLVALUE PUSH2 0x28D JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR PUSH2 0x28D JUMPI PUSH1 0x9 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST POP JUMPDEST CALLER PUSH32 0xF817BEF87C74DE34AB725F43B121C1DFF5324AA363F7B9AC176B9AEE511523E PUSH2 0x140 DUP1 DUP1 DUP1 CALLVALUE DUP2 MSTORE POP POP PUSH1 0x20 SWAP1 POP SWAP1 POP PUSH2 0x140 LOG2 STOP JUMPDEST PUSH1 0x0 DUP1 REVERT",
+  "opcodes": "PUSH1 0x4 CALLDATASIZE LT ISZERO PUSH2 0x0D JUMPI PUSH2 0x26A JUMP JUMPDEST PUSH1 0x4 PUSH1 0x0 PUSH1 0x1C CALLDATACOPY PUSH1 0x0 MLOAD PUSH4 0x454A2AB3 DUP2 EQ ISZERO PUSH2 0x12 JUMPI PUSH1 0x3 SLOAD TIMESTAMP LT PUSH2 0x299 JUMPI PUSH1 0x8 SLOAD PUSH1 0x4 CALLDATALOAD LT ISZERO PUSH2 0x299 JUMPI PUSH1 0x4 SLOAD TIMESTAMP LT ISZERO PUSH2 0x299 JUMPI PUSH1 0x2 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD CALLVALUE GT ISZERO PUSH2 0x299 JUMPI PUSH1 0x9 PUSH1 0x1 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 DUP1 SLOAD PUSH1 0x2 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD DUP2 DUP2 DUP4 ADD LT PUSH2 0x299 JUMPI DUP1 DUP3 ADD SWAP1 POP SWAP1 POP DUP2 SSTORE POP PUSH1 0x6 DUP1 SLOAD PUSH1 0x2 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD DUP1 DUP3 LT PUSH2 0x299 JUMPI DUP1 DUP3 SUB SWAP1 POP SWAP1 POP DUP2 SSTORE POP CALLER PUSH1 0x1 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SSTORE CALLVALUE PUSH1 0x2 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SSTORE PUSH1 0x6 DUP1 SLOAD CALLVALUE DUP2 DUP2 DUP4 ADD LT PUSH2 0x299 JUMPI DUP1 DUP3 ADD SWAP1 POP SWAP1 POP DUP2 SSTORE POP STOP JUMPDEST PUSH4 0x3C7CFE34 DUP2 EQ ISZERO PUSH2 0x13B JUMPI CALLVALUE PUSH2 0x299 JUMPI PUSH1 0x8 SLOAD PUSH1 0x4 CALLDATALOAD LT ISZERO PUSH2 0x299 JUMPI PUSH1 0x2 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD PUSH2 0x140 MSTORE PUSH1 0x20 PUSH2 0x140 RETURN JUMPDEST PUSH4 0x3CCFD6B DUP2 EQ ISZERO PUSH2 0x16E JUMPI CALLVALUE PUSH2 0x299 JUMPI PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 PUSH1 0x9 CALLER PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD CALLER PUSH1 0x0 CALL ISZERO PUSH2 0x299 JUMPI STOP JUMPDEST PUSH4 0xFE67A54B DUP2 EQ ISZERO PUSH2 0x1AC JUMPI CALLVALUE PUSH2 0x299 JUMPI PUSH1 0x4 SLOAD TIMESTAMP LT PUSH2 0x299 JUMPI PUSH1 0x7 SLOAD PUSH2 0x299 JUMPI PUSH1 0x1 PUSH1 0x7 SSTORE PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 PUSH1 0x6 SLOAD PUSH1 0x5 SLOAD PUSH1 0x0 CALL ISZERO PUSH2 0x299 JUMPI STOP JUMPDEST PUSH4 0x4F245EF7 DUP2 EQ ISZERO PUSH2 0x1CB JUMPI CALLVALUE PUSH2 0x299 JUMPI PUSH1 0x3 SLOAD PUSH2 0x140 MSTORE PUSH1 0x20 PUSH2 0x140 RETURN JUMPDEST PUSH4 0x2A24F46C DUP2 EQ ISZERO PUSH2 0x1EA JUMPI CALLVALUE PUSH2 0x299 JUMPI PUSH1 0x4 SLOAD PUSH2 0x140 MSTORE PUSH1 0x20 PUSH2 0x140 RETURN JUMPDEST PUSH4 0x12FA6FEB DUP2 EQ ISZERO PUSH2 0x29 JUMPI CALLVALUE PUSH2 0x299 JUMPI PUSH1 0x7 SLOAD PUSH2 0x140 MSTORE PUSH1 0x20 PUSH2 0x140 RETURN JUMPDEST PUSH4 0xC06FAD6 DUP2 EQ ISZERO PUSH2 0x228 JUMPI CALLVALUE PUSH2 0x299 JUMPI PUSH1 0x8 SLOAD PUSH2 0x140 MSTORE PUSH1 0x20 PUSH2 0x140 RETURN JUMPDEST PUSH4 0x26B387BB DUP2 EQ ISZERO PUSH2 0x268 JUMPI PUSH1 0x4 CALLDATALOAD DUP1 PUSH1 0xA0 SHR PUSH2 0x299 JUMPI DUP1 SWAP1 POP PUSH2 0x140 MSTORE CALLVALUE PUSH2 0x299 JUMPI PUSH1 0x9 PUSH2 0x140 MLOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD PUSH2 0x160 MSTORE PUSH1 0x20 PUSH2 0x160 RETURN JUMPDEST POP JUMPDEST CALLER PUSH32 0xF817BEF87C74DE34AB725F43B121C1DFF5324AA363F7B9AC176B9AEE511523E CALLVALUE PUSH2 0x140 MSTORE PUSH1 0x20 PUSH2 0x140 LOG2 STOP JUMPDEST PUSH1 0x0 DUP1 REVERT",
   "pcMap": {
     "0": {
       "offset": [
         0,
-        3802
+        3799
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2942,7 +2942,7 @@
     },
     "9": {
       "op": "PUSH2",
-      "value": "0x254"
+      "value": "0x26A"
     },
     "12": {
       "op": "JUMP"
@@ -2952,26 +2952,27 @@
     },
     "14": {
       "op": "PUSH1",
-      "value": "0x0"
+      "value": "0x4"
     },
     "16": {
-      "op": "CALLDATALOAD"
+      "op": "PUSH1",
+      "value": "0x0"
     },
-    "17": {
+    "18": {
       "op": "PUSH1",
       "value": "0x1C"
     },
-    "19": {
-      "op": "MSTORE"
-    },
     "20": {
+      "op": "CALLDATACOPY"
+    },
+    "21": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "22": {
+    "23": {
       "op": "MLOAD"
     },
-    "23": {
+    "24": {
       "fn": "Auction.bid",
       "offset": [
         1420,
@@ -2981,7 +2982,7 @@
       "path": "0",
       "value": "0x454A2AB3"
     },
-    "28": {
+    "29": {
       "fn": "Auction.bid",
       "offset": [
         1420,
@@ -2990,7 +2991,7 @@
       "op": "DUP2",
       "path": "0"
     },
-    "29": {
+    "30": {
       "fn": "Auction.bid",
       "offset": [
         1420,
@@ -2999,7 +3000,7 @@
       "op": "EQ",
       "path": "0"
     },
-    "30": {
+    "31": {
       "fn": "Auction.bid",
       "offset": [
         1420,
@@ -3008,7 +3009,7 @@
       "op": "ISZERO",
       "path": "0"
     },
-    "31": {
+    "32": {
       "fn": "Auction.bid",
       "offset": [
         1420,
@@ -3016,9 +3017,9 @@
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x11"
+      "value": "0x12"
     },
-    "34": {
+    "35": {
       "fn": "Auction.bid",
       "offset": [
         1420,
@@ -3027,7 +3028,7 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "35": {
+    "36": {
       "fn": "Auction.bid",
       "offset": [
         1521,
@@ -3038,7 +3039,7 @@
       "statement": 0,
       "value": "0x3"
     },
-    "37": {
+    "38": {
       "fn": "Auction.bid",
       "offset": [
         1502,
@@ -3047,7 +3048,7 @@
       "op": "SLOAD",
       "path": "0"
     },
-    "38": {
+    "39": {
       "fn": "Auction.bid",
       "offset": [
         1502,
@@ -3056,10 +3057,10 @@
       "op": "TIMESTAMP",
       "path": "0"
     },
-    "39": {
+    "40": {
       "op": "LT"
     },
-    "40": {
+    "41": {
       "fn": "Auction.bid",
       "offset": [
         1495,
@@ -3067,9 +3068,9 @@
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x28D"
+      "value": "0x299"
     },
-    "43": {
+    "44": {
       "fn": "Auction.bid",
       "offset": [
         1495,
@@ -3078,7 +3079,7 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "44": {
+    "45": {
       "fn": "Auction.bid",
       "offset": [
         1561,
@@ -3089,7 +3090,7 @@
       "statement": 1,
       "value": "0x8"
     },
-    "46": {
+    "47": {
       "fn": "Auction.bid",
       "offset": [
         1550,
@@ -3098,7 +3099,7 @@
       "op": "SLOAD",
       "path": "0"
     },
-    "47": {
+    "48": {
       "fn": "Auction.bid",
       "offset": [
         1550,
@@ -3108,7 +3109,7 @@
       "path": "0",
       "value": "0x4"
     },
-    "49": {
+    "50": {
       "fn": "Auction.bid",
       "offset": [
         1550,
@@ -3117,7 +3118,7 @@
       "op": "CALLDATALOAD",
       "path": "0"
     },
-    "50": {
+    "51": {
       "fn": "Auction.bid",
       "offset": [
         1550,
@@ -3126,7 +3127,7 @@
       "op": "LT",
       "path": "0"
     },
-    "51": {
+    "52": {
       "fn": "Auction.bid",
       "offset": [
         1543,
@@ -3135,7 +3136,7 @@
       "op": "ISZERO",
       "path": "0"
     },
-    "52": {
+    "53": {
       "fn": "Auction.bid",
       "offset": [
         1543,
@@ -3143,9 +3144,9 @@
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x28D"
+      "value": "0x299"
     },
-    "55": {
+    "56": {
       "fn": "Auction.bid",
       "offset": [
         1543,
@@ -3154,7 +3155,7 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "56": {
+    "57": {
       "fn": "Auction.bid",
       "offset": [
         1640,
@@ -3165,7 +3166,7 @@
       "statement": 2,
       "value": "0x4"
     },
-    "58": {
+    "59": {
       "fn": "Auction.bid",
       "offset": [
         1622,
@@ -3174,7 +3175,7 @@
       "op": "SLOAD",
       "path": "0"
     },
-    "59": {
+    "60": {
       "fn": "Auction.bid",
       "offset": [
         1622,
@@ -3183,7 +3184,7 @@
       "op": "TIMESTAMP",
       "path": "0"
     },
-    "60": {
+    "61": {
       "fn": "Auction.bid",
       "offset": [
         1622,
@@ -3192,7 +3193,7 @@
       "op": "LT",
       "path": "0"
     },
-    "61": {
+    "62": {
       "fn": "Auction.bid",
       "offset": [
         1615,
@@ -3201,7 +3202,7 @@
       "op": "ISZERO",
       "path": "0"
     },
-    "62": {
+    "63": {
       "fn": "Auction.bid",
       "offset": [
         1615,
@@ -3209,9 +3210,9 @@
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x28D"
+      "value": "0x299"
     },
-    "65": {
+    "66": {
       "fn": "Auction.bid",
       "offset": [
         1615,
@@ -3220,7 +3221,7 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "66": {
+    "67": {
       "fn": "Auction.bid",
       "offset": [
         1713,
@@ -3231,45 +3232,45 @@
       "statement": 3,
       "value": "0x2"
     },
-    "68": {
+    "69": {
       "fn": "Auction.bid",
       "offset": [
-        1729,
-        1737
+        1550,
+        1558
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x4"
     },
-    "70": {
+    "71": {
       "op": "CALLDATALOAD"
     },
-    "71": {
+    "72": {
       "op": "PUSH1",
       "value": "0xE0"
     },
-    "73": {
+    "74": {
       "op": "MSTORE"
     },
-    "74": {
+    "75": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "76": {
+    "77": {
       "op": "MSTORE"
     },
-    "77": {
+    "78": {
       "op": "PUSH1",
       "value": "0x40"
     },
-    "79": {
+    "80": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "81": {
+    "82": {
       "op": "SHA3"
     },
-    "82": {
+    "83": {
       "fn": "Auction.bid",
       "offset": [
         1701,
@@ -3278,7 +3279,7 @@
       "op": "SLOAD",
       "path": "0"
     },
-    "83": {
+    "84": {
       "fn": "Auction.bid",
       "offset": [
         1701,
@@ -3287,7 +3288,7 @@
       "op": "CALLVALUE",
       "path": "0"
     },
-    "84": {
+    "85": {
       "fn": "Auction.bid",
       "offset": [
         1701,
@@ -3296,7 +3297,7 @@
       "op": "GT",
       "path": "0"
     },
-    "85": {
+    "86": {
       "fn": "Auction.bid",
       "offset": [
         1694,
@@ -3305,7 +3306,7 @@
       "op": "ISZERO",
       "path": "0"
     },
-    "86": {
+    "87": {
       "fn": "Auction.bid",
       "offset": [
         1694,
@@ -3313,9 +3314,9 @@
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x28D"
+      "value": "0x299"
     },
-    "89": {
+    "90": {
       "fn": "Auction.bid",
       "offset": [
         1694,
@@ -3324,7 +3325,7 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "90": {
+    "91": {
       "fn": "Auction.bid",
       "offset": [
         1795,
@@ -3335,7 +3336,7 @@
       "statement": 4,
       "value": "0x9"
     },
-    "92": {
+    "93": {
       "fn": "Auction.bid",
       "offset": [
         1815,
@@ -3345,48 +3346,48 @@
       "path": "0",
       "value": "0x1"
     },
-    "94": {
+    "95": {
       "fn": "Auction.bid",
       "offset": [
-        1834,
-        1842
+        1550,
+        1558
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x4"
     },
-    "96": {
+    "97": {
       "op": "CALLDATALOAD"
     },
-    "97": {
+    "98": {
       "op": "PUSH1",
       "value": "0xE0"
     },
-    "99": {
+    "100": {
       "op": "MSTORE"
     },
-    "100": {
+    "101": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "102": {
+    "103": {
       "op": "MSTORE"
     },
-    "103": {
+    "104": {
       "op": "PUSH1",
       "value": "0x40"
     },
-    "105": {
+    "106": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "107": {
+    "108": {
       "op": "SHA3"
     },
-    "108": {
+    "109": {
       "op": "SLOAD"
     },
-    "109": {
+    "110": {
       "fn": "Auction.bid",
       "offset": [
         1795,
@@ -3395,15 +3396,6 @@
       "op": "PUSH1",
       "path": "0",
       "value": "0xE0"
-    },
-    "111": {
-      "fn": "Auction.bid",
-      "offset": [
-        1795,
-        1873
-      ],
-      "op": "MSTORE",
-      "path": "0"
     },
     "112": {
       "fn": "Auction.bid",
@@ -3411,11 +3403,20 @@
         1795,
         1873
       ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "113": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
       "op": "PUSH1",
       "path": "0",
       "value": "0xC0"
     },
-    "114": {
+    "115": {
       "fn": "Auction.bid",
       "offset": [
         1795,
@@ -3424,7 +3425,7 @@
       "op": "MSTORE",
       "path": "0"
     },
-    "115": {
+    "116": {
       "fn": "Auction.bid",
       "offset": [
         1795,
@@ -3434,7 +3435,7 @@
       "path": "0",
       "value": "0x40"
     },
-    "117": {
+    "118": {
       "fn": "Auction.bid",
       "offset": [
         1795,
@@ -3444,7 +3445,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "119": {
+    "120": {
       "fn": "Auction.bid",
       "offset": [
         1795,
@@ -3453,10 +3454,10 @@
       "op": "SHA3",
       "path": "0"
     },
-    "120": {
+    "121": {
       "op": "DUP1"
     },
-    "121": {
+    "122": {
       "fn": "Auction.bid",
       "offset": [
         1795,
@@ -3465,7 +3466,7 @@
       "op": "SLOAD",
       "path": "0"
     },
-    "122": {
+    "123": {
       "fn": "Auction.bid",
       "offset": [
         1848,
@@ -3475,52 +3476,43 @@
       "path": "0",
       "value": "0x2"
     },
-    "124": {
+    "125": {
       "fn": "Auction.bid",
       "offset": [
-        1864,
-        1872
+        1550,
+        1558
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x4"
     },
-    "126": {
+    "127": {
       "op": "CALLDATALOAD"
     },
-    "127": {
+    "128": {
       "op": "PUSH1",
       "value": "0xE0"
     },
-    "129": {
+    "130": {
       "op": "MSTORE"
     },
-    "130": {
+    "131": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "132": {
+    "133": {
       "op": "MSTORE"
     },
-    "133": {
+    "134": {
       "op": "PUSH1",
       "value": "0x40"
     },
-    "135": {
+    "136": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "137": {
-      "op": "SHA3"
-    },
     "138": {
-      "fn": "Auction.bid",
-      "offset": [
-        1795,
-        1873
-      ],
-      "op": "SLOAD",
-      "path": "0"
+      "op": "SHA3"
     },
     "139": {
       "fn": "Auction.bid",
@@ -3528,7 +3520,7 @@
         1795,
         1873
       ],
-      "op": "DUP2",
+      "op": "SLOAD",
       "path": "0"
     },
     "140": {
@@ -3546,7 +3538,7 @@
         1795,
         1873
       ],
-      "op": "DUP4",
+      "op": "DUP2",
       "path": "0"
     },
     "142": {
@@ -3555,13 +3547,22 @@
         1795,
         1873
       ],
-      "op": "ADD",
+      "op": "DUP4",
       "path": "0"
     },
     "143": {
-      "op": "LT"
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "ADD",
+      "path": "0"
     },
     "144": {
+      "op": "LT"
+    },
+    "145": {
       "fn": "Auction.bid",
       "offset": [
         1795,
@@ -3569,9 +3570,9 @@
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x28D"
+      "value": "0x299"
     },
-    "147": {
+    "148": {
       "dev": "Integer overflow",
       "fn": "Auction.bid",
       "offset": [
@@ -3581,7 +3582,7 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "148": {
+    "149": {
       "fn": "Auction.bid",
       "offset": [
         1795,
@@ -3590,7 +3591,7 @@
       "op": "DUP1",
       "path": "0"
     },
-    "149": {
+    "150": {
       "fn": "Auction.bid",
       "offset": [
         1795,
@@ -3599,7 +3600,7 @@
       "op": "DUP3",
       "path": "0"
     },
-    "150": {
+    "151": {
       "fn": "Auction.bid",
       "offset": [
         1795,
@@ -3608,22 +3609,13 @@
       "op": "ADD",
       "path": "0"
     },
-    "151": {
-      "fn": "Auction.bid",
-      "offset": [
-        1795,
-        1873
-      ],
-      "op": "SWAP1",
-      "path": "0"
-    },
     "152": {
       "fn": "Auction.bid",
       "offset": [
         1795,
         1873
       ],
-      "op": "POP",
+      "op": "SWAP1",
       "path": "0"
     },
     "153": {
@@ -3632,7 +3624,7 @@
         1795,
         1873
       ],
-      "op": "SWAP1",
+      "op": "POP",
       "path": "0"
     },
     "154": {
@@ -3641,7 +3633,7 @@
         1795,
         1873
       ],
-      "op": "POP",
+      "op": "SWAP1",
       "path": "0"
     },
     "155": {
@@ -3650,7 +3642,7 @@
         1795,
         1873
       ],
-      "op": "DUP2",
+      "op": "POP",
       "path": "0"
     },
     "156": {
@@ -3659,7 +3651,7 @@
         1795,
         1873
       ],
-      "op": "SSTORE",
+      "op": "DUP2",
       "path": "0"
     },
     "157": {
@@ -3668,10 +3660,19 @@
         1795,
         1873
       ],
-      "op": "POP",
+      "op": "SSTORE",
       "path": "0"
     },
     "158": {
+      "fn": "Auction.bid",
+      "offset": [
+        1795,
+        1873
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "159": {
       "fn": "Auction.bid",
       "offset": [
         1920,
@@ -3682,7 +3683,7 @@
       "statement": 5,
       "value": "0x6"
     },
-    "160": {
+    "161": {
       "fn": "Auction.bid",
       "offset": [
         1920,
@@ -3691,7 +3692,7 @@
       "op": "DUP1",
       "path": "0"
     },
-    "161": {
+    "162": {
       "fn": "Auction.bid",
       "offset": [
         1920,
@@ -3700,7 +3701,7 @@
       "op": "SLOAD",
       "path": "0"
     },
-    "162": {
+    "163": {
       "fn": "Auction.bid",
       "offset": [
         1937,
@@ -3710,45 +3711,45 @@
       "path": "0",
       "value": "0x2"
     },
-    "164": {
+    "165": {
       "fn": "Auction.bid",
       "offset": [
-        1953,
-        1961
+        1550,
+        1558
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x4"
     },
-    "166": {
+    "167": {
       "op": "CALLDATALOAD"
     },
-    "167": {
+    "168": {
       "op": "PUSH1",
       "value": "0xE0"
     },
-    "169": {
+    "170": {
       "op": "MSTORE"
     },
-    "170": {
+    "171": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "172": {
+    "173": {
       "op": "MSTORE"
     },
-    "173": {
+    "174": {
       "op": "PUSH1",
       "value": "0x40"
     },
-    "175": {
+    "176": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "177": {
+    "178": {
       "op": "SHA3"
     },
-    "178": {
+    "179": {
       "fn": "Auction.bid",
       "offset": [
         1920,
@@ -3757,7 +3758,7 @@
       "op": "SLOAD",
       "path": "0"
     },
-    "179": {
+    "180": {
       "fn": "Auction.bid",
       "offset": [
         1920,
@@ -3766,7 +3767,7 @@
       "op": "DUP1",
       "path": "0"
     },
-    "180": {
+    "181": {
       "fn": "Auction.bid",
       "offset": [
         1920,
@@ -3775,10 +3776,10 @@
       "op": "DUP3",
       "path": "0"
     },
-    "181": {
+    "182": {
       "op": "LT"
     },
-    "182": {
+    "183": {
       "fn": "Auction.bid",
       "offset": [
         1920,
@@ -3786,9 +3787,9 @@
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x28D"
+      "value": "0x299"
     },
-    "185": {
+    "186": {
       "dev": "Integer underflow",
       "fn": "Auction.bid",
       "offset": [
@@ -3798,7 +3799,7 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "186": {
+    "187": {
       "fn": "Auction.bid",
       "offset": [
         1920,
@@ -3807,7 +3808,7 @@
       "op": "DUP1",
       "path": "0"
     },
-    "187": {
+    "188": {
       "fn": "Auction.bid",
       "offset": [
         1920,
@@ -3816,7 +3817,7 @@
       "op": "DUP3",
       "path": "0"
     },
-    "188": {
+    "189": {
       "fn": "Auction.bid",
       "offset": [
         1920,
@@ -3825,22 +3826,13 @@
       "op": "SUB",
       "path": "0"
     },
-    "189": {
-      "fn": "Auction.bid",
-      "offset": [
-        1920,
-        1962
-      ],
-      "op": "SWAP1",
-      "path": "0"
-    },
     "190": {
       "fn": "Auction.bid",
       "offset": [
         1920,
         1962
       ],
-      "op": "POP",
+      "op": "SWAP1",
       "path": "0"
     },
     "191": {
@@ -3849,7 +3841,7 @@
         1920,
         1962
       ],
-      "op": "SWAP1",
+      "op": "POP",
       "path": "0"
     },
     "192": {
@@ -3858,7 +3850,7 @@
         1920,
         1962
       ],
-      "op": "POP",
+      "op": "SWAP1",
       "path": "0"
     },
     "193": {
@@ -3867,7 +3859,7 @@
         1920,
         1962
       ],
-      "op": "DUP2",
+      "op": "POP",
       "path": "0"
     },
     "194": {
@@ -3876,7 +3868,7 @@
         1920,
         1962
       ],
-      "op": "SSTORE",
+      "op": "DUP2",
       "path": "0"
     },
     "195": {
@@ -3885,10 +3877,19 @@
         1920,
         1962
       ],
-      "op": "POP",
+      "op": "SSTORE",
       "path": "0"
     },
     "196": {
+      "fn": "Auction.bid",
+      "offset": [
+        1920,
+        1962
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "197": {
       "fn": "Auction.bid",
       "offset": [
         2015,
@@ -3898,7 +3899,7 @@
       "path": "0",
       "statement": 6
     },
-    "197": {
+    "198": {
       "fn": "Auction.bid",
       "offset": [
         1984,
@@ -3908,45 +3909,45 @@
       "path": "0",
       "value": "0x1"
     },
-    "199": {
+    "200": {
       "fn": "Auction.bid",
       "offset": [
-        2003,
-        2011
+        1550,
+        1558
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x4"
     },
-    "201": {
+    "202": {
       "op": "CALLDATALOAD"
     },
-    "202": {
+    "203": {
       "op": "PUSH1",
       "value": "0xE0"
     },
-    "204": {
+    "205": {
       "op": "MSTORE"
     },
-    "205": {
+    "206": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "207": {
+    "208": {
       "op": "MSTORE"
     },
-    "208": {
+    "209": {
       "op": "PUSH1",
       "value": "0x40"
     },
-    "210": {
+    "211": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "212": {
+    "213": {
       "op": "SHA3"
     },
-    "213": {
+    "214": {
       "fn": "Auction.bid",
       "offset": [
         1984,
@@ -3955,7 +3956,7 @@
       "op": "SSTORE",
       "path": "0"
     },
-    "214": {
+    "215": {
       "fn": "Auction.bid",
       "offset": [
         2058,
@@ -3965,7 +3966,7 @@
       "path": "0",
       "statement": 7
     },
-    "215": {
+    "216": {
       "fn": "Auction.bid",
       "offset": [
         2030,
@@ -3975,45 +3976,45 @@
       "path": "0",
       "value": "0x2"
     },
-    "217": {
+    "218": {
       "fn": "Auction.bid",
       "offset": [
-        2046,
-        2054
+        1550,
+        1558
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x4"
     },
-    "219": {
+    "220": {
       "op": "CALLDATALOAD"
     },
-    "220": {
+    "221": {
       "op": "PUSH1",
       "value": "0xE0"
     },
-    "222": {
+    "223": {
       "op": "MSTORE"
     },
-    "223": {
+    "224": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "225": {
+    "226": {
       "op": "MSTORE"
     },
-    "226": {
+    "227": {
       "op": "PUSH1",
       "value": "0x40"
     },
-    "228": {
+    "229": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "230": {
+    "231": {
       "op": "SHA3"
     },
-    "231": {
+    "232": {
       "fn": "Auction.bid",
       "offset": [
         2030,
@@ -4022,7 +4023,7 @@
       "op": "SSTORE",
       "path": "0"
     },
-    "232": {
+    "233": {
       "fn": "Auction.bid",
       "offset": [
         2101,
@@ -4033,7 +4034,7 @@
       "statement": 8,
       "value": "0x6"
     },
-    "234": {
+    "235": {
       "fn": "Auction.bid",
       "offset": [
         2101,
@@ -4042,7 +4043,7 @@
       "op": "DUP1",
       "path": "0"
     },
-    "235": {
+    "236": {
       "fn": "Auction.bid",
       "offset": [
         2101,
@@ -4051,22 +4052,13 @@
       "op": "SLOAD",
       "path": "0"
     },
-    "236": {
+    "237": {
       "fn": "Auction.bid",
       "offset": [
         2118,
         2127
       ],
       "op": "CALLVALUE",
-      "path": "0"
-    },
-    "237": {
-      "fn": "Auction.bid",
-      "offset": [
-        2101,
-        2127
-      ],
-      "op": "DUP2",
       "path": "0"
     },
     "238": {
@@ -4084,7 +4076,7 @@
         2101,
         2127
       ],
-      "op": "DUP4",
+      "op": "DUP2",
       "path": "0"
     },
     "240": {
@@ -4093,13 +4085,22 @@
         2101,
         2127
       ],
-      "op": "ADD",
+      "op": "DUP4",
       "path": "0"
     },
     "241": {
-      "op": "LT"
+      "fn": "Auction.bid",
+      "offset": [
+        2101,
+        2127
+      ],
+      "op": "ADD",
+      "path": "0"
     },
     "242": {
+      "op": "LT"
+    },
+    "243": {
       "fn": "Auction.bid",
       "offset": [
         2101,
@@ -4107,9 +4108,9 @@
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x28D"
+      "value": "0x299"
     },
-    "245": {
+    "246": {
       "dev": "Integer overflow",
       "fn": "Auction.bid",
       "offset": [
@@ -4119,7 +4120,7 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "246": {
+    "247": {
       "fn": "Auction.bid",
       "offset": [
         2101,
@@ -4128,7 +4129,7 @@
       "op": "DUP1",
       "path": "0"
     },
-    "247": {
+    "248": {
       "fn": "Auction.bid",
       "offset": [
         2101,
@@ -4137,7 +4138,7 @@
       "op": "DUP3",
       "path": "0"
     },
-    "248": {
+    "249": {
       "fn": "Auction.bid",
       "offset": [
         2101,
@@ -4146,22 +4147,13 @@
       "op": "ADD",
       "path": "0"
     },
-    "249": {
-      "fn": "Auction.bid",
-      "offset": [
-        2101,
-        2127
-      ],
-      "op": "SWAP1",
-      "path": "0"
-    },
     "250": {
       "fn": "Auction.bid",
       "offset": [
         2101,
         2127
       ],
-      "op": "POP",
+      "op": "SWAP1",
       "path": "0"
     },
     "251": {
@@ -4170,7 +4162,7 @@
         2101,
         2127
       ],
-      "op": "SWAP1",
+      "op": "POP",
       "path": "0"
     },
     "252": {
@@ -4179,7 +4171,7 @@
         2101,
         2127
       ],
-      "op": "POP",
+      "op": "SWAP1",
       "path": "0"
     },
     "253": {
@@ -4188,7 +4180,7 @@
         2101,
         2127
       ],
-      "op": "DUP2",
+      "op": "POP",
       "path": "0"
     },
     "254": {
@@ -4197,7 +4189,7 @@
         2101,
         2127
       ],
-      "op": "SSTORE",
+      "op": "DUP2",
       "path": "0"
     },
     "255": {
@@ -4206,16 +4198,16 @@
         2101,
         2127
       ],
-      "op": "POP",
+      "op": "SSTORE",
       "path": "0"
     },
     "256": {
       "fn": "Auction.bid",
       "offset": [
-        1420,
+        2101,
         2127
       ],
-      "op": "STOP",
+      "op": "POP",
       "path": "0"
     },
     "257": {
@@ -4224,818 +4216,790 @@
         1420,
         2127
       ],
-      "op": "JUMPDEST",
+      "op": "STOP",
       "path": "0"
     },
     "258": {
+      "fn": "Auction.bid",
+      "offset": [
+        1420,
+        2127
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "259": {
       "fn": "Auction.currentBid",
       "offset": [
-        2142,
-        2257
+        2139,
+        2254
       ],
       "op": "PUSH4",
       "path": "0",
       "value": "0x3C7CFE34"
     },
-    "263": {
-      "fn": "Auction.currentBid",
-      "offset": [
-        2142,
-        2257
-      ],
-      "op": "DUP2",
-      "path": "0"
-    },
     "264": {
       "fn": "Auction.currentBid",
       "offset": [
-        2142,
-        2257
+        2139,
+        2254
       ],
-      "op": "EQ",
+      "op": "DUP2",
       "path": "0"
     },
     "265": {
       "fn": "Auction.currentBid",
       "offset": [
-        2142,
-        2257
+        2139,
+        2254
       ],
-      "op": "ISZERO",
+      "op": "EQ",
       "path": "0"
     },
     "266": {
       "fn": "Auction.currentBid",
       "offset": [
-        2142,
-        2257
+        2139,
+        2254
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "267": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2139,
+        2254
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x138"
-    },
-    "269": {
-      "fn": "Auction.currentBid",
-      "offset": [
-        2142,
-        2257
-      ],
-      "op": "JUMPI",
-      "path": "0"
+      "value": "0x13B"
     },
     "270": {
       "fn": "Auction.currentBid",
       "offset": [
-        2142,
-        2257
+        2139,
+        2254
       ],
-      "op": "CALLVALUE",
+      "op": "JUMPI",
       "path": "0"
     },
     "271": {
       "fn": "Auction.currentBid",
       "offset": [
-        2142,
-        2257
+        2139,
+        2254
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "272": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2139,
+        2254
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x28D"
+      "value": "0x299"
     },
-    "274": {
+    "275": {
       "dev": "Cannot send ether to nonpayable function",
       "fn": "Auction.currentBid",
       "offset": [
-        2142,
-        2257
+        2139,
+        2254
       ],
       "op": "JUMPI",
       "path": "0"
     },
-    "275": {
+    "276": {
       "fn": "Auction.currentBid",
       "offset": [
-        2210,
-        2220
+        2207,
+        2217
       ],
       "op": "PUSH1",
       "path": "0",
       "statement": 9,
       "value": "0x8"
     },
-    "277": {
+    "278": {
       "fn": "Auction.currentBid",
       "offset": [
-        2199,
-        2220
+        2196,
+        2217
       ],
       "op": "SLOAD",
       "path": "0"
     },
-    "278": {
+    "279": {
       "fn": "Auction.currentBid",
       "offset": [
-        2199,
-        2207
+        2196,
+        2204
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x4"
     },
-    "280": {
-      "fn": "Auction.currentBid",
-      "offset": [
-        2199,
-        2220
-      ],
-      "op": "CALLDATALOAD",
-      "path": "0"
-    },
     "281": {
       "fn": "Auction.currentBid",
       "offset": [
-        2199,
-        2220
+        2196,
+        2217
       ],
-      "op": "LT",
+      "op": "CALLDATALOAD",
       "path": "0"
     },
     "282": {
       "fn": "Auction.currentBid",
       "offset": [
-        2192,
-        2220
+        2196,
+        2217
       ],
-      "op": "ISZERO",
+      "op": "LT",
       "path": "0"
     },
     "283": {
       "fn": "Auction.currentBid",
       "offset": [
-        2192,
-        2220
+        2189,
+        2217
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "284": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2189,
+        2217
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x28D"
-    },
-    "286": {
-      "fn": "Auction.currentBid",
-      "offset": [
-        2192,
-        2220
-      ],
-      "op": "JUMPI",
-      "path": "0"
+      "value": "0x299"
     },
     "287": {
       "fn": "Auction.currentBid",
       "offset": [
-        2232,
-        2247
+        2189,
+        2217
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "288": {
+      "fn": "Auction.currentBid",
+      "offset": [
+        2229,
+        2244
       ],
       "op": "PUSH1",
       "path": "0",
       "statement": 10,
       "value": "0x2"
     },
-    "289": {
+    "290": {
       "fn": "Auction.currentBid",
       "offset": [
-        2248,
-        2256
+        2196,
+        2204
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x4"
     },
-    "291": {
+    "292": {
       "op": "CALLDATALOAD"
     },
-    "292": {
+    "293": {
       "op": "PUSH1",
       "value": "0xE0"
     },
-    "294": {
+    "295": {
       "op": "MSTORE"
     },
-    "295": {
+    "296": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "297": {
+    "298": {
       "op": "MSTORE"
     },
-    "298": {
+    "299": {
       "op": "PUSH1",
       "value": "0x40"
     },
-    "300": {
+    "301": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "302": {
+    "303": {
       "op": "SHA3"
     },
-    "303": {
-      "fn": "Auction.currentBid",
-      "offset": [
-        2225,
-        2257
-      ],
-      "op": "SLOAD",
-      "path": "0"
-    },
     "304": {
+      "op": "SLOAD"
+    },
+    "305": {
       "fn": "Auction.currentBid",
       "offset": [
-        2225,
-        2257
+        2222,
+        2254
       ],
-      "op": "PUSH1",
+      "op": "PUSH2",
       "path": "0",
-      "value": "0x0"
+      "value": "0x140"
     },
-    "306": {
+    "308": {
+      "op": "MSTORE"
+    },
+    "309": {
       "fn": "Auction.currentBid",
       "offset": [
-        2225,
-        2257
-      ],
-      "op": "MSTORE",
-      "path": "0"
-    },
-    "307": {
-      "fn": "Auction.currentBid",
-      "offset": [
-        2225,
-        2257
+        2222,
+        2254
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x20"
     },
-    "309": {
-      "fn": "Auction.currentBid",
-      "offset": [
-        2225,
-        2257
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
-    },
     "311": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "314": {
       "fn": "Auction.currentBid",
       "offset": [
-        2225,
-        2257
+        2139,
+        2254
       ],
       "op": "RETURN",
       "path": "0"
     },
-    "312": {
+    "315": {
       "fn": "Auction.currentBid",
       "offset": [
-        2142,
-        2257
+        2139,
+        2254
       ],
       "op": "JUMPDEST",
       "path": "0"
     },
-    "313": {
+    "316": {
       "fn": "Auction.withdraw",
       "offset": [
-        2526,
-        2595
+        2523,
+        2592
       ],
       "op": "PUSH4",
       "path": "0",
       "value": "0x3CCFD6B"
     },
-    "318": {
+    "321": {
       "fn": "Auction.withdraw",
       "offset": [
-        2526,
-        2595
+        2523,
+        2592
       ],
       "op": "DUP2",
       "path": "0"
     },
-    "319": {
+    "322": {
       "fn": "Auction.withdraw",
       "offset": [
-        2526,
-        2595
+        2523,
+        2592
       ],
       "op": "EQ",
       "path": "0"
     },
-    "320": {
+    "323": {
       "fn": "Auction.withdraw",
       "offset": [
-        2526,
-        2595
+        2523,
+        2592
       ],
       "op": "ISZERO",
       "path": "0"
     },
-    "321": {
-      "fn": "Auction.withdraw",
-      "offset": [
-        2526,
-        2595
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x16B"
-    },
     "324": {
       "fn": "Auction.withdraw",
       "offset": [
-        2526,
-        2595
+        2523,
+        2592
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x16E"
+    },
+    "327": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2523,
+        2592
       ],
       "op": "JUMPI",
       "path": "0"
     },
-    "325": {
+    "328": {
       "fn": "Auction.withdraw",
       "offset": [
-        2526,
-        2595
+        2523,
+        2592
       ],
       "op": "CALLVALUE",
       "path": "0"
     },
-    "326": {
+    "329": {
       "fn": "Auction.withdraw",
       "offset": [
-        2526,
-        2595
+        2523,
+        2592
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x28D"
+      "value": "0x299"
     },
-    "329": {
+    "332": {
       "dev": "Cannot send ether to nonpayable function",
       "fn": "Auction.withdraw",
       "offset": [
-        2526,
-        2595
+        2523,
+        2592
       ],
       "op": "JUMPI",
       "path": "0"
     },
-    "330": {
+    "333": {
       "fn": "Auction.withdraw",
       "offset": [
-        2546,
-        2595
+        2543,
+        2592
       ],
       "op": "PUSH1",
       "path": "0",
       "statement": 11,
       "value": "0x0"
     },
-    "332": {
+    "335": {
       "fn": "Auction.withdraw",
       "offset": [
-        2546,
-        2595
+        2543,
+        2592
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "334": {
+    "337": {
       "fn": "Auction.withdraw",
       "offset": [
-        2546,
-        2595
+        2543,
+        2592
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "336": {
+    "339": {
       "fn": "Auction.withdraw",
       "offset": [
-        2546,
-        2595
+        2543,
+        2592
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "338": {
+    "341": {
       "fn": "Auction.withdraw",
       "offset": [
-        2563,
-        2582
+        2560,
+        2579
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x9"
     },
-    "340": {
+    "343": {
       "fn": "Auction.withdraw",
       "offset": [
-        2583,
-        2593
+        2580,
+        2590
       ],
       "op": "CALLER",
       "path": "0"
     },
-    "341": {
-      "op": "PUSH1",
-      "value": "0xE0"
-    },
-    "343": {
-      "op": "MSTORE"
-    },
     "344": {
       "op": "PUSH1",
-      "value": "0xC0"
+      "value": "0xE0"
     },
     "346": {
       "op": "MSTORE"
     },
     "347": {
       "op": "PUSH1",
-      "value": "0x40"
+      "value": "0xC0"
     },
     "349": {
+      "op": "MSTORE"
+    },
+    "350": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "352": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "351": {
+    "354": {
       "op": "SHA3"
     },
-    "352": {
+    "355": {
       "fn": "Auction.withdraw",
       "offset": [
-        2546,
-        2595
+        2543,
+        2592
       ],
       "op": "SLOAD",
       "path": "0"
     },
-    "353": {
-      "fn": "Auction.withdraw",
-      "offset": [
-        2551,
-        2561
-      ],
-      "op": "CALLER",
-      "path": "0"
-    },
-    "354": {
-      "fn": "Auction.withdraw",
-      "offset": [
-        2546,
-        2595
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
-    },
     "356": {
       "fn": "Auction.withdraw",
       "offset": [
-        2546,
-        2595
+        2548,
+        2558
       ],
-      "op": "CALL",
+      "op": "CALLER",
       "path": "0"
     },
     "357": {
       "fn": "Auction.withdraw",
       "offset": [
-        2546,
-        2595
+        2543,
+        2592
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "359": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2543,
+        2592
+      ],
+      "op": "CALL",
+      "path": "0"
+    },
+    "360": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2543,
+        2592
       ],
       "op": "ISZERO",
       "path": "0"
     },
-    "358": {
-      "fn": "Auction.withdraw",
-      "offset": [
-        2546,
-        2595
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x28D"
-    },
     "361": {
       "fn": "Auction.withdraw",
       "offset": [
-        2546,
-        2595
+        2543,
+        2592
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x299"
+    },
+    "364": {
+      "fn": "Auction.withdraw",
+      "offset": [
+        2543,
+        2592
       ],
       "op": "JUMPI",
       "path": "0"
     },
-    "362": {
+    "365": {
       "fn": "Auction.withdraw",
       "offset": [
-        2526,
-        2595
+        2523,
+        2592
       ],
       "op": "STOP",
       "path": "0"
     },
-    "363": {
+    "366": {
       "fn": "Auction.withdraw",
       "offset": [
-        2526,
-        2595
+        2523,
+        2592
       ],
       "op": "JUMPDEST",
       "path": "0"
     },
-    "364": {
+    "367": {
       "fn": "Auction.endAuction",
       "offset": [
-        2672,
-        3639
+        2669,
+        3636
       ],
       "op": "PUSH4",
       "path": "0",
       "value": "0xFE67A54B"
     },
-    "369": {
+    "372": {
       "fn": "Auction.endAuction",
       "offset": [
-        2672,
-        3639
+        2669,
+        3636
       ],
       "op": "DUP2",
       "path": "0"
     },
-    "370": {
+    "373": {
       "fn": "Auction.endAuction",
       "offset": [
-        2672,
-        3639
+        2669,
+        3636
       ],
       "op": "EQ",
       "path": "0"
     },
-    "371": {
+    "374": {
       "fn": "Auction.endAuction",
       "offset": [
-        2672,
-        3639
+        2669,
+        3636
       ],
       "op": "ISZERO",
       "path": "0"
     },
-    "372": {
-      "fn": "Auction.endAuction",
-      "offset": [
-        2672,
-        3639
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x1A9"
-    },
     "375": {
       "fn": "Auction.endAuction",
       "offset": [
-        2672,
-        3639
+        2669,
+        3636
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1AC"
+    },
+    "378": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        2669,
+        3636
       ],
       "op": "JUMPI",
       "path": "0"
     },
-    "376": {
+    "379": {
       "fn": "Auction.endAuction",
       "offset": [
-        2672,
-        3639
+        2669,
+        3636
       ],
       "op": "CALLVALUE",
       "path": "0"
     },
-    "377": {
+    "380": {
       "fn": "Auction.endAuction",
       "offset": [
-        2672,
-        3639
+        2669,
+        3636
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x28D"
+      "value": "0x299"
     },
-    "380": {
+    "383": {
       "dev": "Cannot send ether to nonpayable function",
       "fn": "Auction.endAuction",
       "offset": [
-        2672,
-        3639
+        2669,
+        3636
       ],
       "op": "JUMPI",
       "path": "0"
     },
-    "381": {
+    "384": {
       "fn": "Auction.endAuction",
       "offset": [
-        3438,
-        3453
+        3435,
+        3450
       ],
       "op": "PUSH1",
       "path": "0",
       "statement": 12,
       "value": "0x4"
     },
-    "383": {
+    "386": {
       "fn": "Auction.endAuction",
       "offset": [
-        3419,
-        3453
+        3416,
+        3450
       ],
       "op": "SLOAD",
       "path": "0"
     },
-    "384": {
+    "387": {
       "fn": "Auction.endAuction",
       "offset": [
-        3419,
-        3434
+        3416,
+        3431
       ],
       "op": "TIMESTAMP",
       "path": "0"
     },
-    "385": {
+    "388": {
       "op": "LT"
-    },
-    "386": {
-      "fn": "Auction.endAuction",
-      "offset": [
-        3412,
-        3453
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x28D"
     },
     "389": {
       "fn": "Auction.endAuction",
       "offset": [
-        3412,
-        3453
+        3409,
+        3450
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x299"
+    },
+    "392": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3409,
+        3450
       ],
       "op": "JUMPI",
       "path": "0"
     },
-    "390": {
+    "393": {
       "fn": "Auction.endAuction",
       "offset": [
-        3522,
-        3532
+        3519,
+        3529
       ],
       "op": "PUSH1",
       "path": "0",
       "statement": 13,
       "value": "0x7"
     },
-    "392": {
+    "395": {
       "fn": "Auction.endAuction",
       "offset": [
-        3518,
-        3532
+        3515,
+        3529
       ],
       "op": "SLOAD",
       "path": "0"
     },
-    "393": {
-      "fn": "Auction.endAuction",
-      "offset": [
-        3511,
-        3532
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x28D"
-    },
     "396": {
       "fn": "Auction.endAuction",
       "offset": [
-        3511,
-        3532
+        3508,
+        3529
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x299"
+    },
+    "399": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3508,
+        3529
       ],
       "op": "JUMPI",
       "path": "0"
     },
-    "397": {
+    "400": {
       "fn": "Auction.endAuction",
       "offset": [
-        3568,
-        3572
+        3565,
+        3569
       ],
       "op": "PUSH1",
       "path": "0",
       "statement": 14,
       "value": "0x1"
     },
-    "399": {
+    "402": {
       "fn": "Auction.endAuction",
       "offset": [
-        3555,
-        3565
+        3552,
+        3562
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x7"
     },
-    "401": {
+    "404": {
       "fn": "Auction.endAuction",
       "offset": [
-        3555,
-        3572
+        3552,
+        3569
       ],
       "op": "SSTORE",
       "path": "0"
     },
-    "402": {
+    "405": {
       "fn": "Auction.endAuction",
       "offset": [
-        3602,
-        3639
+        3599,
+        3636
       ],
       "op": "PUSH1",
       "path": "0",
       "statement": 15,
       "value": "0x0"
     },
-    "404": {
+    "407": {
       "fn": "Auction.endAuction",
       "offset": [
-        3602,
-        3639
+        3599,
+        3636
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "406": {
+    "409": {
       "fn": "Auction.endAuction",
       "offset": [
-        3602,
-        3639
+        3599,
+        3636
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "408": {
+    "411": {
       "fn": "Auction.endAuction",
       "offset": [
-        3602,
-        3639
+        3599,
+        3636
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "410": {
+    "413": {
       "fn": "Auction.endAuction",
       "offset": [
-        3625,
-        3638
+        3622,
+        3635
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x6"
     },
-    "412": {
-      "fn": "Auction.endAuction",
-      "offset": [
-        3602,
-        3639
-      ],
-      "op": "SLOAD",
-      "path": "0"
-    },
-    "413": {
-      "fn": "Auction.endAuction",
-      "offset": [
-        3607,
-        3623
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x5"
-    },
     "415": {
       "fn": "Auction.endAuction",
       "offset": [
-        3602,
-        3639
+        3599,
+        3636
       ],
       "op": "SLOAD",
       "path": "0"
@@ -5043,69 +5007,88 @@
     "416": {
       "fn": "Auction.endAuction",
       "offset": [
-        3602,
-        3639
+        3604,
+        3620
       ],
       "op": "PUSH1",
       "path": "0",
-      "value": "0x0"
+      "value": "0x5"
     },
     "418": {
       "fn": "Auction.endAuction",
       "offset": [
-        3602,
-        3639
+        3599,
+        3636
       ],
-      "op": "CALL",
+      "op": "SLOAD",
       "path": "0"
     },
     "419": {
       "fn": "Auction.endAuction",
       "offset": [
-        3602,
-        3639
+        3599,
+        3636
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "421": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3599,
+        3636
+      ],
+      "op": "CALL",
+      "path": "0"
+    },
+    "422": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3599,
+        3636
       ],
       "op": "ISZERO",
       "path": "0"
     },
-    "420": {
-      "fn": "Auction.endAuction",
-      "offset": [
-        3602,
-        3639
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x28D"
-    },
     "423": {
       "fn": "Auction.endAuction",
       "offset": [
-        3602,
-        3639
+        3599,
+        3636
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x299"
+    },
+    "426": {
+      "fn": "Auction.endAuction",
+      "offset": [
+        3599,
+        3636
       ],
       "op": "JUMPI",
       "path": "0"
     },
-    "424": {
+    "427": {
       "fn": "Auction.endAuction",
       "offset": [
-        2672,
-        3639
+        2669,
+        3636
       ],
       "op": "STOP",
       "path": "0"
     },
-    "425": {
+    "428": {
       "fn": "Auction.endAuction",
       "offset": [
-        2672,
-        3639
+        2669,
+        3636
       ],
       "op": "JUMPDEST",
       "path": "0"
     },
-    "426": {
+    "429": {
       "offset": [
         298,
         313
@@ -5114,7 +5097,7 @@
       "path": "0",
       "value": "0x4F245EF7"
     },
-    "431": {
+    "434": {
       "offset": [
         298,
         313
@@ -5122,7 +5105,7 @@
       "op": "DUP2",
       "path": "0"
     },
-    "432": {
+    "435": {
       "offset": [
         298,
         313
@@ -5130,7 +5113,7 @@
       "op": "EQ",
       "path": "0"
     },
-    "433": {
+    "436": {
       "offset": [
         298,
         313
@@ -5138,16 +5121,16 @@
       "op": "ISZERO",
       "path": "0"
     },
-    "434": {
+    "437": {
       "offset": [
         298,
         313
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x1C6"
+      "value": "0x1CB"
     },
-    "437": {
+    "440": {
       "offset": [
         298,
         313
@@ -5155,7 +5138,7 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "438": {
+    "441": {
       "offset": [
         298,
         313
@@ -5163,16 +5146,16 @@
       "op": "CALLVALUE",
       "path": "0"
     },
-    "439": {
+    "442": {
       "offset": [
         298,
         313
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x28D"
+      "value": "0x299"
     },
-    "442": {
+    "445": {
       "offset": [
         298,
         313
@@ -5180,36 +5163,26 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "443": {
+    "446": {
       "op": "PUSH1",
       "value": "0x3"
     },
-    "445": {
-      "offset": [
-        298,
-        313
-      ],
-      "op": "SLOAD",
-      "path": "0"
-    },
-    "446": {
-      "offset": [
-        298,
-        313
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
-    },
     "448": {
-      "offset": [
-        298,
-        313
-      ],
-      "op": "MSTORE",
-      "path": "0"
+      "op": "SLOAD"
     },
     "449": {
+      "offset": [
+        298,
+        313
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x140"
+    },
+    "452": {
+      "op": "MSTORE"
+    },
+    "453": {
       "offset": [
         298,
         313
@@ -5218,16 +5191,11 @@
       "path": "0",
       "value": "0x20"
     },
-    "451": {
-      "offset": [
-        298,
-        313
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
+    "455": {
+      "op": "PUSH2",
+      "value": "0x140"
     },
-    "453": {
+    "458": {
       "offset": [
         298,
         313
@@ -5235,7 +5203,7 @@
       "op": "RETURN",
       "path": "0"
     },
-    "454": {
+    "459": {
       "offset": [
         298,
         313
@@ -5243,7 +5211,7 @@
       "op": "JUMPDEST",
       "path": "0"
     },
-    "455": {
+    "460": {
       "offset": [
         326,
         341
@@ -5252,7 +5220,7 @@
       "path": "0",
       "value": "0x2A24F46C"
     },
-    "460": {
+    "465": {
       "offset": [
         326,
         341
@@ -5260,7 +5228,7 @@
       "op": "DUP2",
       "path": "0"
     },
-    "461": {
+    "466": {
       "offset": [
         326,
         341
@@ -5268,37 +5236,12 @@
       "op": "EQ",
       "path": "0"
     },
-    "462": {
-      "offset": [
-        326,
-        341
-      ],
-      "op": "ISZERO",
-      "path": "0"
-    },
-    "463": {
-      "offset": [
-        326,
-        341
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x1E3"
-    },
-    "466": {
-      "offset": [
-        326,
-        341
-      ],
-      "op": "JUMPI",
-      "path": "0"
-    },
     "467": {
       "offset": [
         326,
         341
       ],
-      "op": "CALLVALUE",
+      "op": "ISZERO",
       "path": "0"
     },
     "468": {
@@ -5308,7 +5251,7 @@
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x28D"
+      "value": "0x1EA"
     },
     "471": {
       "offset": [
@@ -5319,35 +5262,50 @@
       "path": "0"
     },
     "472": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "473": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x299"
+    },
+    "476": {
+      "offset": [
+        326,
+        341
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "477": {
       "op": "PUSH1",
       "value": "0x4"
     },
-    "474": {
-      "offset": [
-        326,
-        341
-      ],
-      "op": "SLOAD",
-      "path": "0"
+    "479": {
+      "op": "SLOAD"
     },
-    "475": {
+    "480": {
       "offset": [
         326,
         341
       ],
-      "op": "PUSH1",
+      "op": "PUSH2",
       "path": "0",
-      "value": "0x0"
+      "value": "0x140"
     },
-    "477": {
-      "offset": [
-        326,
-        341
-      ],
-      "op": "MSTORE",
-      "path": "0"
+    "483": {
+      "op": "MSTORE"
     },
-    "478": {
+    "484": {
       "offset": [
         326,
         341
@@ -5356,16 +5314,11 @@
       "path": "0",
       "value": "0x20"
     },
-    "480": {
-      "offset": [
-        326,
-        341
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
+    "486": {
+      "op": "PUSH2",
+      "value": "0x140"
     },
-    "482": {
+    "489": {
       "offset": [
         326,
         341
@@ -5373,7 +5326,7 @@
       "op": "RETURN",
       "path": "0"
     },
-    "483": {
+    "490": {
       "offset": [
         326,
         341
@@ -5381,7 +5334,7 @@
       "op": "JUMPDEST",
       "path": "0"
     },
-    "484": {
+    "491": {
       "offset": [
         542,
         554
@@ -5390,7 +5343,7 @@
       "path": "0",
       "value": "0x12FA6FEB"
     },
-    "489": {
+    "496": {
       "offset": [
         542,
         554
@@ -5398,7 +5351,7 @@
       "op": "DUP2",
       "path": "0"
     },
-    "490": {
+    "497": {
       "offset": [
         542,
         554
@@ -5406,7 +5359,7 @@
       "op": "EQ",
       "path": "0"
     },
-    "491": {
+    "498": {
       "offset": [
         542,
         554
@@ -5414,16 +5367,16 @@
       "op": "ISZERO",
       "path": "0"
     },
-    "492": {
+    "499": {
       "offset": [
         542,
         554
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x20"
+      "value": "0x29"
     },
-    "495": {
+    "502": {
       "offset": [
         542,
         554
@@ -5431,7 +5384,7 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "496": {
+    "503": {
       "offset": [
         542,
         554
@@ -5439,16 +5392,16 @@
       "op": "CALLVALUE",
       "path": "0"
     },
-    "497": {
+    "504": {
       "offset": [
         542,
         554
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x28D"
+      "value": "0x299"
     },
-    "500": {
+    "507": {
       "offset": [
         542,
         554
@@ -5456,36 +5409,26 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "501": {
+    "508": {
       "op": "PUSH1",
       "value": "0x7"
     },
-    "503": {
-      "offset": [
-        542,
-        554
-      ],
-      "op": "SLOAD",
-      "path": "0"
+    "510": {
+      "op": "SLOAD"
     },
-    "504": {
+    "511": {
       "offset": [
         542,
         554
       ],
-      "op": "PUSH1",
+      "op": "PUSH2",
       "path": "0",
-      "value": "0x0"
+      "value": "0x140"
     },
-    "506": {
-      "offset": [
-        542,
-        554
-      ],
-      "op": "MSTORE",
-      "path": "0"
+    "514": {
+      "op": "MSTORE"
     },
-    "507": {
+    "515": {
       "offset": [
         542,
         554
@@ -5494,16 +5437,11 @@
       "path": "0",
       "value": "0x20"
     },
-    "509": {
-      "offset": [
-        542,
-        554
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
+    "517": {
+      "op": "PUSH2",
+      "value": "0x140"
     },
-    "511": {
+    "520": {
       "offset": [
         542,
         554
@@ -5511,7 +5449,7 @@
       "op": "RETURN",
       "path": "0"
     },
-    "512": {
+    "521": {
       "offset": [
         542,
         554
@@ -5519,7 +5457,7 @@
       "op": "JUMPDEST",
       "path": "0"
     },
-    "513": {
+    "522": {
       "offset": [
         562,
         577
@@ -5528,7 +5466,7 @@
       "path": "0",
       "value": "0xC06FAD6"
     },
-    "518": {
+    "527": {
       "offset": [
         562,
         577
@@ -5536,7 +5474,7 @@
       "op": "DUP2",
       "path": "0"
     },
-    "519": {
+    "528": {
       "offset": [
         562,
         577
@@ -5544,7 +5482,7 @@
       "op": "EQ",
       "path": "0"
     },
-    "520": {
+    "529": {
       "offset": [
         562,
         577
@@ -5552,16 +5490,16 @@
       "op": "ISZERO",
       "path": "0"
     },
-    "521": {
+    "530": {
       "offset": [
         562,
         577
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x21D"
+      "value": "0x228"
     },
-    "524": {
+    "533": {
       "offset": [
         562,
         577
@@ -5569,7 +5507,7 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "525": {
+    "534": {
       "offset": [
         562,
         577
@@ -5577,16 +5515,16 @@
       "op": "CALLVALUE",
       "path": "0"
     },
-    "526": {
+    "535": {
       "offset": [
         562,
         577
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x28D"
+      "value": "0x299"
     },
-    "529": {
+    "538": {
       "offset": [
         562,
         577
@@ -5594,36 +5532,26 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "530": {
+    "539": {
       "op": "PUSH1",
       "value": "0x8"
     },
-    "532": {
-      "offset": [
-        562,
-        577
-      ],
-      "op": "SLOAD",
-      "path": "0"
+    "541": {
+      "op": "SLOAD"
     },
-    "533": {
+    "542": {
       "offset": [
         562,
         577
       ],
-      "op": "PUSH1",
+      "op": "PUSH2",
       "path": "0",
-      "value": "0x0"
+      "value": "0x140"
     },
-    "535": {
-      "offset": [
-        562,
-        577
-      ],
-      "op": "MSTORE",
-      "path": "0"
+    "545": {
+      "op": "MSTORE"
     },
-    "536": {
+    "546": {
       "offset": [
         562,
         577
@@ -5632,16 +5560,11 @@
       "path": "0",
       "value": "0x20"
     },
-    "538": {
-      "offset": [
-        562,
-        577
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
+    "548": {
+      "op": "PUSH2",
+      "value": "0x140"
     },
-    "540": {
+    "551": {
       "offset": [
         562,
         577
@@ -5649,7 +5572,7 @@
       "op": "RETURN",
       "path": "0"
     },
-    "541": {
+    "552": {
       "offset": [
         562,
         577
@@ -5657,7 +5580,7 @@
       "op": "JUMPDEST",
       "path": "0"
     },
-    "542": {
+    "553": {
       "offset": [
         662,
         695
@@ -5666,7 +5589,7 @@
       "path": "0",
       "value": "0x26B387BB"
     },
-    "547": {
+    "558": {
       "offset": [
         662,
         695
@@ -5674,7 +5597,7 @@
       "op": "DUP2",
       "path": "0"
     },
-    "548": {
+    "559": {
       "offset": [
         662,
         695
@@ -5682,7 +5605,7 @@
       "op": "EQ",
       "path": "0"
     },
-    "549": {
+    "560": {
       "offset": [
         662,
         695
@@ -5690,16 +5613,16 @@
       "op": "ISZERO",
       "path": "0"
     },
-    "550": {
+    "561": {
       "offset": [
         662,
         695
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x252"
+      "value": "0x268"
     },
-    "553": {
+    "564": {
       "offset": [
         662,
         695
@@ -5707,116 +5630,44 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "554": {
-      "offset": [
-        662,
-        695
-      ],
-      "op": "CALLVALUE",
-      "path": "0"
-    },
-    "555": {
-      "offset": [
-        662,
-        695
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x28D"
-    },
-    "558": {
-      "offset": [
-        662,
-        695
-      ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "559": {
+    "565": {
       "op": "PUSH1",
       "value": "0x4"
     },
-    "561": {
+    "567": {
       "op": "CALLDATALOAD"
     },
-    "562": {
-      "op": "PUSH1",
-      "value": "0xA0"
-    },
-    "564": {
-      "op": "SHR"
-    },
-    "565": {
-      "offset": [
-        662,
-        695
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x28D"
-    },
     "568": {
-      "offset": [
-        662,
-        695
-      ],
-      "op": "JUMPI",
-      "path": "0"
+      "op": "DUP1"
     },
     "569": {
       "op": "PUSH1",
-      "value": "0x9"
+      "value": "0xA0"
     },
     "571": {
-      "op": "PUSH1",
-      "value": "0x4"
+      "op": "SHR"
     },
-    "573": {
-      "op": "CALLDATALOAD"
+    "572": {
+      "op": "PUSH2",
+      "value": "0x299"
     },
-    "574": {
-      "op": "PUSH1",
-      "value": "0xE0"
+    "575": {
+      "op": "JUMPI"
     },
     "576": {
-      "op": "MSTORE"
+      "op": "DUP1"
     },
     "577": {
-      "op": "PUSH1",
-      "value": "0xC0"
+      "op": "SWAP1"
+    },
+    "578": {
+      "op": "POP"
     },
     "579": {
-      "op": "MSTORE"
-    },
-    "580": {
-      "op": "PUSH1",
-      "value": "0x40"
+      "op": "PUSH2",
+      "value": "0x140"
     },
     "582": {
-      "op": "PUSH1",
-      "value": "0xC0"
-    },
-    "584": {
-      "op": "SHA3"
-    },
-    "585": {
-      "offset": [
-        662,
-        695
-      ],
-      "op": "SLOAD",
-      "path": "0"
-    },
-    "586": {
-      "offset": [
-        662,
-        695
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
-    },
-    "588": {
       "offset": [
         662,
         695
@@ -5824,7 +5675,83 @@
       "op": "MSTORE",
       "path": "0"
     },
-    "589": {
+    "583": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "584": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x299"
+    },
+    "587": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "588": {
+      "op": "PUSH1",
+      "value": "0x9"
+    },
+    "590": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "593": {
+      "op": "MLOAD"
+    },
+    "594": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "596": {
+      "op": "MSTORE"
+    },
+    "597": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "599": {
+      "op": "MSTORE"
+    },
+    "600": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "602": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "604": {
+      "op": "SHA3"
+    },
+    "605": {
+      "op": "SLOAD"
+    },
+    "606": {
+      "offset": [
+        662,
+        695
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x160"
+    },
+    "609": {
+      "op": "MSTORE"
+    },
+    "610": {
       "offset": [
         662,
         695
@@ -5833,16 +5760,11 @@
       "path": "0",
       "value": "0x20"
     },
-    "591": {
-      "offset": [
-        662,
-        695
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
+    "612": {
+      "op": "PUSH2",
+      "value": "0x160"
     },
-    "593": {
+    "615": {
       "offset": [
         662,
         695
@@ -5850,7 +5772,7 @@
       "op": "RETURN",
       "path": "0"
     },
-    "594": {
+    "616": {
       "offset": [
         662,
         695
@@ -5858,199 +5780,109 @@
       "op": "JUMPDEST",
       "path": "0"
     },
-    "595": {
+    "617": {
       "op": "POP"
     },
-    "596": {
+    "618": {
       "op": "JUMPDEST"
     },
-    "597": {
+    "619": {
       "fn": "Auction.__default__",
       "offset": [
-        3791,
-        3801
+        3788,
+        3798
       ],
       "op": "CALLER",
       "path": "0",
       "statement": 16
     },
-    "598": {
+    "620": {
       "fn": "Auction.__default__",
       "offset": [
-        3768,
-        3802
+        3765,
+        3799
       ],
       "op": "PUSH32",
       "path": "0",
       "value": "0xF817BEF87C74DE34AB725F43B121C1DFF5324AA363F7B9AC176B9AEE511523E"
     },
-    "631": {
+    "653": {
       "fn": "Auction.__default__",
       "offset": [
-        3768,
-        3802
+        3777,
+        3786
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "654": {
+      "fn": "Auction.__default__",
+      "offset": [
+        3765,
+        3799
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x140"
     },
-    "634": {
+    "657": {
+      "op": "MSTORE"
+    },
+    "658": {
       "fn": "Auction.__default__",
       "offset": [
-        3768,
-        3802
-      ],
-      "op": "DUP1",
-      "path": "0"
-    },
-    "635": {
-      "fn": "Auction.__default__",
-      "offset": [
-        3768,
-        3802
-      ],
-      "op": "DUP1",
-      "path": "0"
-    },
-    "636": {
-      "fn": "Auction.__default__",
-      "offset": [
-        3768,
-        3802
-      ],
-      "op": "DUP1",
-      "path": "0"
-    },
-    "637": {
-      "fn": "Auction.__default__",
-      "offset": [
-        3780,
-        3789
-      ],
-      "op": "CALLVALUE",
-      "path": "0"
-    },
-    "638": {
-      "op": "DUP2"
-    },
-    "639": {
-      "fn": "Auction.__default__",
-      "offset": [
-        3768,
-        3802
-      ],
-      "op": "MSTORE",
-      "path": "0"
-    },
-    "640": {
-      "fn": "Auction.__default__",
-      "offset": [
-        3768,
-        3802
-      ],
-      "op": "POP",
-      "path": "0"
-    },
-    "641": {
-      "fn": "Auction.__default__",
-      "offset": [
-        3768,
-        3802
-      ],
-      "op": "POP",
-      "path": "0"
-    },
-    "642": {
-      "fn": "Auction.__default__",
-      "offset": [
-        3768,
-        3802
+        3765,
+        3799
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x20"
     },
-    "644": {
+    "660": {
       "fn": "Auction.__default__",
       "offset": [
-        3768,
-        3802
-      ],
-      "op": "SWAP1",
-      "path": "0"
-    },
-    "645": {
-      "fn": "Auction.__default__",
-      "offset": [
-        3768,
-        3802
-      ],
-      "op": "POP",
-      "path": "0"
-    },
-    "646": {
-      "fn": "Auction.__default__",
-      "offset": [
-        3768,
-        3802
-      ],
-      "op": "SWAP1",
-      "path": "0"
-    },
-    "647": {
-      "fn": "Auction.__default__",
-      "offset": [
-        3768,
-        3802
-      ],
-      "op": "POP",
-      "path": "0"
-    },
-    "648": {
-      "fn": "Auction.__default__",
-      "offset": [
-        3768,
-        3802
+        3765,
+        3799
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x140"
     },
-    "651": {
+    "663": {
       "fn": "Auction.__default__",
       "offset": [
-        3768,
-        3802
+        3765,
+        3799
       ],
       "op": "LOG2",
       "path": "0"
     },
-    "652": {
+    "664": {
       "fn": "Auction.__default__",
       "offset": [
-        3745,
-        3802
+        3742,
+        3799
       ],
       "op": "STOP",
       "path": "0"
     },
-    "653": {
+    "665": {
       "op": "JUMPDEST"
     },
-    "654": {
+    "666": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "656": {
+    "668": {
       "op": "DUP1"
     },
-    "657": {
+    "669": {
       "op": "REVERT",
       "optimizer_revert": true
     }
   },
-  "sha1": "47bef5929ea65839eefb3fe3582a354357c719f6",
-  "source": "# @version ^0.2.0\n# Open Auction\n\n# Auction params\n# Beneficiary receives money from the highest bidder\nidToWinner: HashMap[uint256, address]\nhighestBidder: HashMap[uint256, address]\nhighestBid: HashMap[uint256, uint256]\n\n#beneficiaries(_tokenID uint256): public(idToWinner(address))\nauctionStart: public(uint256)\nauctionEnd: public(uint256)\n\n# Current state of auction\n#highestBidder: public(HashMap[uint256, address])\n#highestBid: public(uint256)\nbeneficiary: address\nfinalSum: uint256\n# Set to true at the end, disallows any change\nended: public(bool)\nitems: public(uint256)\n# Keep track of refunded bids so we can follow the withdraw pattern\npendingReturns: public(HashMap[address, uint256])\n\n\n# Create a simple auction with `_auction_start` and\n# `_bidding_time` seconds bidding time on behalf of the\n# beneficiary address `_beneficiary`.\n@external\ndef __init__(_auctionowner: address, _items: uint256, _auction_start: uint256, _bidding_time: uint256):\n    self.beneficiary = _auctionowner\n    self.items = _items\n    self.auctionStart = _auction_start  # auction start time can be in the past, present or future\n    self.auctionEnd = self.auctionStart + _bidding_time\n    assert block.timestamp < self.auctionEnd # auction end time should be in the future\n\n# Bid on the auction with the value sent\n# together with this transaction.\n# The value will only be refunded if the\n# auction is not won.\n@external\n@payable\ndef bid(_tokenID: uint256):\n    # Check if bidding period has started.\n    assert block.timestamp >= self.auctionStart\n    assert _tokenID < self.items\n    # Check if bidding period is over.\n    assert block.timestamp < self.auctionEnd\n    # Check if bid is high enough\n    assert msg.value > self.highestBid[_tokenID]\n    # Track the refund for the previous high bidder\n    self.pendingReturns[self.highestBidder[_tokenID]] += self.highestBid[_tokenID]\n    #remove the refund from the sum total\n    self.finalSum -= self.highestBid[_tokenID]\n    # Assign bid\n    self.highestBidder[_tokenID] = msg.sender\n    self.highestBid[_tokenID] = msg.value\n    # Increment total output\n    self.finalSum += msg.value   \n\n@external\ndef currentBid(_tokenID: uint256) -> uint256:\n    assert _tokenID < self.items\n    return self.highestBid[_tokenID]\n\n\n\n# Withdraw a previously refunded bid. The withdraw pattern is\n# used here to avoid a security issue. If refunds were directly\n# sent as part of bid(), a malicious bidding contract could block\n# those refunds and thus block new higher bids from coming in.\n@external\ndef withdraw():\n    send(msg.sender, self.pendingReturns[msg.sender])\n\n# End the auction and send the highest bid\n# to the beneficiary.\n@external\ndef endAuction():\n    # It is a good guideline to structure functions that interact\n    # with other contracts (i.e. they call functions or send Ether)\n    # into three phases:\n    # 1. checking conditions\n    # 2. performing actions (potentially changing conditions)\n    # 3. interacting with other contracts\n    # If these phases are mixed up, the other contract could call\n    # back into the current contract and modify the state or cause\n    # effects (Ether payout) to be performed multiple times.\n    # If functions called internally include interaction with external\n    # contracts, they also have to be considered interaction with\n    # external contracts.\n\n    # 1. Conditions\n    # Check if auction endtime has been reached\n    assert block.timestamp >= self.auctionEnd\n    # Check if this function has already been called\n    assert not self.ended\n\n    # 2. Effects\n    self.ended = True\n\n    # 3. Interaction   \n    send(self.beneficiary, self.finalSum)\n\n\n\n#Default function\nevent Payment:\n    amount: uint256\n    sender: indexed(address)\n\n@external\n@payable\ndef __default__():\n    log Payment(msg.value, msg.sender)",
+  "sha1": "b6ed0589942fba8040f81bc024996ee41cfa3a3f",
+  "source": "# @version ^0.3.0\n# Open Auction\n\n# Auction params\n# Beneficiary receives money from the highest bidder\nidToWinner: HashMap[uint256, address]\nhighestBidder: HashMap[uint256, address]\nhighestBid: HashMap[uint256, uint256]\n\n#beneficiaries(_tokenID uint256): public(idToWinner(address))\nauctionStart: public(uint256)\nauctionEnd: public(uint256)\n\n# Current state of auction\n#highestBidder: public(HashMap[uint256, address])\n#highestBid: public(uint256)\nbeneficiary: address\nfinalSum: uint256\n# Set to true at the end, disallows any change\nended: public(bool)\nitems: public(uint256)\n# Keep track of refunded bids so we can follow the withdraw pattern\npendingReturns: public(HashMap[address, uint256])\n\n\n# Create a simple auction with `_auction_start` and\n# `_bidding_time` seconds bidding time on behalf of the\n# beneficiary address `_beneficiary`.\n@external\ndef __init__(_auctionowner: address, _items: uint256, _auction_start: uint256, _bidding_time: uint256):\n    self.beneficiary = _auctionowner\n    self.items = _items\n    self.auctionStart = _auction_start  # auction start time can be in the past, present or future\n    self.auctionEnd = self.auctionStart + _bidding_time\n    assert block.timestamp < self.auctionEnd # auction end time should be in the future\n\n# Bid on the auction with the value sent\n# together with this transaction.\n# The value will only be refunded if the\n# auction is not won.\n@external\n@payable\ndef bid(_tokenID: uint256):\n    # Check if bidding period has started.\n    assert block.timestamp >= self.auctionStart\n    assert _tokenID < self.items\n    # Check if bidding period is over.\n    assert block.timestamp < self.auctionEnd\n    # Check if bid is high enough\n    assert msg.value > self.highestBid[_tokenID]\n    # Track the refund for the previous high bidder\n    self.pendingReturns[self.highestBidder[_tokenID]] += self.highestBid[_tokenID]\n    #remove the refund from the sum total\n    self.finalSum -= self.highestBid[_tokenID]\n    # Assign bid\n    self.highestBidder[_tokenID] = msg.sender\n    self.highestBid[_tokenID] = msg.value\n    # Increment total output\n    self.finalSum += msg.value\n\n@external\ndef currentBid(_tokenID: uint256) -> uint256:\n    assert _tokenID < self.items\n    return self.highestBid[_tokenID]\n\n\n\n# Withdraw a previously refunded bid. The withdraw pattern is\n# used here to avoid a security issue. If refunds were directly\n# sent as part of bid(), a malicious bidding contract could block\n# those refunds and thus block new higher bids from coming in.\n@external\ndef withdraw():\n    send(msg.sender, self.pendingReturns[msg.sender])\n\n# End the auction and send the highest bid\n# to the beneficiary.\n@external\ndef endAuction():\n    # It is a good guideline to structure functions that interact\n    # with other contracts (i.e. they call functions or send Ether)\n    # into three phases:\n    # 1. checking conditions\n    # 2. performing actions (potentially changing conditions)\n    # 3. interacting with other contracts\n    # If these phases are mixed up, the other contract could call\n    # back into the current contract and modify the state or cause\n    # effects (Ether payout) to be performed multiple times.\n    # If functions called internally include interaction with external\n    # contracts, they also have to be considered interaction with\n    # external contracts.\n\n    # 1. Conditions\n    # Check if auction endtime has been reached\n    assert block.timestamp >= self.auctionEnd\n    # Check if this function has already been called\n    assert not self.ended\n\n    # 2. Effects\n    self.ended = True\n\n    # 3. Interaction   \n    send(self.beneficiary, self.finalSum)\n\n\n\n#Default function\nevent Payment:\n    amount: uint256\n    sender: indexed(address)\n\n@external\n@payable\ndef __default__():\n    log Payment(msg.value, msg.sender)",
   "sourceMap": "",
   "sourcePath": "contracts/Auction.vy",
   "type": "contract"

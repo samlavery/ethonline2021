@@ -1,4 +1,4 @@
-# @version ^0.2.0
+# @version ^0.3.0
 
 """
 @title ERC-721 Non-Fungible Token Standard, optional metadata extension
@@ -349,6 +349,13 @@ def _clearApproval(_owner: address, _tokenId: uint256):
     if self.idToApprovals[_tokenId] != ZERO_ADDRESS:
         # Reset approvals
         self.idToApprovals[_tokenId] = ZERO_ADDRESS
+
+
+#def pack_values(values) -> bytes:
+#    """Stolen from curvefi/curve-pool-registry"""
+#    assert max(values) < 256
+#    return sum(i << c * 8 for c, i in enumerate(values))
+
 
 
 @internal

@@ -67,13 +67,13 @@ def receiver_valid(accounts):
     return receiver
 
 
-
+#needs to be in the past for stupid ganache
 @pytest.fixture(scope="module")
 def auction(Auction, accounts):
-    #Start the auction 5 seconds ago
-    start = time.time() - 5;
-    end   = time.time() + 60*60;
-    auct  = Auction.deploy(accounts[0], 50, start, end, {'from': accounts[0]})
+    #Start the auction 2 seconds ago
+    start = time.time() - 2;
+    biddingTime = 6
+    return Auction.deploy(accounts[0], 50, start, biddingTime, {'from': accounts[0]})
 
 
 
