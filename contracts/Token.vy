@@ -4,6 +4,7 @@
 @title ERC-721 Non-Fungible Token Standard, optional metadata extension
 @license MIT
 @author vasa (@vasa-develop)
+@author sam lavery
 @notice ERC-721 Non-Fungible Token Standard, optional metadata extension
 @dev See https://eips.ethereum.org/EIPS/eip-721
   Note: the ERC-165 identifier for this interface is 0x5b5e139f.
